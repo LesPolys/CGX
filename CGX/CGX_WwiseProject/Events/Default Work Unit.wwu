@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{032E0657-2410-45BE-97DA-B9D2266BB823}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{032E0657-2410-45BE-97DA-B9D2266BB823}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Music" ID="{672A0AD7-A502-4EC1-88D5-F0653BE79C52}">
+					<ChildrenList>
+						<Action Name="" ID="{AA550DB9-8B5A-4CB4-B144-D0230A023653}" ShortID="328703710">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test" ID="{9EE04B24-5F86-412C-9164-B3E8010D9406}" WorkUnitID="{7C4D23EC-5208-4022-A6E4-92F3597189B5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Keypress" ID="{004724AE-9844-4498-9F16-D36FCBDEFFD8}">
+					<ChildrenList>
+						<Action Name="" ID="{6EA979E0-6952-4253-B4F7-ECC56668EC1F}" ShortID="303036587">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Keypress Test" ID="{EB42C60A-7D38-411D-BA0D-94CB1264948A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>F:\Documents\GitHub\CGX\CGX\CGX_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Documents\GitHub\CGX\CGX\CGX_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Documents\GitHub\CGX\CGX\CGX_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4237249297" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank01</ObjectPath>
+			<ShortName>Soundbank01</ShortName>
+			<Path>Soundbank01.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2418373383" Name="Keypress" ObjectPath="\Events\Default Work Unit\Keypress"/>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="232857948" Language="SFX">
+					<ShortName>Necronomnomcon_Item Pickup_05.wav</ShortName>
+					<Path>SFX\Necronomnomcon_Item Pickup_05_1C9C67B2.wem</Path>
+				</File>
+				<File Id="727775957" Language="SFX">
+					<ShortName>Chants Chants Devilution Music.wav</ShortName>
+					<Path>SFX\Chants Chants Devilution Music_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

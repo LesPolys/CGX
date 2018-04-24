@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2418373383	Keypress			\Default Work Unit\Keypress	
+	3991942870	Music			\Default Work Unit\Music	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	232857948	Necronomnomcon_Item Pickup_05	F:\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Mac\SFX\Necronomnomcon_Item Pickup_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Keypress Test\Necronomnomcon_Item Pickup_05		48960
+	727775957	Chants Chants Devilution Music	F:\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Mac\SFX\Chants Chants Devilution Music_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Test\Chants Chants Devilution Music		17357824
+
