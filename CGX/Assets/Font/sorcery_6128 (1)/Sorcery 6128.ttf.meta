@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 0d501c9e8e94a484ca9c06d2e8554979
+timeCreated: 1522803870
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sorcery 6128
+  fontNames:
+  - Sorcery 6128
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
