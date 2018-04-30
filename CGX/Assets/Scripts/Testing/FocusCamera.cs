@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MultiTargetCamera : MonoBehaviour {
+public class FocusCamera : MonoBehaviour {
 
     public List<GameObject> targets;
 
@@ -27,14 +27,14 @@ public class MultiTargetCamera : MonoBehaviour {
         }
 
         Move();
-        //Zoom();
+        Zoom();
       
     }
 
     void Zoom()
     {
-        //float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter );
-        //cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);// only works in perspective mode
+        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter );
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);// only works in perspective mode
 
 
 
@@ -69,21 +69,31 @@ public class MultiTargetCamera : MonoBehaviour {
 
         bool startingPointFound = false;
 
-        for (int i = 0; i < targets.Count; i++)
+        foreach (GameObject obj in targets)
+        {
+            bounds.Encapsulate(obj.transform.position);
+        }
+
+       /* for (int i = 0; i < targets.Count; i++)
         {
             if(!targets[i].GetComponent<PlayerClass>().GetIsDead() && startingPointFound == false){
                 bounds = new Bounds(targets[i].transform.position, Vector3.zero);
                 bounds.Encapsulate(targets[i].transform.position);
                 startingPointFound = !startingPointFound;
             }else if(startingPointFound){
-                bounds.Encapsulate(targets[i].transform.position);
+                
             }
-        }
+        }*/
 
         return bounds;
     }
 
-    public void RemoveTarget(GameObject deadPlayer){
-        targets.Remove(deadPlayer);
+    public void RemoveTarget(GameObject removeTarget){
+        targets.Remove(removeTarget);
     }
+
+    public void AddTarget(GameObject newTarget){
+        targets.Add(newTarget);
+    }
+
 }

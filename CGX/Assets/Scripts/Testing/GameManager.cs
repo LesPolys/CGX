@@ -89,4 +89,8 @@ public class GameManager : MonoBehaviour {
         CameraShaker.Instance.ShakeOnce(Magnitude, Roughness, 0, FadeOutTime);
     }
 
+    public void RemoveFromCam(GameObject gameObject){
+        cameraHolder.GetComponent<FocusCamera>().RemoveTarget(gameObject);
+    }
+
 }

@@ -114,7 +114,9 @@ public class PlayerClass : MonoBehaviour {
         if(other.gameObject.tag == "KillBox" ){
 			if(!GetIsDead()){ ToggleDeath(); }
 			
+            gameManager.RemoveFromCam(this.gameObject);
 			gameObject.SetActive(false);
+          
             gameManager.ShakeTheCamera();
 			partyStats.PartyMemberDied();
            
