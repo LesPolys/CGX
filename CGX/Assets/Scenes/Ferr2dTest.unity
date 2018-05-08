@@ -122,10 +122,10 @@ GameObject:
   m_Component:
   - component: {fileID: 88936116}
   - component: {fileID: 88936120}
-  - component: {fileID: 88936119}
-  - component: {fileID: 88936118}
   - component: {fileID: 88936117}
   - component: {fileID: 88936121}
+  - component: {fileID: 88936118}
+  - component: {fileID: 88936115}
   m_Layer: 0
   m_Name: Test_Player
   m_TagString: Untagged
@@ -133,6 +133,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &88936115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88936114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4134a31425b7478aa618fc545898245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinWidth: 0.05
+  minMoveDistance: 0.001
+  slopeLimit: 30
+  blockerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  oneWayPlatformTag: One Way Platform
+  ignoreOneWayPlatforms: 0
+  ignoreOneWayPlatformsOnce: 0
+  isGrounded: 0
+  isOnCeiling: 0
+  isOnOneWayPlatform: 0
 --- !u!4 &88936116
 Transform:
   m_ObjectHideFlags: 0
@@ -161,30 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
---- !u!114 &88936118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 88936114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4134a31425b7478aa618fc545898245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skinWidth: 0.01
-  minMoveDistance: 0.001
-  slopeLimit: 30
-  blockerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  oneWayPlatformTag: One Way Platform
-  ignoreOneWayPlatforms: 0
-  ignoreOneWayPlatformsOnce: 0
-  isGrounded: 0
-  isOnCeiling: 0
-  isOnOneWayPlatform: 0
---- !u!50 &88936119
+--- !u!50 &88936118
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1570ae7d043db47b7ac21b5150d1fedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0.1
+  gravity: 2
 --- !u!1 &386957701
 GameObject:
   m_ObjectHideFlags: 0
