@@ -29,10 +29,26 @@ public class Controls : MonoBehaviour {
 
 
         //add in falling property style gravity scale
+
+        if (movement.y < 0) // if falling
+        {
+            rb2d.gravityScale = fallMultiplier;
+        }
+        else if (rb2d.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb2d.gravityScale = lowJumpMultiplier;
+        }
+        else
+        {
+            rb2d.gravityScale = 1f;
+        }
+
+
         movement.y -= gravity * Time.deltaTime;
         print(movement.y);
     }
 
+ 
 
     private void FixedUpdate()
     {
