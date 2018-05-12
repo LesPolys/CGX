@@ -122,8 +122,12 @@ public class AkWwisePostImportCallbackSetup
 
 	private static void PostImportFunction()
 	{
-		UnityEditor.EditorApplication.hierarchyWindowChanged += CheckWwiseGlobalExistance;
-		UnityEditor.EditorApplication.delayCall += CheckPicker;
+#if UNITY_2018_1_OR_NEWER
+        UnityEditor.EditorApplication.hierarchyChanged += CheckWwiseGlobalExistance;
+#else
+        UnityEditor.EditorApplication.hierarchyWindowChanged += CheckWwiseGlobalExistance;
+#endif
+        UnityEditor.EditorApplication.delayCall += CheckPicker;
 
 		if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || UnityEditor.EditorApplication.isCompiling)
 			return;

@@ -30,6 +30,7 @@ public class Controls : MonoBehaviour {
 
         //add in falling property style gravity scale
 
+        /*
         if (movement.y < 0) // if falling
         {
             rb2d.gravityScale = fallMultiplier;
@@ -42,7 +43,7 @@ public class Controls : MonoBehaviour {
         {
             rb2d.gravityScale = 1f;
         }
-
+        */
 
         movement.y -= gravity * Time.deltaTime;
         print(movement.y);

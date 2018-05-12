@@ -11,110 +11,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62cbe3aec8a5b7478325896116f520c, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu:
-  - Guid: '{71064263-12F7-40C3-9797-BE1FCF23ECC1}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1311331456
-    ParentPhysicalPath: 
-    PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
-    List: []
+  AcousticTextureWwu: []
   autoPopulateEnabled: 1
-  AuxBusWwu:
-  - Guid: '{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1311331456
-    ParentPhysicalPath: 
-    PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
-    List: []
-  BankWwu:
-  - Guid: '{09BD853D-F44B-45B9-B39E-89DC72B2251C}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1311331456
-    ParentPhysicalPath: 
-    PhysicalPath: SoundBanks/Default Work Unit.wwu
-    List:
-    - Guid: 2df007c73638fd42b746ec3c55679d00
-      ID: -57717999
-      Name: Soundbank01
-      Path: Default Work Unit/Soundbank01
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Soundbank01
-        ObjectType: 7
+  AuxBusWwu: []
+  BankWwu: []
   basePath: Audio\GeneratedSoundBanks
   callbackManagerBufferSize: 4
   CurrentPluginConfig: 
   defaultPoolSize: 4096
-  EventWwu:
-  - Guid: '{032E0657-2410-45BE-97DA-B9D2266BB823}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1301331456
-    ParentPhysicalPath: 
-    PhysicalPath: Events/Default Work Unit.wwu
-    List:
-    - Guid: ae244700449898449f16d36fcbdeffd8
-      ID: -1876593913
-      Name: Keypress
-      Path: Default Work Unit/Keypress
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Keypress
-        ObjectType: 3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - Guid: d70a2a6702a5c14e88d5f0653be79c52
-      ID: -303024426
-      Name: Music
-      Path: Default Work Unit/Music
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Music
-        ObjectType: 3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-  ExpandedItems:
-  - /CGX_WwiseProject
-  - /CGX_WwiseProject/Events
-  - /CGX_WwiseProject/Events/Default Work Unit
-  - /CGX_WwiseProject/SoundBanks
-  - /CGX_WwiseProject/SoundBanks/Default Work Unit
+  EventWwu: []
+  ExpandedItems: []
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
   m_lastPopulateTimePsrt1: 0
   memoryCutoffThreshold: 0.95
   preparePoolSize: 0
-  RtpcWwu:
-  - Guid: '{39E10261-DD8B-449F-94FF-3CD7AB7DD182}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1301331456
-    ParentPhysicalPath: 
-    PhysicalPath: Game Parameters/Default Work Unit.wwu
-    List: []
-  StateWwu:
-  - Guid: '{0A35D18D-798C-46A2-81B8-AE61098EE334}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1311331456
-    ParentPhysicalPath: 
-    PhysicalPath: States/Default Work Unit.wwu
-    List: []
+  RtpcWwu: []
+  StateWwu: []
   streamingPoolSize: 1024
-  SwitchWwu:
-  - Guid: '{C9457357-8434-4C5F-97CD-C4E96D1CD101}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1311331456
-    ParentPhysicalPath: 
-    PhysicalPath: Switches/Default Work Unit.wwu
-    List: []
-  TriggerWwu:
-  - Guid: '{E8B206A8-CA42-4DAA-83FA-EA7EF7E3FE0D}'
-    m_lastTimePart2: -1999263359
-    m_lastTimePsrt1: 1311331456
-    ParentPhysicalPath: 
-    PhysicalPath: Triggers/Default Work Unit.wwu
-    List: []
+  SwitchWwu: []
+  TriggerWwu: []
