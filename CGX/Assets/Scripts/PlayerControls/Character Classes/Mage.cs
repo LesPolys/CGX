@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mage : MonoBehaviour {
+class Mage : PlayerClass
+{
+    void Update()
+    {
+        if (grounded)
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                jumpRequest = true;
+              
+            }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        myAnimator.SetFloat("Speed", rb2d.velocity.x);
+        myAnimator.SetBool("Grounded", grounded);
+        myAnimator.SetFloat("Jump", rb2d.velocity.y);
+    }
+
+
 }

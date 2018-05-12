@@ -5,32 +5,44 @@ using UnityEngine;
 
 public class PlayerClass : MonoBehaviour {
 
-    public enum CharClass{Knight,Ranger,Mage,Druid};
-	private bool isDead = false;
 
 
-    public CharClass theClass;
+    protected bool isDead = false;
 
-    PartyProperties partyStats;
-    private float moveSpeed = 0.1f;
+    //PartyProperties partyStats;
+    [SerializeField]
+    protected float moveSpeed = 0.1f;
+    //falling feel
+    [SerializeField]
+    protected  float fallMultiplier = 2.5f;
+    [SerializeField]
+    protected  float lowJumpMultiplier = 2f;
 
+    [SerializeField]
     [Range(1, 10)]
-    public float jumpVelocity;
+    protected float jumpVelocity;
 
-    public float groundedSkin = 0.05f; // the thickness below ourself we check if we are standin on it
-    public LayerMask mask;
+    [SerializeField]
+    protected float groundedSkin = 0.05f; // the thickness below ourself we check if we are standin on it
 
-    private Rigidbody2D rb2d;
-    private Animator myAnimator;
-    public GameManager gameManager;
+    [SerializeField]
+    protected LayerMask mask;
 
-    bool jumpRequest;
-    bool grounded;
+    protected Rigidbody2D rb2d;
 
-    Vector2 playerSize;
-    Vector2 boxSize;
+    protected Animator myAnimator;
 
+    protected bool jumpRequest;
+    protected bool grounded;
 
+    
+    public  Vector2 playerSize;
+    public  Vector2 boxSize;
+
+    public PlayerClass()
+    {
+
+    }
 
     // Use this for initialization
 
@@ -40,52 +52,7 @@ public class PlayerClass : MonoBehaviour {
         playerSize = GetComponent<BoxCollider2D>().size;
         boxSize = new Vector2(playerSize.x, groundedSkin);
         myAnimator = GetComponent<Animator>();
-        partyStats = GetComponentInParent<PartyProperties>();
-        moveSpeed = partyStats.partyMoveSpeed;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
-  
-
-        if(grounded){
-            switch (theClass)
-            {
-                case CharClass.Knight:
-                    if(Input.GetKeyDown(KeyCode.R) ){
-                        jumpRequest = true;
-//                        AkSoundEngine.PostEvent("knight_jump", gameObject);
-                    }
-                    break;
-
-                case CharClass.Ranger:
-                 if(Input.GetKeyDown(KeyCode.E) ){
-                        jumpRequest = true;
-                    }
-                break;
-
-                case CharClass.Mage:
-                 if(Input.GetKeyDown(KeyCode.W) ){
-                        jumpRequest = true;
-            //            AkSoundEngine.PostEvent("mage_jump", gameObject);
-                    }
-                break;
-
-                case CharClass.Druid:
-                 if(Input.GetKeyDown(KeyCode.Q) ){
-                        jumpRequest = true;
-                    }
-                break;
-            }
-        }
-
-        myAnimator.SetFloat("Speed", rb2d.velocity.x);
-        myAnimator.SetBool("Grounded", grounded);
-        myAnimator.SetFloat("Jump", rb2d.velocity.y);
-
-
+        
     }
 
     private void FixedUpdate()
@@ -94,9 +61,7 @@ public class PlayerClass : MonoBehaviour {
 
         if (jumpRequest)
         {
-            //rb2d.velocity += Vector2.up * jumpForce;
             rb2d.AddForce(Vector2.up * jumpVelocity , ForceMode2D.Impulse);
-            //rb2d.velocity = new Vector2(rb2d.velocity.x, jumpVelocity);
             jumpRequest = false;
             grounded = false;
         }
@@ -106,6 +71,25 @@ public class PlayerClass : MonoBehaviour {
             grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0.0f , mask) != null);
         }
 
+
+
+        //falling properties
+        if (rb2d.velocity.y < 0) // if falling
+        {
+            rb2d.gravityScale = fallMultiplier;
+        }
+        else if (rb2d.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb2d.gravityScale = lowJumpMultiplier;
+        }
+        else
+        {
+            rb2d.gravityScale = 1f;
+        }
+
+ 
+
+
         rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
 
     }
@@ -114,11 +98,11 @@ public class PlayerClass : MonoBehaviour {
         if(other.gameObject.tag == "KillBox" ){
 			if(!GetIsDead()){ ToggleDeath(); }
 			
-            gameManager.RemoveFromCam(this.gameObject);
-			gameObject.SetActive(false);
+            //gameManager.RemoveFromCam(this.gameObject);
+			//gameObject.SetActive(false);
           
-            gameManager.ShakeTheCamera();
-			partyStats.PartyMemberDied();
+            //gameManager.ShakeTheCamera();
+			//partyStats.PartyMemberDied();
            
         }
     }
