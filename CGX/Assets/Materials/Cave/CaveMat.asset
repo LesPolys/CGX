@@ -104,8 +104,8 @@ MonoBehaviour:
       height: 0
     _leftCaps:
     - serializedVersion: 2
-      x: 0.77734375
-      y: 0.6269531
+      x: 0
+      y: 0.35546875
       width: 0
       height: 0
     _leftCapWeights: []
@@ -136,7 +136,7 @@ MonoBehaviour:
     _rightCaps:
     - serializedVersion: 2
       x: 1
-      y: 0.6269531
+      y: 0.35546875
       width: 0
       height: 0
     _rightCapWeights: []
@@ -160,10 +160,10 @@ MonoBehaviour:
     - 0
     _bodies:
     - serializedVersion: 2
-      x: 0.77734375
-      y: 0.6269531
-      width: 0.22265625
-      height: 0.09765625
+      x: 0
+      y: 0.35546875
+      width: 1
+      height: 0.125
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
     _physicsMaterial2D: {fileID: 0}
     _physicsMaterial3D: {fileID: 0}
   - _applyTo: 2
-    _zOffset: 0.002
+    _zOffset: 0
     _yOffset: 0
     _capOffset: 0
     _legacyLeftCap:
@@ -182,8 +182,8 @@ MonoBehaviour:
       height: 0
     _leftCaps:
     - serializedVersion: 2
-      x: 0.00390625
-      y: 0.6308594
+      x: 0
+      y: 0.48242188
       width: 0
       height: 0
     _leftCapWeights: []
@@ -213,8 +213,8 @@ MonoBehaviour:
       height: 0
     _rightCaps:
     - serializedVersion: 2
-      x: 0.19921875
-      y: 0.6308594
+      x: 1
+      y: 0.48242188
       width: 0
       height: 0
     _rightCapWeights: []
@@ -238,10 +238,10 @@ MonoBehaviour:
     - 0
     _bodies:
     - serializedVersion: 2
-      x: 0.00390625
-      y: 0.6308594
-      width: 0.1953125
-      height: 0.09765625
+      x: 0
+      y: 0.48242188
+      width: 1
+      height: 0.12890625
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
     _leftCaps:
     - serializedVersion: 2
       x: 0
-      y: 0
+      y: 0.123046875
       width: 0
       height: 0
     _leftCapWeights: []
@@ -292,7 +292,7 @@ MonoBehaviour:
     _rightCaps:
     - serializedVersion: 2
       x: 1
-      y: 0
+      y: 0.123046875
       width: 0
       height: 0
     _rightCapWeights: []
@@ -317,9 +317,9 @@ MonoBehaviour:
     _bodies:
     - serializedVersion: 2
       x: 0
-      y: 0
+      y: 0.123046875
       width: 1
-      height: 0.13085938
+      height: 0.123046875
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
