@@ -1,185 +1,124 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Prime31;
 
 
 public class PlayerClass : MonoBehaviour {
 
-    // movement config
-    [SerializeField]
-    protected float gravity = -25f;
-    [SerializeField]
-    protected float jumpStartMultiplier = -25f;
-    [SerializeField]
-    protected float jumpEndMultiplier = -25f;
-    [SerializeField]
-    protected float runSpeed = 8f;
-    [SerializeField]
-    protected float groundDamping = 20f; // how fast do we change direction? higher means faster
-    [SerializeField]
-    protected float inAirDamping = 5f;
-    [SerializeField]
-    protected float jumpHeight = 3f;
-
-    [HideInInspector]
-    protected float normalizedHorizontalSpeed = 0;
 
 
-    protected CharacterController2D _controller;
-    protected Animator _animator;
-    protected RaycastHit2D _lastControllerColliderHit;
-    protected Vector3 _velocity;
+    protected bool isDead = false;
 
-    protected KeyCode actionKey;
-
-    /// <summary>
-      /// mask with all layers that trigger events should fire when intersected
-      /// </summary>
-      /// 
+    //PartyProperties partyStats;
     [SerializeField]
-    protected LayerMask enemyMask = 0;
-
-    //PlayerQualities
+    protected float moveSpeed = 0.1f;
+    //falling feel
+    [SerializeField]
+    protected  float fallMultiplier = 2.5f;
+    [SerializeField]
+    protected  float lowJumpMultiplier = 2f;
 
     [SerializeField]
-    protected float health = 10.0f;
+    [Range(1, 10)]
+    protected float jumpVelocity;
 
+    [SerializeField]
+    protected float groundedSkin = 0.05f; // the thickness below ourself we check if we are standin on it
 
-    void Awake()
+    [SerializeField]
+    protected LayerMask mask;
+
+    protected Rigidbody2D rb2d;
+
+    protected Animator myAnimator;
+
+    protected bool jumpRequest;
+    protected bool grounded;
+
+    
+    public  Vector2 playerSize;
+    public  Vector2 boxSize;
+
+    public PlayerClass()
     {
-        _animator = GetComponent<Animator>();
-        _controller = GetComponent<CharacterController2D>();
 
-        // listen to some events for illustration purposes
-        _controller.onControllerCollidedEvent += onControllerCollider;
-        _controller.onTriggerEnterEvent += onTriggerEnterEvent;
-        _controller.onTriggerExitEvent += onTriggerExitEvent;
     }
 
+    // Use this for initialization
 
-    #region Event Listeners
-
-    void onControllerCollider(RaycastHit2D hit)
+    private void Awake()
     {
-        // bail out on plain old ground hits cause they arent very interesting
-        if (hit.normal.y == 1f)
-            return;
-
-        // logs any collider hits if uncommented. it gets noisy so it is commented out for the demo
-        //Debug.Log( "flags: " + _controller.collisionState + ", hit.normal: " + hit.normal );
-    }
-
-
-    void onTriggerEnterEvent(Collider2D col)
-    {
-        Debug.Log("onTriggerEnterEvent: " + col.gameObject.name);
-    }
-
-
-    void onTriggerExitEvent(Collider2D col)
-    {
-        Debug.Log("onTriggerExitEvent: " + col.gameObject.name);
-    }
-
-    #endregion
-
-
-    // the Update loop contains a very simple example of moving the character around and controlling the animation
-    void Update()
-    {
-        if (_controller.isGrounded)
-            _velocity.y = 0;
-
+        rb2d = GetComponent<Rigidbody2D>();
+        playerSize = GetComponent<BoxCollider2D>().size;
+        boxSize = new Vector2(playerSize.x, groundedSkin);
+        myAnimator = GetComponent<Animator>();
         
-         normalizedHorizontalSpeed = 1;
-        if (transform.localScale.x < 0f)
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+    }
 
-            //if( _controller.isGrounded )
-            //	_animator.Play( Animator.StringToHash( "Run" ) );
-        //}
-        //else if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    normalizedHorizontalSpeed = -1;
-        //    if (transform.localScale.x > 0f)
-        //        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+    private void FixedUpdate()
+    {
+      
 
-        //    //if( _controller.isGrounded )
-        //    //	_animator.Play( Animator.StringToHash( "Run" ) );
-        //}
-        //else
-        //{
-        //    normalizedHorizontalSpeed = 0;
-
-        //    //if( _controller.isGrounded )
-        //    //	_animator.Play( Animator.StringToHash( "Idle" ) );
-        //}
-
-
-        // we can only jump whilst grounded
-        if (_controller.isGrounded && Input.GetKeyDown(actionKey))
+        if (jumpRequest)
         {
-            _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-            //_animator.Play( Animator.StringToHash( "Jump" ) );
-        }
-
-        if (!_controller.isGrounded && Input.GetKeyDown(actionKey))
-        {
-            Ability();
-            //_animator.Play( Animator.StringToHash( "Ability" ) );
-        }
-
-
-        // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
-        var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
-        _velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * runSpeed, Time.deltaTime * smoothedMovementFactor);
-
-        // apply gravity before moving
-
-        if (_velocity.y < 0) // if falling
-        {
-            gravity = jumpEndMultiplier;
-        }
-        else if (_velocity.y > 0 && Input.GetKey(actionKey))
-        {
-            gravity = jumpStartMultiplier;
+            rb2d.AddForce(Vector2.up * jumpVelocity , ForceMode2D.Impulse);
+            jumpRequest = false;
+            grounded = false;
         }
         else
         {
-            gravity = -25f;
+            Vector2 boxCenter = (Vector2)transform.position + Vector2.down * (playerSize.y + boxSize.y) * 0.5f;
+            grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0.0f , mask) != null);
         }
 
 
-        _velocity.y += gravity * Time.deltaTime;
 
-        // if holding down bump up our movement amount and turn off one way platform detection for a frame.
-        // this lets us jump down through one way platforms
-        //if (_controller.isGrounded && Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    _velocity.y *= 3f;
-        //    _controller.ignoreOneWayPlatformsThisFrame = true;
-        //}
+        //falling properties
+        if (rb2d.velocity.y < 0) // if falling
+        {
+            rb2d.gravityScale = fallMultiplier;
+        }
+        else if (rb2d.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb2d.gravityScale = lowJumpMultiplier;
+        }
+        else
+        {
+            rb2d.gravityScale = 1f;
+        }
 
-        _controller.move(_velocity * Time.deltaTime);
+ 
 
-        // grab our current _velocity to use as a base for all calculations
-        _velocity = _controller.velocity;
+
+        rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
+
     }
 
-    public virtual void Ability()
-    {
-        //the players jump ability
+   void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag == "KillBox" ){
+			if(!GetIsDead()){ ToggleDeath(); }
+			
+            //gameManager.RemoveFromCam(this.gameObject);
+			//gameObject.SetActive(false);
+          
+            //gameManager.ShakeTheCamera();
+			//partyStats.PartyMemberDied();
+           
+        }
     }
 
 
+	public bool GetIsDead(){
+		return isDead;
+	}
 
-    
+	public void ToggleDeath(){
+		isDead = !isDead;
+	}
 
+	public void SetIsDead(bool newDeathState){
+		isDead = newDeathState;
+	}
 
 }
-
-
-
-
 

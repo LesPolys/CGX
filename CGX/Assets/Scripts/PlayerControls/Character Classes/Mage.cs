@@ -4,19 +4,19 @@ using UnityEngine;
 
 class Mage : PlayerClass
 {
-    float abilityRange;
-
-    Mage()
+    void Update()
     {
-        actionKey = KeyCode.W;
+        if (grounded)
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                jumpRequest = true;
+              
+            }
+
+        myAnimator.SetFloat("Speed", rb2d.velocity.x);
+        myAnimator.SetBool("Grounded", grounded);
+        myAnimator.SetFloat("Jump", rb2d.velocity.y);
     }
 
-    public override void Ability()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, abilityRange, enemyMask);
-        if (colliders.Length > 0)
-        {
 
-        }
-    }
 }
