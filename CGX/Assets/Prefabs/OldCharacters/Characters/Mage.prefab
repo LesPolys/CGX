@@ -110,6 +110,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114103112648401908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,13 +122,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0575f968d0c9644cdafd3116dc5e9937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theClass: 2
-  jumpVelocity: 7
-  groundedSkin: 0.05
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
-  gameManager: {fileID: 0}
+  gravity: -25
+  runSpeed: 8
+  groundDamping: 20
+  inAirDamping: 5
+  jumpHeight: 3
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!114 &114105629638765534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,6 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7858311b50c444d55a92274a989fdd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravity: -25
+  runSpeed: 8
+  groundDamping: 20
+  inAirDamping: 5
+  jumpHeight: 3
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!114 &114693019469644394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,6 +194,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
