@@ -2990,22 +2990,12 @@ MonoBehaviour:
   fillCollider: 0
   pathData:
     _points:
-    - {x: 6.875643, y: -6.055049}
-    - {x: 6.0671515, y: 0.030566692}
-    - {x: 8.074871, y: 0.5314388}
-    - {x: 8.500019, y: 1.6184487}
-    - {x: 2.0177217, y: 1.837915}
-    - {x: -1.4544382, y: 5.6084347}
-    - {x: -6.7956085, y: 3.8130417}
-    - {x: -6.862668, y: 0.008059502}
-    - {x: -8.901475, y: -3.1521711}
-    - {x: 3.9722042, y: -6.4418683}
+    - {x: 5, y: -5}
+    - {x: 7.1251345, y: 5.469187}
+    - {x: -5, y: 5}
+    - {x: -5, y: -5}
     _pointControls:
     - radius: 1
-      controlNext: {x: 1.2435306, y: 1.625186}
-      controlPrev: {x: -0.5933158, y: -0.77541184}
-      type: 2
-    - radius: 1
       controlNext: {x: 0, y: 0}
       controlPrev: {x: 0, y: 0}
       type: 4
@@ -3018,50 +3008,12 @@ MonoBehaviour:
       controlPrev: {x: 0, y: 0}
       type: 4
     - radius: 1
-      controlNext: {x: -1.552879, y: 0.71257097}
-      controlPrev: {x: 1.9650015, y: -0.90168196}
-      type: 2
-    - radius: 1
-      controlNext: {x: -1.8193582, y: 0.46678105}
-      controlPrev: {x: 1.654963, y: -0.42460322}
-      type: 2
-    - radius: 1
       controlNext: {x: 0, y: 0}
       controlPrev: {x: 0, y: 0}
       type: 4
-    - radius: 1
-      controlNext: {x: -0.36481968, y: -1.1993494}
-      controlPrev: {x: 0.36916065, y: 1.2136204}
-      type: 2
-    - radius: 1
-      controlNext: {x: 0, y: 0}
-      controlPrev: {x: 0, y: 0}
-      type: 4
-    - radius: 1
-      controlNext: {x: 0.97467303, y: -0.057442818}
-      controlPrev: {x: -4.4214454, y: 0.26057997}
-      type: 2
     _closed: 1
     _splitDistance: 1
     _data:
-    - directionOverride: 100
-      cutOverrides: 
-      scale: 1
-    - directionOverride: 100
-      cutOverrides: 
-      scale: 1
-    - directionOverride: 2
-      cutOverrides: 
-      scale: 1
-    - directionOverride: 100
-      cutOverrides: 
-      scale: 0.9725618
-    - directionOverride: 0
-      cutOverrides: 
-      scale: 1
-    - directionOverride: 100
-      cutOverrides: 
-      scale: 1
     - directionOverride: 100
       cutOverrides: 
       scale: 1
@@ -3108,7 +3060,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2029956679}
-  m_Mesh: {fileID: 1684965968}
+  m_Mesh: {fileID: 1300414926}
 --- !u!23 &2029956682
 MeshRenderer:
 =======
