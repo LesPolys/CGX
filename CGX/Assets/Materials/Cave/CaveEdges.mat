@@ -9,10 +9,14 @@ Material:
   m_Name: CaveEdges
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Shader: {fileID: 4800000, guid: f96550915e1658a4195dff70b551b70b, type: 3}
 =======
   m_Shader: {fileID: 4800000, guid: 84b65c35407eba14e9d6cc11b4ca4957, type: 3}
 >>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
+=======
+  m_Shader: {fileID: 4800000, guid: b6f50f69ba5b7b04a85b72ebf4511b9a, type: 3}
+>>>>>>> parent of b278089... New Movement and slope Handeling
 =======
   m_Shader: {fileID: 4800000, guid: b6f50f69ba5b7b04a85b72ebf4511b9a, type: 3}
 >>>>>>> parent of b278089... New Movement and slope Handeling
