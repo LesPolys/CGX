@@ -104,10 +104,17 @@ MonoBehaviour:
       height: 0
     _leftCaps:
     - serializedVersion: 2
+<<<<<<< HEAD
       x: 0.76953125
       y: 0.70703125
       width: 0.23046875
       height: 0.09765625
+=======
+      x: 0
+      y: 0.35546875
+      width: 0
+      height: 0
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
     _leftCapWeights: []
     _leftCapColliderSize:
     - 1
@@ -135,8 +142,13 @@ MonoBehaviour:
       height: 0
     _rightCaps:
     - serializedVersion: 2
+<<<<<<< HEAD
       x: 0
       y: 0
+=======
+      x: 1
+      y: 0.35546875
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
       width: 0
       height: 0
     _rightCapWeights: []
@@ -161,9 +173,15 @@ MonoBehaviour:
     _bodies:
     - serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 0.45898438
       width: 1
       height: 0.103515625
+=======
+      y: 0.35546875
+      width: 1
+      height: 0.125
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
@@ -171,7 +189,7 @@ MonoBehaviour:
     _physicsMaterial2D: {fileID: 0}
     _physicsMaterial3D: {fileID: 0}
   - _applyTo: 2
-    _zOffset: 0.002
+    _zOffset: 0
     _yOffset: 0
     _capOffset: 0
     _legacyLeftCap:
@@ -183,6 +201,7 @@ MonoBehaviour:
     _leftCaps:
     - serializedVersion: 2
       x: 0
+<<<<<<< HEAD
       y: 0
       width: 0
       height: 0
@@ -262,6 +281,9 @@ MonoBehaviour:
     - serializedVersion: 2
       x: 0.00390625
       y: 0.234375
+=======
+      y: 0.48242188
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
       width: 0
       height: 0
     _leftCapWeights: []
@@ -291,8 +313,13 @@ MonoBehaviour:
       height: 0
     _rightCaps:
     - serializedVersion: 2
+<<<<<<< HEAD
       x: 0.99609375
       y: 0.234375
+=======
+      x: 1
+      y: 0.48242188
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
       width: 0
       height: 0
     _rightCapWeights: []
@@ -316,6 +343,7 @@ MonoBehaviour:
     - 0
     _bodies:
     - serializedVersion: 2
+<<<<<<< HEAD
       x: 0.00390625
       y: 0.234375
       width: 0.9921875
@@ -398,6 +426,12 @@ MonoBehaviour:
       y: 0
       width: 1
       height: 1
+=======
+      x: 0
+      y: 0.48242188
+      width: 1
+      height: 0.12890625
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
@@ -417,7 +451,7 @@ MonoBehaviour:
     _leftCaps:
     - serializedVersion: 2
       x: 0
-      y: 0
+      y: 0.123046875
       width: 0
       height: 0
     _leftCapWeights: []
@@ -448,7 +482,7 @@ MonoBehaviour:
     _rightCaps:
     - serializedVersion: 2
       x: 1
-      y: 0
+      y: 0.123046875
       width: 0
       height: 0
     _rightCapWeights: []
@@ -473,9 +507,13 @@ MonoBehaviour:
     _bodies:
     - serializedVersion: 2
       x: 0
-      y: 0
+      y: 0.123046875
       width: 1
+<<<<<<< HEAD
       height: 1
+=======
+      height: 0.123046875
+>>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
