@@ -6,28 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CaveEdges
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Shader: {fileID: 4800000, guid: f96550915e1658a4195dff70b551b70b, type: 3}
-=======
-  m_Shader: {fileID: 4800000, guid: 84b65c35407eba14e9d6cc11b4ca4957, type: 3}
->>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
-=======
-  m_Shader: {fileID: 4800000, guid: b6f50f69ba5b7b04a85b72ebf4511b9a, type: 3}
->>>>>>> parent of b278089... New Movement and slope Handeling
-=======
-  m_Shader: {fileID: 4800000, guid: b6f50f69ba5b7b04a85b72ebf4511b9a, type: 3}
->>>>>>> parent of b278089... New Movement and slope Handeling
-=======
-  m_Shader: {fileID: 4800000, guid: b6f50f69ba5b7b04a85b72ebf4511b9a, type: 3}
->>>>>>> parent of 06cee97... cave textures
-=======
-  m_Shader: {fileID: 4800000, guid: b6f50f69ba5b7b04a85b72ebf4511b9a, type: 3}
->>>>>>> parent of b278089... New Movement and slope Handeling
+  m_Name: CaveFillVLit
+  m_Shader: {fileID: 4800000, guid: 188c7b6d8e591e345b7adf33bb6fefb9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -59,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b9c31de3e40a3044cb2b0c7479aee5f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: e1342c4a13f5edc4a8d3dc1c811c804a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

@@ -108,6 +108,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: 0.76953125
       y: 0.70703125
       width: 0.23046875
@@ -115,6 +116,10 @@ MonoBehaviour:
 =======
       x: 0
       y: 0.35546875
+=======
+      x: 0.77734375
+      y: 0.6269531
+>>>>>>> parent of b278089... New Movement and slope Handeling
 =======
       x: 0.77734375
       y: 0.6269531
@@ -167,6 +172,7 @@ MonoBehaviour:
       x: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       y: 0.35546875
 >>>>>>> b278089744e2ffad38c4540a9c37b57d50bfc1fe
 =======
@@ -179,6 +185,9 @@ MonoBehaviour:
       x: 1
       y: 0.6269531
 >>>>>>> parent of 06cee97... cave textures
+=======
+      y: 0.6269531
+>>>>>>> parent of b278089... New Movement and slope Handeling
       width: 0
       height: 0
     _rightCapWeights: []
@@ -205,6 +214,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: 0
 <<<<<<< HEAD
       y: 0.45898438
@@ -220,10 +230,13 @@ MonoBehaviour:
 >>>>>>> parent of b278089... New Movement and slope Handeling
 =======
 >>>>>>> parent of 06cee97... cave textures
+=======
+>>>>>>> parent of b278089... New Movement and slope Handeling
       x: 0.77734375
       y: 0.6269531
       width: 0.22265625
       height: 0.09765625
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of b278089... New Movement and slope Handeling
@@ -231,6 +244,8 @@ MonoBehaviour:
 >>>>>>> parent of b278089... New Movement and slope Handeling
 =======
 >>>>>>> parent of 06cee97... cave textures
+=======
+>>>>>>> parent of b278089... New Movement and slope Handeling
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
@@ -249,6 +264,7 @@ MonoBehaviour:
       height: 0
     _leftCaps:
     - serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,6 +364,10 @@ MonoBehaviour:
       x: 0.00390625
       y: 0.6308594
 >>>>>>> parent of 06cee97... cave textures
+=======
+      x: 0.00390625
+      y: 0.6308594
+>>>>>>> parent of b278089... New Movement and slope Handeling
       width: 0
       height: 0
     _leftCapWeights: []
@@ -381,6 +401,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: 0.99609375
       y: 0.234375
 =======
@@ -395,6 +416,10 @@ MonoBehaviour:
       x: 0.19921875
       y: 0.6308594
 >>>>>>> parent of 06cee97... cave textures
+=======
+      x: 0.19921875
+      y: 0.6308594
+>>>>>>> parent of b278089... New Movement and slope Handeling
       width: 0
       height: 0
     _rightCapWeights: []
@@ -418,6 +443,7 @@ MonoBehaviour:
     - 0
     _bodies:
     - serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       x: 0.00390625
@@ -530,6 +556,12 @@ MonoBehaviour:
       width: 0.1953125
       height: 0.09765625
 >>>>>>> parent of 06cee97... cave textures
+=======
+      x: 0.00390625
+      y: 0.6308594
+      width: 0.1953125
+      height: 0.09765625
+>>>>>>> parent of b278089... New Movement and slope Handeling
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
@@ -611,6 +643,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       height: 1
 =======
       height: 0.123046875
@@ -624,6 +657,9 @@ MonoBehaviour:
 =======
       height: 0.13085938
 >>>>>>> parent of 06cee97... cave textures
+=======
+      height: 0.13085938
+>>>>>>> parent of b278089... New Movement and slope Handeling
     _bodyWeights: []
     _yOffsetPercent: 0
     _colliderOffset: 0
