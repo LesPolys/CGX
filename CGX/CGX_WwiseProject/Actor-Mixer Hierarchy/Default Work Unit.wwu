@@ -174,7 +174,13 @@
 									<PropertyList>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>18</Value>
+												<Value>38</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
 											</ValueList>
 										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -202,7 +208,7 @@
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -472,9 +478,15 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Druid_Footsteps" ID="{512F0478-A26F-44AD-A7C2-0E7048790702}" ShortID="87948700">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -496,6 +508,11 @@
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.13"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>
@@ -711,6 +728,12 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Knight_Footsteps" ID="{CA8F38C7-4A3C-4A54-B289-84E9CD0A69EB}" ShortID="963806624">
 									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -728,6 +751,11 @@
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.14"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -923,9 +951,15 @@
 												<Value>8</Value>
 											</ValueList>
 										</Property>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -948,6 +982,11 @@
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.14"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-9</Value>
