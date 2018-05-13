@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - KillBox
   layers:
   - Default
   - TransparentFX
@@ -14,6 +15,9 @@ TagManager:
   - 
   - 
   - 
+  - Floor
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -30,13 +34,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BackGround
+  - ForeGround
+  - MidGround
+  - FarGround
   m_SortingLayers:
   - name: Default
     uniqueID: 0

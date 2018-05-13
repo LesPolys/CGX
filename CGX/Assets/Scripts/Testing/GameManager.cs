@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour {
         
         for(int i = 0; i < theParty.partyMembers.Length; i++){
             theParty.partyMembers[i].SetActive(true);
-            theParty.partyMembers[i].GetComponent<PlayerClass>().SetIsDead(false);
+    //        theParty.partyMembers[i].GetComponent<PlayerClass>().SetIsDead(false);
         }
 
         //thePlayer.gameObject.SetActive(true);
