@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="85">
-	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1526224907" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1526231075" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1525994233" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1525994233" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\CGX_WwiseProject.Connor.wsettings" DateLow="1526228739" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\CGX_WwiseProject.Connor.wsettings" DateLow="1526236241" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\CGX_WwiseProject.wproj" DateLow="1526087866" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1525994233" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1525994233" DateHigh="0"/>
@@ -21,7 +21,7 @@
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1525994236" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Queries\Factory Queries.wwu" DateLow="1525994236" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1525994236" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1525994236" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1526229277" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\States\Default Work Unit.wwu" DateLow="1525994236" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1525994236" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1525994236" DateHigh="0"/>
