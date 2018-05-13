@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4571051677295068}
   - component: {fileID: 212324302579871578}
   - component: {fileID: 61971004881346264}
+  - component: {fileID: 95283269592703160}
   - component: {fileID: 50891640964410680}
   - component: {fileID: 114633282944631738}
-  - component: {fileID: 114611512577611558}
+  - component: {fileID: 114681654475375316}
   m_Layer: 10
   m_Name: Ranger
   m_TagString: Player
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416491309599416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.84, y: 4.29, z: 0}
+  m_LocalPosition: {x: -8.841, y: 3.665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +76,8 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_UsedByComposite: 1
+  m_Offset: {x: -0.07, y: 0.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -87,33 +88,26 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 1}
+  m_Size: {x: 0.85, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114611512577611558
-MonoBehaviour:
+--- !u!95 &95283269592703160
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416491309599416}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee8aeba740ca4fd1b775672727607cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: -25
-  jumpStartMultiplier: -25
-  jumpEndMultiplier: -25
-  runSpeed: 2
-  groundDamping: 20
-  inAirDamping: 5
-  jumpHeight: 3
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  health: 10
-  arrowPrefab: {fileID: 0}
-  numArrows: 0
-  attackRange: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: deceff9284f52da4f9fd1c13379910d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114633282944631738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,6 +167,29 @@ MonoBehaviour:
     m_RotationOrder: 4
   totalHorizontalRays: 8
   totalVerticalRays: 4
+--- !u!114 &114681654475375316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416491309599416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf92d1bf0f0346aca9839a89c63a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: -25
+  jumpStartMultiplier: -25
+  jumpEndMultiplier: -25
+  runSpeed: 2
+  groundDamping: 20
+  inAirDamping: 5
+  jumpHeight: 3
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 10
+  attackRange: 0
 --- !u!212 &212324302579871578
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -208,7 +225,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300044, guid: 0d40e4d1e7bff484b86b1ffd72e2e774, type: 3}
+  m_Sprite: {fileID: 21300058, guid: 0d40e4d1e7bff484b86b1ffd72e2e774, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

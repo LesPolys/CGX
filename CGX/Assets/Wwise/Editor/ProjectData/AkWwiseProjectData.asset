@@ -48,8 +48,8 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{032E0657-2410-45BE-97DA-B9D2266BB823}'
-    m_lastTimePart2: -1999259617
-    m_lastTimePsrt1: -2050983010
+    m_lastTimePart2: -1999259414
+    m_lastTimePsrt1: -1896518611
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -281,6 +281,10 @@ MonoBehaviour:
   - /CGX_WwiseProject
   - /CGX_WwiseProject/Events
   - /CGX_WwiseProject/Events/Default Work Unit
+  - /CGX_WwiseProject/Events/Default Work Unit/Classes
+  - /CGX_WwiseProject/Events/Default Work Unit/Classes/Ranger
+  - /CGX_WwiseProject/Events/Default Work Unit/Music
+  - /CGX_WwiseProject/Events/Default Work Unit/Music/Main_Music
   - /CGX_WwiseProject/SoundBanks
   - /CGX_WwiseProject/SoundBanks/Default Work Unit
   language: English(US)
