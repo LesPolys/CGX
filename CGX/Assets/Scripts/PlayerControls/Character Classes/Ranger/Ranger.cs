@@ -16,6 +16,42 @@ class Ranger : PlayerClass
         actionKey = KeyCode.E;
     }
 
+
+    public override void Animation(int anim)
+    {
+        switch (anim)
+        {
+
+            case 0: // idle
+                _animator.Play(Animator.StringToHash("RangerIdle"));
+                AnimationEnd();
+                break;
+            case 1: //run
+                _animator.Play(Animator.StringToHash("RangerRun"));
+                AnimationEnd();
+                break;
+            case 2: //jump up
+                _animator.Play(Animator.StringToHash("RangerJump"));
+                break;
+            case 3: //fall down
+                _animator.Play(Animator.StringToHash("RangerFall"));
+                break;
+            case 4: //ability
+                _animator.Play(Animator.StringToHash("RangerPower"));
+                break;
+            case 5: //fainting
+                break;
+            case 6: //just in case
+                break;
+
+
+
+        }
+    }
+    
+     
+
+
     public override void Ability()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
@@ -41,6 +77,12 @@ class Ranger : PlayerClass
 
         // Destroy the bullet after 2 seconds
         Destroy(arrow, 2.0f);
+    }
+
+
+    public override void AnimationEnd()
+    {
+        abilityAnimating = false;
     }
 
 }

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27c9355f4e9c13439b8ed354310f1fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 30
+  arrowSpeed: 9.01
   myDir: {x: 0, y: 0, z: 0}
   speed: 30
 --- !u!212 &212967444519385328

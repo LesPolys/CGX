@@ -323,7 +323,7 @@ MonoBehaviour:
     _bodyWeights: []
     _yOffsetPercent: 0.34
     _colliderOffset: 0
-    _colliderThickness: 1
+    _colliderThickness: 0.5
     _physicsMaterial2D: {fileID: 0}
     _physicsMaterial3D: {fileID: 0}
   isPixel: 0

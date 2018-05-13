@@ -49,6 +49,9 @@ public class PlayerClass : MonoBehaviour
     protected float health = 10.0f;
 
 
+    protected bool abilityAnimating;
+
+
     void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -99,39 +102,42 @@ public class PlayerClass : MonoBehaviour
         if (transform.localScale.x < 0f)
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
-        //if( _controller.isGrounded )
-        //	_animator.Play( Animator.StringToHash( "Run" ) );
-        //}
-        //else if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    normalizedHorizontalSpeed = -1;
-        //    if (transform.localScale.x > 0f)
-        //        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        if( _controller.isGrounded)
+        {
+            //_animator.Play( Animator.StringToHash( "RangerRun" ) );
+            Animation(1); //run anim
+            // run sound
 
-        //    //if( _controller.isGrounded )
-        //    //	_animator.Play( Animator.StringToHash( "Run" ) );
-        //}
-        //else
-        //{
-        //    normalizedHorizontalSpeed = 0;
-
-        //    //if( _controller.isGrounded )
-        //    //	_animator.Play( Animator.StringToHash( "Idle" ) );
-        //}
+        }
+ 
 
 
         // we can only jump whilst grounded
         if (_controller.isGrounded && Input.GetKeyDown(actionKey))
         {
             _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-            //_animator.Play( Animator.StringToHash( "Jump" ) );
+            //_animator.Play( Animator.StringToHash( "RangerJump" ) );
+            Animation(2); //jump
+            //jump sound
         }
 
         if (!_controller.isGrounded && Input.GetKeyDown(actionKey))
         {
+            //_animator.Play(Animator.StringToHash("RangerPower"));
+            Animation(4);
+            abilityAnimating = true;
             Ability();
-            //_animator.Play( Animator.StringToHash( "Ability" ) );
+            //shoot sound
+
         }
+
+        if (!_controller.isGrounded && _velocity.y < 0 && !abilityAnimating)
+        {
+            // _animator.Play(Animator.StringToHash("RangerFall"));
+            Animation(3);
+        }
+
+      
 
 
         // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
@@ -156,13 +162,7 @@ public class PlayerClass : MonoBehaviour
 
         _velocity.y += gravity * Time.deltaTime;
 
-        // if holding down bump up our movement amount and turn off one way platform detection for a frame.
-        // this lets us jump down through one way platforms
-        //if (_controller.isGrounded && Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    _velocity.y *= 3f;
-        //    _controller.ignoreOneWayPlatformsThisFrame = true;
-        //}
+      
 
         _controller.move(_velocity * Time.deltaTime);
 
@@ -175,9 +175,16 @@ public class PlayerClass : MonoBehaviour
         //the players jump ability
     }
 
+    public virtual void Animation(int anim)
+    {
 
+    }
 
+    public virtual void AnimationEnd()
+    {
 
-
+    }
 
 }
+
+  
