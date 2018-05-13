@@ -2,56 +2,53 @@ fileFormatVersion: 2
 guid: 1b454caf5bdc5664fa3703296eb03e01
 TextureImporter:
   fileIDToRecycleName:
-    21300000: druidpowers_0
-    21300002: druidpowers_1
-    21300004: druidpowers_2
-    21300006: druidpowers_3
-    21300008: druidpowers_4
-    21300010: druidpowers_5
-    21300012: druidpowers_6
-    21300014: druidpowers_7
-    21300016: druidpowers_8
-    21300018: druidpowers_9
-    21300020: druidpowers_10
-    21300022: druidpowers_11
-    21300024: druidpowers_12
-    21300026: druidpowers_13
-    21300028: druidpowers_14
-    21300030: druidpowers_15
-    21300032: druidpowers_16
-    21300034: druidpowers_17
-    21300036: druidpowers_18
-    21300038: druidpowers_19
-    21300040: druidpowers_20
-    21300042: druidpowers_21
-    21300044: druidpowers_22
-    21300046: druidpowers_23
-    21300048: druidpowers_24
-    21300050: druidpowers_25
-    21300052: druidpowers_26
-    21300054: druidpowers_27
-    21300056: druidpowers_28
-    21300058: druidpowers_29
-    21300060: druidpowers_30
-    21300062: druidpowers_31
-    21300064: druidpowers_32
-    21300066: druidpowers_33
-    21300068: druidpowers_34
-    21300070: druidpowers_35
-    21300072: druidpowers_36
-    21300074: druidpowers_37
-    21300076: druidpowers_38
-    21300078: druidpowers_39
-    21300080: druidpowers_40
-    21300082: druidpowers_41
-    21300084: druidpowers_42
-    21300086: druidpowers_43
-    21300088: druidpowers_44
-    21300090: druidpowers_45
-    21300092: druidpowers_46
-    21300094: druidpowers_47
-    21300096: druidpowers_48
-    21300098: druidpowers_49
+    21300000: druid_0
+    21300002: druid_1
+    21300004: druid_2
+    21300006: druid_3
+    21300008: druid_4
+    21300010: druid_5
+    21300012: druid_6
+    21300014: druid_7
+    21300016: druid_8
+    21300018: druid_9
+    21300020: druid_10
+    21300022: druid_11
+    21300024: druid_12
+    21300026: druid_13
+    21300028: druid_14
+    21300030: druid_15
+    21300032: druid_16
+    21300034: druid_17
+    21300036: druid_18
+    21300038: druid_19
+    21300040: druid_20
+    21300042: druid_21
+    21300044: druid_22
+    21300046: druid_23
+    21300048: druid_24
+    21300050: druid_25
+    21300052: druid_26
+    21300054: druid_27
+    21300056: druid_28
+    21300058: druid_29
+    21300060: druid_30
+    21300062: druid_31
+    21300064: druid_32
+    21300066: druid_33
+    21300068: druid_34
+    21300070: druid_35
+    21300072: druid_36
+    21300074: druid_37
+    21300076: druid_38
+    21300078: druid_39
+    21300080: druid_40
+    21300082: druid_41
+    21300084: druid_42
+    21300086: druid_43
+    21300088: druid_44
+    21300090: druid_45
+    21300092: druid_46
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -108,7 +105,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -119,7 +116,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -130,7 +127,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -141,7 +138,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -154,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: druidpowers_0
+      name: druid_0
       rect:
         serializedVersion: 2
         x: 0
@@ -168,13 +165,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1437ceeea27dfd34399122fdbab8e848
+      spriteID: 49cbfe1cc8dbf974aae6e90e445d2be8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_1
+      name: druid_1
       rect:
         serializedVersion: 2
         x: 140
@@ -188,13 +185,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce3cf5d7a60422d4c809de68bae573db
+      spriteID: 3f765274a4f43d5429243f246edca2df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_2
+      name: druid_2
       rect:
         serializedVersion: 2
         x: 280
@@ -208,13 +205,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6513a3c944ed29846aff336895f5f4d0
+      spriteID: ca258a6ac3e7c3d4ab0ad753c30cd9bd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_3
+      name: druid_3
       rect:
         serializedVersion: 2
         x: 420
@@ -228,13 +225,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e79a2faf9d2f9f441a59c6568b0b70b9
+      spriteID: 8c717526aebcc4c489e6a3cfbf2a12cc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_4
+      name: druid_4
       rect:
         serializedVersion: 2
         x: 560
@@ -248,13 +245,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327d6355cebc6954aa8ce8f30910942e
+      spriteID: 9de9f9a70d21150489adfe1873dc8f0d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_5
+      name: druid_5
       rect:
         serializedVersion: 2
         x: 700
@@ -268,13 +265,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 060de7319447c5d4680842a2c560569e
+      spriteID: 00dad83f1246abe4fb459a979bed165f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_6
+      name: druid_6
       rect:
         serializedVersion: 2
         x: 840
@@ -288,13 +285,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e228348b619398540ae267cc5ddfae83
+      spriteID: 9222a4df9d4ff4349aac718fe227a864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_7
+      name: druid_7
       rect:
         serializedVersion: 2
         x: 980
@@ -308,13 +305,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 412963c0b447d6a409ce2508ea772473
+      spriteID: 0a422e1e31be14e4cbbfe56228290842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_8
+      name: druid_8
       rect:
         serializedVersion: 2
         x: 1120
@@ -328,13 +325,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2bc8b6a06017d14c8326788bc785fd7
+      spriteID: 32cb8d2cda99ed54588d139f44ffff2c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_9
+      name: druid_9
       rect:
         serializedVersion: 2
         x: 1260
@@ -348,13 +345,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9d27a54841b12c46bf189f411b457a1
+      spriteID: 137dc3898df94ed4bacf472d6c2c7a96
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_10
+      name: druid_10
       rect:
         serializedVersion: 2
         x: 1400
@@ -368,13 +365,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55f5b38dbe40dda43a131303bc4320c0
+      spriteID: 92592b35953cfbc4bb2f47b15a3a1c60
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_11
+      name: druid_11
       rect:
         serializedVersion: 2
         x: 1540
@@ -388,13 +385,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10b42a4175384f4e91a5c0c9ac9af67
+      spriteID: 8627983a7da54e14680c47988b3ef8c1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_12
+      name: druid_12
       rect:
         serializedVersion: 2
         x: 1680
@@ -408,13 +405,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90bdd0482ece8db438ac7e39d4a63447
+      spriteID: 26dcf0f362023b14fa5dc3ae76e09bcd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_13
+      name: druid_13
       rect:
         serializedVersion: 2
         x: 1820
@@ -428,13 +425,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b15c874f51c889d468839d35f8b69382
+      spriteID: 74a74c4e52e5ada4aa756ea9377d144b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_14
+      name: druid_14
       rect:
         serializedVersion: 2
         x: 1960
@@ -448,13 +445,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e4b7a1afd5a94468971222ef0b46e0
+      spriteID: a8ca245244b11ec41bd29f782effcc93
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_15
+      name: druid_15
       rect:
         serializedVersion: 2
         x: 2100
@@ -468,13 +465,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8cd0a370d15e74fb64ce4a35336c26
+      spriteID: c684f910b942cde45b355c84c1355d3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_16
+      name: druid_16
       rect:
         serializedVersion: 2
         x: 2240
@@ -488,13 +485,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7ee1d1a6e4643408caacf03285cc2d
+      spriteID: 8e1174bcea456e54ea4d07fcee1dafd2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_17
+      name: druid_17
       rect:
         serializedVersion: 2
         x: 0
@@ -508,13 +505,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8f0ee3c78368af45848e6bd7db8372a
+      spriteID: 7f9940de5b0f2504bbb57ef11146349d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_18
+      name: druid_18
       rect:
         serializedVersion: 2
         x: 140
@@ -528,13 +525,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 043c0cb4ecbd1e245b7be18da102928b
+      spriteID: 1284003c955f6194680483844be24ab4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_19
+      name: druid_19
       rect:
         serializedVersion: 2
         x: 280
@@ -548,13 +545,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e252bb139e879e14c946b941c4b76889
+      spriteID: 7ac15d31c2e49a14e898fb8f7f531b61
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_20
+      name: druid_20
       rect:
         serializedVersion: 2
         x: 420
@@ -568,73 +565,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c262bbb5d77211443ab2492ee442ce9c
+      spriteID: 02f268745484fc843808a2d585681b04
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_21
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 462
-        width: 140
-        height: 154
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 445d8b3f1b680ff41be0e32f390b8ef9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: druidpowers_22
-      rect:
-        serializedVersion: 2
-        x: 1400
-        y: 462
-        width: 140
-        height: 154
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4db081a680585a048b006921bdbaafbb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: druidpowers_23
-      rect:
-        serializedVersion: 2
-        x: 2240
-        y: 462
-        width: 140
-        height: 154
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05d656e84890cf4449a7149ed0f819ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: druidpowers_24
+      name: druid_21
       rect:
         serializedVersion: 2
         x: 0
@@ -648,13 +585,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670eacb7fce793f419b486c19cb771e1
+      spriteID: d956e4b06a7567f4fbe2809cb3d153f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_25
+      name: druid_22
       rect:
         serializedVersion: 2
         x: 140
@@ -668,13 +605,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed0be6a82e88554458e20f4cc1c9a223
+      spriteID: c91fb1c08f8b9da44ae704ee98b7070b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_26
+      name: druid_23
       rect:
         serializedVersion: 2
         x: 0
@@ -688,13 +625,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ece1d2bee0b98439f754b0dccfbe08
+      spriteID: af23b340893186f428946f1b30828a1c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_27
+      name: druid_24
       rect:
         serializedVersion: 2
         x: 140
@@ -708,13 +645,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 280e9fe7924580e49a00581e7b6d1b8e
+      spriteID: 720b859c652dc3e4a882b61f4faa8153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_28
+      name: druid_25
       rect:
         serializedVersion: 2
         x: 280
@@ -728,13 +665,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8b642fabbd6484fb3042d3a2af8bb2
+      spriteID: a52698d2fedec0c4e9c7e139fc5826a4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_29
+      name: druid_26
       rect:
         serializedVersion: 2
         x: 420
@@ -748,13 +685,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ba81ac558f782146a8f73b7974e96ae
+      spriteID: 6dfcd98c01dc8ab4787ab52f249d507c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_30
+      name: druid_27
       rect:
         serializedVersion: 2
         x: 560
@@ -768,13 +705,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed350007e01078d4f840caaa770db0a0
+      spriteID: 2b677757255710649bd4d7c64e8e4a71
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_31
+      name: druid_28
       rect:
         serializedVersion: 2
         x: 700
@@ -788,13 +725,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516c5bab02e772f4596e1afeae73d445
+      spriteID: 213ff99d3d2855047922c7fcca1b660f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_32
+      name: druid_29
       rect:
         serializedVersion: 2
         x: 840
@@ -808,13 +745,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60de848127d5e3f4fbe0b0695b6bddf1
+      spriteID: d54d0c4bf2314e14390de58774ad6ed3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_33
+      name: druid_30
       rect:
         serializedVersion: 2
         x: 980
@@ -828,13 +765,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29f15ae3886429c42890b1d49046767a
+      spriteID: 5899b6c2d760f014abbd7ef6e67bb0d7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_34
+      name: druid_31
       rect:
         serializedVersion: 2
         x: 1120
@@ -848,13 +785,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c23332a3c2164414c83eed2812b4502d
+      spriteID: 6357fe16ff87ce2469036e16625813be
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_35
+      name: druid_32
       rect:
         serializedVersion: 2
         x: 1260
@@ -868,13 +805,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f06fe03fbb8d934c88dec3850270813
+      spriteID: 9311958765196374c93380f570bb328f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_36
+      name: druid_33
       rect:
         serializedVersion: 2
         x: 1400
@@ -888,13 +825,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d5626b27c65a14db9eadd5f9b9d442
+      spriteID: ae8da438ead90744cb889a67a5f2fba8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_37
+      name: druid_34
       rect:
         serializedVersion: 2
         x: 1540
@@ -908,13 +845,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4176fdecfd2d554c9120bd11c6216b1
+      spriteID: 9c70ec19192d8e74b8a5e24b9844e092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_38
+      name: druid_35
       rect:
         serializedVersion: 2
         x: 1680
@@ -928,13 +865,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de41c78586fdccb4494c2a445205ee77
+      spriteID: 62b4a4950d5394646be0eaf13c5d3d38
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_39
+      name: druid_36
       rect:
         serializedVersion: 2
         x: 1820
@@ -948,13 +885,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79569b96f8b63e84e9cdd92b2fc7f09a
+      spriteID: da7a7f0a693aa8a40aa93cb0a12971a4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_40
+      name: druid_37
       rect:
         serializedVersion: 2
         x: 1960
@@ -968,13 +905,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c628860716e64384fb4f290f132c1cf4
+      spriteID: a2f8a49e405815f40841b3896fc7b96c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_41
+      name: druid_38
       rect:
         serializedVersion: 2
         x: 2100
@@ -988,13 +925,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe1c41fdca400a428c01b2fc721b8f5
+      spriteID: ebbf832ca633d014cb7108903673021c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_42
+      name: druid_39
       rect:
         serializedVersion: 2
         x: 2240
@@ -1008,13 +945,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23b45d74e62852f40b680c6a1a0e7f7d
+      spriteID: 8e74cf4fcab7dfa4bae1ae616865712d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_43
+      name: druid_40
       rect:
         serializedVersion: 2
         x: 2380
@@ -1028,13 +965,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ce2d2832423d9746993f70161c56b92
+      spriteID: f4e83d2151dc58240b5c7700a25fd863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_44
+      name: druid_41
       rect:
         serializedVersion: 2
         x: 2520
@@ -1048,13 +985,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf3bb4ed25adde4984c92d82a05b3c4
+      spriteID: b61c86ef10b4d5645930ad6a616ddbe7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_45
+      name: druid_42
       rect:
         serializedVersion: 2
         x: 2660
@@ -1068,13 +1005,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b38f90709e5e20f44b482575f4a6835a
+      spriteID: 0bfabc63104e7044e8310e459b1bf15d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_46
+      name: druid_43
       rect:
         serializedVersion: 2
         x: 0
@@ -1088,13 +1025,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2058eebf3e7d7a4e92dd3005c210760
+      spriteID: c2f91828a5a8b2548bb7885ce0538978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_47
+      name: druid_44
       rect:
         serializedVersion: 2
         x: 140
@@ -1108,13 +1045,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e961d3260a6a8dc4ea83b100b1f3073e
+      spriteID: 5e4a2516da89cff40b0798fe89f6096e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_48
+      name: druid_45
       rect:
         serializedVersion: 2
         x: 280
@@ -1128,13 +1065,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f979acf0d4b3a74380e395f0af3a0ea
+      spriteID: dbd6e441043476f40b50230c594dc4e4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: druidpowers_49
+      name: druid_46
       rect:
         serializedVersion: 2
         x: 420
@@ -1148,7 +1085,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e15d418d52d5a4abbec56161e6ff14
+      spriteID: 940a9f576a5a71c43aefec1bb5d4df19
       vertices: []
       indices: 
       edges: []
@@ -1156,7 +1093,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1bb3c5b688b844e43b6c8a3fc4affeb5
+    spriteID: 2c676b5329195c4489b9d5f5172be8a6
     vertices: []
     indices: 
     edges: []
