@@ -34,10 +34,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - BackGround
+  - ForeGround
+  - MidGround
+  - FarGround
   m_SortingLayers:
   - name: Default
     uniqueID: 0

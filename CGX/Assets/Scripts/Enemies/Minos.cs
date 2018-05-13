@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Minos : MonoBehaviour {
+public class Minos : Enemy {
 
 	// Use this for initialization
 	void Start () {
