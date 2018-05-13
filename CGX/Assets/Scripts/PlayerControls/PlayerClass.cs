@@ -56,26 +56,28 @@ public class PlayerClass : MonoBehaviour {
                 case CharClass.Knight:
                     if(Input.GetKeyDown(KeyCode.R) ){
                         jumpRequest = true;
-//                        AkSoundEngine.PostEvent("knight_jump", gameObject);
+                        AkSoundEngine.PostEvent("Knight_Jump", gameObject);
                     }
                     break;
 
                 case CharClass.Ranger:
                  if(Input.GetKeyDown(KeyCode.E) ){
                         jumpRequest = true;
+                        AkSoundEngine.PostEvent("Ranger_Jump", gameObject);
                     }
                 break;
 
                 case CharClass.Mage:
                  if(Input.GetKeyDown(KeyCode.W) ){
                         jumpRequest = true;
-            //            AkSoundEngine.PostEvent("mage_jump", gameObject);
+                        AkSoundEngine.PostEvent("Mage_Jump", gameObject);
                     }
                 break;
 
                 case CharClass.Druid:
                  if(Input.GetKeyDown(KeyCode.Q) ){
                         jumpRequest = true;
+                        AkSoundEngine.PostEvent("Druid_Jump", gameObject);
                     }
                 break;
             }
