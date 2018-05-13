@@ -11,24 +11,310 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62cbe3aec8a5b7478325896116f520c, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
+  AcousticTextureWwu:
+  - Guid: '{71064263-12F7-40C3-9797-BE1FCF23ECC1}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 731462228
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
   autoPopulateEnabled: 1
-  AuxBusWwu: []
-  BankWwu: []
+  AuxBusWwu:
+  - Guid: '{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 711127697
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List: []
+  BankWwu:
+  - Guid: '{09BD853D-F44B-45B9-B39E-89DC72B2251C}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 731382014
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List:
+    - Guid: 2df007c73638fd42b746ec3c55679d00
+      ID: -57717999
+      Name: Soundbank01
+      Path: Default Work Unit\Soundbank01
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Soundbank01
+        ObjectType: 7
   basePath: Audio\GeneratedSoundBanks
   callbackManagerBufferSize: 4
   CurrentPluginConfig: 
   defaultPoolSize: 4096
-  EventWwu: []
-  ExpandedItems: []
+  EventWwu:
+  - Guid: '{032E0657-2410-45BE-97DA-B9D2266BB823}'
+    m_lastTimePart2: -1999259617
+    m_lastTimePsrt1: -2050983010
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List:
+    - Guid: 309eb85a99cdc14a91019ec8b63884b9
+      ID: 98870701
+      Name: Coin_Pickup
+      Path: Default Work Unit\Character-World Interactions\Coin\Coin_Pickup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character-World Interactions
+        ObjectType: 4
+      - ElementName: Coin
+        ObjectType: 4
+      - ElementName: Coin_Pickup
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: eaeb86c904da7f4b9dbc314c3236e610
+      ID: -1734314230
+      Name: Druid_Attack
+      Path: Default Work Unit\Classes\Druid\Druid_Attack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Druid
+        ObjectType: 4
+      - ElementName: Druid_Attack
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b6ff90a129909f4ba27a4d1743319b68
+      ID: 267328355
+      Name: Druid_Footsteps
+      Path: Default Work Unit\Classes\Druid\Druid_Footsteps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Druid
+        ObjectType: 4
+      - ElementName: Druid_Footsteps
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4e48d5c1de631c48934f1cba3de01c49
+      ID: 1045264174
+      Name: Druid_Jump
+      Path: Default Work Unit\Classes\Druid\Druid_Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Druid
+        ObjectType: 4
+      - ElementName: Druid_Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ef47948e85a33f45b816c729c0b38052
+      ID: -1329021995
+      Name: Knight_Attack
+      Path: Default Work Unit\Classes\Knight\Knight_Attack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Knight
+        ObjectType: 4
+      - ElementName: Knight_Attack
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4223379d6c72604f86cf1077f1368e63
+      ID: -1720819122
+      Name: Knight_Footsteps
+      Path: Default Work Unit\Classes\Knight\Knight_Footsteps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Knight
+        ObjectType: 4
+      - ElementName: Knight_Footsteps
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 57075087050b824eb3b12042346daa5c
+      ID: -368611871
+      Name: Knight_Jump
+      Path: Default Work Unit\Classes\Knight\Knight_Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Knight
+        ObjectType: 4
+      - ElementName: Knight_Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b7044707733e7b4bb8ebeaa10c2feda2
+      ID: -180466726
+      Name: Mage_Attack
+      Path: Default Work Unit\Classes\Mage\Mage_Attack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Mage
+        ObjectType: 4
+      - ElementName: Mage_Attack
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6e489b97fbd03e4dbe3e48ec846a36a8
+      ID: 921890035
+      Name: Mage_Footsteps
+      Path: Default Work Unit\Classes\Mage\Mage_Footsteps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Mage
+        ObjectType: 4
+      - ElementName: Mage_Footsteps
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1fd50b8982600b4a8b5e12c97b9bcc39
+      ID: -430755202
+      Name: Mage_Jump
+      Path: Default Work Unit\Classes\Mage\Mage_Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Mage
+        ObjectType: 4
+      - ElementName: Mage_Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: beeedc9556a8524cae7f040a04c71f1d
+      ID: -1272042523
+      Name: Ranger_Attack
+      Path: Default Work Unit\Classes\Ranger\Ranger_Attack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Ranger
+        ObjectType: 4
+      - ElementName: Ranger_Attack
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9dfbd69c0a398641ac2dc65693d92e94
+      ID: 915474462
+      Name: Ranger_Footsteps
+      Path: Default Work Unit\Classes\Ranger\Ranger_Footsteps
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Ranger
+        ObjectType: 4
+      - ElementName: Ranger_Footsteps
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 323272772de13e4daee4b2088d3c1585
+      ID: 1341943729
+      Name: Ranger_Jump
+      Path: Default Work Unit\Classes\Ranger\Ranger_Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Classes
+        ObjectType: 4
+      - ElementName: Ranger
+        ObjectType: 4
+      - ElementName: Ranger_Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 64a2530ab6149445abda6215143808d1
+      ID: -2142007631
+      Name: Town_Track
+      Path: Default Work Unit\Music\Main_Music\Town_Track
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Main_Music
+        ObjectType: 4
+      - ElementName: Town_Track
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /CGX_WwiseProject
+  - /CGX_WwiseProject/Events
+  - /CGX_WwiseProject/Events/Default Work Unit
+  - /CGX_WwiseProject/SoundBanks
+  - /CGX_WwiseProject/SoundBanks/Default Work Unit
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
   m_lastPopulateTimePsrt1: 0
   memoryCutoffThreshold: 0.95
   preparePoolSize: 0
-  RtpcWwu: []
-  StateWwu: []
+  RtpcWwu:
+  - Guid: '{39E10261-DD8B-449F-94FF-3CD7AB7DD182}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 702601309
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List: []
+  StateWwu:
+  - Guid: '{0A35D18D-798C-46A2-81B8-AE61098EE334}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 731422054
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List: []
   streamingPoolSize: 1024
-  SwitchWwu: []
-  TriggerWwu: []
+  SwitchWwu:
+  - Guid: '{C9457357-8434-4C5F-97CD-C4E96D1CD101}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 731422054
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{E8B206A8-CA42-4DAA-83FA-EA7EF7E3FE0D}'
+    m_lastTimePart2: -1999259956
+    m_lastTimePsrt1: 731422054
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []

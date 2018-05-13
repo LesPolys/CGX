@@ -1,68 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7C4D23EC-5208-4022-A6E4-92F3597189B5}" SchemaVersion="85">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{7C4D23EC-5208-4022-A6E4-92F3597189B5}" PersistMode="Standalone">
-			<ChildrenList>
-				<MusicSegment Name="Test" ID="{9EE04B24-5F86-412C-9164-B3E8010D9406}" ShortID="549601318">
-					<PropertyList>
-						<Property Name="EndPosition" Type="Real64" Value="98400"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<MusicTrack Name="Chants Chants Devilution Music" ID="{0EE93A8D-FA7D-4116-81AB-FB90C7C92D0A}" ShortID="818271310">
-							<ReferenceList>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Chants Chants Devilution Music" ID="{63618249-2CC2-4CBF-A9F3-1D2312959AB4}" ShortID="727775957">
-									<Language>SFX</Language>
-									<AudioFile>Chants Chants Devilution Music.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{62BD6B0A-4C2B-4CB4-A2DA-E193C3F05074}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<SequenceList>
-								<MusicTrackSequence Name="" ID="{358543DD-D176-4058-8788-D22589D59A60}">
-									<ClipList>
-										<MusicClip Name="Chants Chants Devilution Music" ID="{25965D80-2AEC-4183-BC08-2E01D2517D45}">
-											<PropertyList>
-												<Property Name="EndTrimOffset" Type="Real64" Value="98400"/>
-												<Property Name="FadeInMode" Type="int16" Value="0"/>
-												<Property Name="FadeOutMode" Type="int16" Value="0"/>
-											</PropertyList>
-											<AudioSourceRef Name="Chants Chants Devilution Music" ID="{63618249-2CC2-4CBF-A9F3-1D2312959AB4}"/>
-										</MusicClip>
-									</ClipList>
-								</MusicTrackSequence>
-							</SequenceList>
-						</MusicTrack>
-					</ChildrenList>
-					<CueList>
-						<MusicCue Name="Entry Cue" ID="{B41B3863-B46A-4F6B-87CF-87F338E1FD18}"/>
-						<MusicCue Name="Exit Cue" ID="{F125AB96-76D3-4A48-88B5-B1366B1D213D}">
-							<PropertyList>
-								<Property Name="CueType" Type="int16" Value="1"/>
-								<Property Name="TimeMs" Type="Real64" Value="1000"/>
-							</PropertyList>
-						</MusicCue>
-					</CueList>
-				</MusicSegment>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{7C4D23EC-5208-4022-A6E4-92F3597189B5}" PersistMode="Standalone"/>
 	</InteractiveMusic>
 </WwiseDocument>
