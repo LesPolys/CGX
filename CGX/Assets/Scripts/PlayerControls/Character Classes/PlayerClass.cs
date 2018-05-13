@@ -180,9 +180,9 @@ public class PlayerClass : MonoBehaviour
 
     }
 
-    public virtual void AnimationEnd()
+    public void AnimationEnd()
     {
-
+        abilityAnimating = false;
     }
 
 }

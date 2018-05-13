@@ -83,9 +83,6 @@ class Ranger : PlayerClass
     }
 
 
-    public override void AnimationEnd()
-    {
-        abilityAnimating = false;
-    }
+  
 
 }
