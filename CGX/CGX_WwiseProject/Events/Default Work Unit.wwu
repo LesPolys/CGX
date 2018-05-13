@@ -3,34 +3,238 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{032E0657-2410-45BE-97DA-B9D2266BB823}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Music" ID="{672A0AD7-A502-4EC1-88D5-F0653BE79C52}">
+				<Folder Name="Character-World Interactions" ID="{AFA68EE5-3876-4368-A23B-985E4E60D53D}" ShortID="635720664">
 					<ChildrenList>
-						<Action Name="" ID="{AA550DB9-8B5A-4CB4-B144-D0230A023653}" ShortID="328703710">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Test" ID="{9EE04B24-5F86-412C-9164-B3E8010D9406}" WorkUnitID="{7C4D23EC-5208-4022-A6E4-92F3597189B5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Folder Name="Coin" ID="{04A14BBB-69B4-47BF-9C2C-EDD546040ED2}" ShortID="713679595">
+							<ChildrenList>
+								<Event Name="Coin_Pickup" ID="{5AB89E30-CD99-4AC1-9101-9EC8B63884B9}">
+									<ChildrenList>
+										<Action Name="" ID="{F279EF12-76B4-4670-847D-97BED04C325A}" ShortID="418378768">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Coin_Pickup" ID="{74541289-0F72-4C0F-B80A-54E8EB653C47}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
-				</Event>
-				<Event Name="Keypress" ID="{004724AE-9844-4498-9F16-D36FCBDEFFD8}">
+				</Folder>
+				<Folder Name="Classes" ID="{669AFBF7-59D9-4C68-8C6D-AFE0968648ED}" ShortID="810383776">
 					<ChildrenList>
-						<Action Name="" ID="{6EA979E0-6952-4253-B4F7-ECC56668EC1F}" ShortID="303036587">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Keypress Test" ID="{EB42C60A-7D38-411D-BA0D-94CB1264948A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Folder Name="Ranger" ID="{A7916A50-6F4E-4192-86D2-CFC45CA5F865}" ShortID="667686996">
+							<ChildrenList>
+								<Event Name="Ranger_Attack" ID="{95DCEEBE-A856-4C52-AE7F-040A04C71F1D}">
+									<ChildrenList>
+										<Action Name="" ID="{713D9A5F-C413-46E7-AD33-03ACC3C3EC9A}" ShortID="676300287">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ranger_Attack" ID="{63BDD0E1-D371-4A11-8777-F2F97A581FD3}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Ranger_Footsteps" ID="{9CD6FB9D-390A-4186-AC2D-C65693D92E94}">
+									<ChildrenList>
+										<Action Name="" ID="{D94D43AF-3653-4BD7-9A0E-383A86B257B4}" ShortID="90711103">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ranger_Footsteps" ID="{95283487-EE97-4577-A4A7-93C56366E1D1}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Ranger_Jump" ID="{77723232-E12D-4D3E-AEE4-B2088D3C1585}">
+									<ChildrenList>
+										<Action Name="" ID="{D9291413-5070-4F7A-8301-A5FC3B859E20}" ShortID="360110227">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ranger_Jump" ID="{4BD2655A-7806-4671-BB8F-3EF1A5D77A57}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Druid" ID="{9C261BE6-D224-4E91-9B9B-3E0F7EC8004F}" ShortID="997596472">
+							<ChildrenList>
+								<Event Name="Druid_Attack" ID="{C986EBEA-DA04-4B7F-9DBC-314C3236E610}">
+									<ChildrenList>
+										<Action Name="" ID="{3135F71F-C242-41FC-8AA8-EFE664B16D0C}" ShortID="536186128">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Druid_Attack" ID="{38EAD9E7-1E65-4A01-A4E8-EEA0CCAE545C}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Druid_Footsteps" ID="{A190FFB6-9029-4B9F-A27A-4D1743319B68}">
+									<ChildrenList>
+										<Action Name="" ID="{5753CE46-CE46-4731-9F7C-AD12C6AA63F4}" ShortID="581981103">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Druid_Footsteps" ID="{512F0478-A26F-44AD-A7C2-0E7048790702}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Druid_Jump" ID="{C1D5484E-63DE-481C-934F-1CBA3DE01C49}">
+									<ChildrenList>
+										<Action Name="" ID="{A5DB37D7-FBD0-4FCD-AB7C-1EB54D99F5F5}" ShortID="237126483">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Druid_Jump" ID="{46D35986-C8A9-4551-8D0B-3696E059216F}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Knight" ID="{DDF0B2F4-C2F1-4DD8-95EE-387456BDE86E}" ShortID="109777016">
+							<ChildrenList>
+								<Event Name="Knight_Attack" ID="{8E9447EF-A385-453F-B816-C729C0B38052}">
+									<ChildrenList>
+										<Action Name="" ID="{DF8C5F23-A4AE-4E96-8110-73E0A1F1F285}" ShortID="574004423">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Knight_Attack" ID="{D910BDE4-3105-46F3-A496-D9427A0F5174}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Knight_Footsteps" ID="{9D372342-726C-4F60-86CF-1077F1368E63}">
+									<ChildrenList>
+										<Action Name="" ID="{4FD8C6FB-1B1D-4D4B-B281-5D6ADCAE8C43}" ShortID="613290949">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Knight_Footsteps" ID="{CA8F38C7-4A3C-4A54-B289-84E9CD0A69EB}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Knight_Jump" ID="{87500757-0B05-4E82-B3B1-2042346DAA5C}">
+									<ChildrenList>
+										<Action Name="" ID="{60EF4F67-1B16-464D-B2F0-1BB92CDBA157}" ShortID="865896858">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Knight_Jump" ID="{DC7E3465-32F1-4D42-ACE7-FDB3BD4DA736}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Mage" ID="{2FD040E2-6C13-45CA-BB45-455367A2BB76}" ShortID="946012029">
+							<ChildrenList>
+								<Event Name="Mage_Attack" ID="{074704B7-3E73-4B7B-B8EB-EAA10C2FEDA2}">
+									<ChildrenList>
+										<Action Name="" ID="{B589E0C5-4D40-4AA9-A57F-FD7CDFA207EE}" ShortID="669345564">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Mage_Attack" ID="{A6131BA6-F067-499F-B726-474721D245F0}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Mage_Footsteps" ID="{979B486E-D0FB-4D3E-BE3E-48EC846A36A8}">
+									<ChildrenList>
+										<Action Name="" ID="{EE0A4494-B605-4CA3-9DDA-3933BA9979D3}" ShortID="613676591">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Mage_Footsteps" ID="{53DB9329-633F-48C6-914C-736409778B8F}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Mage_Jump" ID="{890BD51F-6082-4A0B-8B5E-12C97B9BCC39}">
+									<ChildrenList>
+										<Action Name="" ID="{4160DBFE-9DE8-4E67-A2A4-95BD3977871D}" ShortID="302559446">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Mage_Jump" ID="{D7285CEC-8DEC-4D5B-A45F-78B9A2B1242C}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
-				</Event>
+				</Folder>
+				<Folder Name="Music" ID="{6D4DB6A0-82F5-4659-A132-345048B5EDDE}" ShortID="1041941646">
+					<ChildrenList>
+						<Folder Name="Main_Music" ID="{C67ECDB0-E94C-491E-8E47-7D13E1086FFF}" ShortID="369887158">
+							<ChildrenList>
+								<Event Name="Town_Track" ID="{0A53A264-14B6-4594-ABDA-6215143808D1}">
+									<ChildrenList>
+										<Action Name="" ID="{F95C10B4-302F-4C83-8399-71930C6F5CDE}" ShortID="855782574">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NiceDayDotJPEG_V3" ID="{853B501B-A6A7-4169-9F11-D4C2FCA0528A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

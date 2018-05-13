@@ -13,8 +13,20 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID KEYPRESS = 2418373383U;
-        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID COIN_PICKUP = 98870701U;
+        static const AkUniqueID DRUID_ATTACK = 2560653066U;
+        static const AkUniqueID DRUID_FOOTSTEPS = 267328355U;
+        static const AkUniqueID DRUID_JUMP = 1045264174U;
+        static const AkUniqueID KNIGHT_ATTACK = 2965945301U;
+        static const AkUniqueID KNIGHT_FOOTSTEPS = 2574148174U;
+        static const AkUniqueID KNIGHT_JUMP = 3926355425U;
+        static const AkUniqueID MAGE_ATTACK = 4114500570U;
+        static const AkUniqueID MAGE_FOOTSTEPS = 921890035U;
+        static const AkUniqueID MAGE_JUMP = 3864212094U;
+        static const AkUniqueID RANGER_ATTACK = 3022924773U;
+        static const AkUniqueID RANGER_FOOTSTEPS = 915474462U;
+        static const AkUniqueID RANGER_JUMP = 1341943729U;
+        static const AkUniqueID TOWN_TRACK = 2152959665U;
     } // namespace EVENTS
 
     namespace BANKS
