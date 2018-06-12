@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Druid : PlayerClass
+public class Druid : Player
 {
 
     public float attackRange;
@@ -49,13 +49,13 @@ public class Druid : PlayerClass
     }
 
 
-    public override void Ability()
+    public override void Ability()//find all the enemies in range and root them (Spawn a group of vines, )
     {
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
         if (colliders.Length > 0)
         {
-
+            
         }
 
     }

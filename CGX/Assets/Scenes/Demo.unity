@@ -208,6 +208,11 @@ Prefab:
       propertyPath: _skinWidth
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 114825827557633100, guid: 796761b474cad1847a8550e0252c21e2,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796761b474cad1847a8550e0252c21e2, type: 2}
   m_IsPrefabParent: 0
@@ -624,7 +629,7 @@ MonoBehaviour:
   memoryCutoffThreshold: 0.95
   monitorPoolSize: 128
   monitorQueuePoolSize: 64
-  callbackManagerBufferSize: 5
+  callbackManagerBufferSize: 4
   spatialAudioPoolSize: 4096
   maxSoundPropagationDepth: 8
   diffractionFlags: 11

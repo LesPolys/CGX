@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Mage : PlayerClass
+class Mage : Player
 {
     float abilityRange;
 

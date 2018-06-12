@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Ranger : PlayerClass
+class Ranger : Player
 {
 
     public GameObject arrowPrefab;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent: Rigidbody2D]
+
 public class TestEnemyWalk : MonoBehaviour {
 
 	Rigidbody2D rb2d;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Knight : PlayerClass
+public class Knight : Player
 {
 
 
