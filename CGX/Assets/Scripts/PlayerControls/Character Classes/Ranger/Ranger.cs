@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Ranger : Player
+public class Ranger : Player
 {
 
     public GameObject arrowPrefab;
@@ -28,19 +28,19 @@ class Ranger : Player
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("RangerRun"));
-                AkSoundEngine.PostEvent("Ranger_Footsteps", gameObject);
+               // AkSoundEngine.PostEvent("Ranger_Footsteps", gameObject);
                 AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("RangerJump"));
-                AkSoundEngine.PostEvent("Ranger_Jump", gameObject);
+                //AkSoundEngine.PostEvent("Ranger_Jump", gameObject);
                 break;
             case 3: //fall down
                 _animator.Play(Animator.StringToHash("RangerFall"));
                 break;
             case 4: //ability
                 _animator.Play(Animator.StringToHash("RangerPower"));
-                AkSoundEngine.PostEvent("Ranger_Attack", gameObject);
+                //AkSoundEngine.PostEvent("Ranger_Attack", gameObject);
                 break;
             case 5: //fainting
                 break;
@@ -68,13 +68,13 @@ class Ranger : Player
 
     void Shoot(Transform target)
     {
-        // Create the Bullet from the Bullet Prefab
+       
         var arrow = (GameObject)Instantiate(
             arrowPrefab,
             transform.position,
             Quaternion.identity);
 
-        // Add velocity to the bullet
+       
         //arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
         arrow.GetComponent<Arrow>().Target(target);
 

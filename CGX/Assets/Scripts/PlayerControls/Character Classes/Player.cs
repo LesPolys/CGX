@@ -26,7 +26,7 @@ public class Player : Agent
 
 
     protected RaycastHit2D _lastControllerColliderHit;
-    protected Vector3 _velocity;
+   
 
     protected KeyCode actionKey;
 
@@ -44,7 +44,6 @@ public class Player : Agent
     
 
 
-    // the Update loop contains a very simple example of moving the character around and controlling the animation
     void Update()
     {
         if (_controller.isGrounded)

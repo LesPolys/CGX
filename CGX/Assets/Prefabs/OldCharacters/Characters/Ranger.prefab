@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95283269592703160}
   - component: {fileID: 50891640964410680}
   - component: {fileID: 114633282944631738}
-  - component: {fileID: 114681654475375316}
+  - component: {fileID: 114654655282882022}
   m_Layer: 10
   m_Name: Ranger
   m_TagString: Player
@@ -167,7 +167,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   totalHorizontalRays: 8
   totalVerticalRays: 4
---- !u!114 &114681654475375316
+--- !u!114 &114654655282882022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,21 +175,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1416491309599416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf92d1bf0f0346aca9839a89c63a2c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ee8aeba740ca4fd1b775672727607cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  moveSpeed: 0
   gravity: -25
   jumpStartMultiplier: -25
   jumpEndMultiplier: -25
-  runSpeed: 2
   groundDamping: 20
   inAirDamping: 5
   jumpHeight: 3
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
-  health: 10
-  attackRange: 0
+    m_Bits: 2048
+  arrowPrefab: {fileID: 1070132052650802, guid: 85228a796745eeb48a1a300383c505d8,
+    type: 2}
+  numArrows: 1
+  attackRange: 10
 --- !u!212 &212324302579871578
 SpriteRenderer:
   m_ObjectHideFlags: 1

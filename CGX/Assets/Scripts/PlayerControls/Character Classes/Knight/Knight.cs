@@ -23,19 +23,19 @@ public class Knight : Player
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("KnightRun"));
-                AkSoundEngine.PostEvent("Knight_Footsteps", gameObject);
+                //AkSoundEngine.PostEvent("Knight_Footsteps", gameObject);
                 AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("KnightJump"));
-                AkSoundEngine.PostEvent("Knight_Jump", gameObject);
+                //AkSoundEngine.PostEvent("Knight_Jump", gameObject);
                 break;
             case 3: //fall down
                 _animator.Play(Animator.StringToHash("KnightFall"));
                 break;
             case 4: //ability
                 _animator.Play(Animator.StringToHash("KnightPower"));
-                AkSoundEngine.PostEvent("Knight_Attack", gameObject);
+                //AkSoundEngine.PostEvent("Knight_Attack", gameObject);
                 break;
             case 5: //fainting
                 break;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 class Mage : Player
 {
-    float abilityRange;
+    public float abilityRange;
 
     [SerializeField]
     protected LayerMask partyMask = 0;
@@ -25,19 +25,19 @@ class Mage : Player
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("MageRun"));
-                AkSoundEngine.PostEvent("Mage_Footsteps", gameObject);
+                //AkSoundEngine.PostEvent("Mage_Footsteps", gameObject);
                 AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("MageJump"));
-                AkSoundEngine.PostEvent("Mage_Jump", gameObject);
+                //AkSoundEngine.PostEvent("Mage_Jump", gameObject);
                 break;
             case 3: //fall down
                 _animator.Play(Animator.StringToHash("MageFall"));
                 break;
             case 4: //ability
                 _animator.Play(Animator.StringToHash("MagePower"));
-                AkSoundEngine.PostEvent("Mage_Attack", gameObject);
+                //AkSoundEngine.PostEvent("Mage_Attack", gameObject);
                 break;
             case 5: //fainting
                 break;
@@ -49,12 +49,36 @@ class Mage : Player
         }
     }
 
+    
+
     public override void Ability()
     {
+
+        GameObject[] partyMembers;
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, abilityRange, partyMask);
         if (colliders.Length > 0)
         {
-
+            foreach(Collider2D collider in colliders)
+            {
+                
+            }
         }
+
+        StartCoroutine(FloatParty());
+    }
+
+    IEnumerator FloatParty()
+    {
+        collider.transform.position = new Vector3(collider.transform.position.x, this.transform.position.y, collider.transform.position.z);
+
+        if ()//ability breaks
+        {
+
+            yield break;
+        }
+
+
+        yield return null;
     }
 }

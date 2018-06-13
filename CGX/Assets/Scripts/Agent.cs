@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Prime31;
 
-public class Agent : MonoBehaviour {
+public class Agent : MonoBehaviour
+{
 
 	 [SerializeField]
     protected float health;
@@ -15,8 +16,10 @@ public class Agent : MonoBehaviour {
 	protected CharacterController2D _controller;
     protected Animator _animator;
 
+    protected Vector3 _velocity;
 
-	#region Event Listeners
+
+    #region Event Listeners
 
     void onControllerCollider(RaycastHit2D hit)
     {
@@ -65,9 +68,14 @@ public class Agent : MonoBehaviour {
 
 	}
 
-	void KnockBack(){ //apply for up and back
+    public IEnumerator KnockBack(float duration, float power, Vector2 knockBackDirection)
+    {
 
-	}
+      
+
+
+        yield return 0;
+    }
 
 	void Damage(float damage){ //reduce health stat by X
 		health -= damage;
@@ -77,16 +85,15 @@ public class Agent : MonoBehaviour {
 		moveSpeed = 0;
 	}
 
-	void SlowDown(){ // slow down to a max of zero
-
-	}
-
-	void SpeedUp(){ //speed up to a max of?
-
-	}
-
-
+    IEnumerator AlterSpeedTemp(float speedChange, float abilityTime)
+    {
+        float startSpeed = moveSpeed;
+        moveSpeed += speedChange;
+        yield return new WaitForSeconds(abilityTime);
+        moveSpeed = startSpeed;
+    }
 
 
-	
+
+
 }

@@ -213,6 +213,15 @@ Prefab:
       propertyPath: moveSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114825827557633100, guid: 796761b474cad1847a8550e0252c21e2,
+        type: 2}
+      propertyPath: enemyMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513763796902258, guid: 796761b474cad1847a8550e0252c21e2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796761b474cad1847a8550e0252c21e2, type: 2}
   m_IsPrefabParent: 0
@@ -263,7 +272,12 @@ Prefab:
         type: 3}
     - target: {fileID: 1416491309599416, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114681654475375316, guid: 488c77f4bb0391e4da006e6ced0291fb,
+        type: 2}
+      propertyPath: enemyMask.m_Bits
+      value: 2048
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
