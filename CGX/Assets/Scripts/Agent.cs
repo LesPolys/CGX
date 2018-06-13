@@ -77,11 +77,11 @@ public class Agent : MonoBehaviour
         yield return 0;
     }
 
-	void Damage(float damage){ //reduce health stat by X
+	public void Damage(float damage){ //reduce health stat by X
 		health -= damage;
 	}
 
-	void Root(){
+	public void Root(){
 		moveSpeed = 0;
 	}
 
@@ -92,6 +92,17 @@ public class Agent : MonoBehaviour
         yield return new WaitForSeconds(abilityTime);
         moveSpeed = startSpeed;
     }
+
+    protected void changeYVelocity(float newYVelocity)
+    {
+        _velocity.y = newYVelocity;
+    }
+
+    protected void changeVelocity(Vector3 newVelocity)
+    {
+        _velocity = newVelocity;
+    }
+
 
 
 

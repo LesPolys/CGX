@@ -41,6 +41,8 @@ public class Player : Agent
     protected bool abilityAnimating;
 
 
+    protected enum PlayerState {IDLE, RUNNING, JUMPING, FALLING, ABILITY };
+    protected  PlayerState currentState;
     
 
 
@@ -56,7 +58,7 @@ public class Player : Agent
 
         if( _controller.isGrounded)
         {
-            //_animator.Play( Animator.StringToHash( "RangerRun" ) );
+            currentState = PlayerState.RUNNING;
             Animation(1); //run anim
             // run sound
 
@@ -68,14 +70,14 @@ public class Player : Agent
         if (_controller.isGrounded && Input.GetKeyDown(actionKey))
         {
             _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-            //_animator.Play( Animator.StringToHash( "RangerJump" ) );
+            currentState = PlayerState.JUMPING;
             Animation(2); //jump
             //jump sound
         }
 
         if (!_controller.isGrounded && Input.GetKeyDown(actionKey))
         {
-            //_animator.Play(Animator.StringToHash("RangerPower"));
+            currentState = PlayerState.ABILITY;
             Animation(4);
             abilityAnimating = true;
             Ability();
@@ -85,7 +87,7 @@ public class Player : Agent
 
         if (!_controller.isGrounded && _velocity.y < 0 && !abilityAnimating)
         {
-            // _animator.Play(Animator.StringToHash("RangerFall"));
+            currentState = PlayerState.FALLING;
             Animation(3);
         }
 
@@ -106,13 +108,11 @@ public class Player : Agent
         {
             gravity = jumpStartMultiplier;
         }
-        else
-        {
-            gravity = -25f;
-        }
+        
 
 
         _velocity.y += gravity * Time.deltaTime;
+        print(_velocity.y);
 
       
 
@@ -137,6 +137,18 @@ public class Player : Agent
         abilityAnimating = false;
     }
 
+    public void changeGravity(float newGravity)
+    {
+        gravity = newGravity;
+    }
+
+
+    public void FloatAgent(float newYVelocity, float newGravity)
+    {
+        changeYVelocity(newYVelocity);
+        changeGravity(newGravity);
+
+    }
 
 
 

@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4571051677295068, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.08
+      value: -3.913
       objectReference: {fileID: 0}
     - target: {fileID: 4571051677295068, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -515,7 +515,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4862153701212044, guid: 796761b474cad1847a8550e0252c21e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.85
+      value: -5.168
       objectReference: {fileID: 0}
     - target: {fileID: 4862153701212044, guid: 796761b474cad1847a8550e0252c21e2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -549,6 +549,11 @@ Prefab:
         type: 2}
       propertyPath: abilityRange
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825827557633100, guid: 796761b474cad1847a8550e0252c21e2,
+        type: 2}
+      propertyPath: magneticPower
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796761b474cad1847a8550e0252c21e2, type: 2}

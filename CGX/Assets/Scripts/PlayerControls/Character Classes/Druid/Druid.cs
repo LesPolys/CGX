@@ -55,9 +55,17 @@ public class Druid : Player
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
         if (colliders.Length > 0)
         {
-            
+            foreach (Collider2D collider in colliders){
+               // SpawnVine(collider.gameObject);
+               // collider.gameObject.
+            }   
         }
 
+    }
+
+    public void SpawnVine(GameObject target)
+    {
+        //Instantiate(vinesPrefab, target.position);
     }
 
 

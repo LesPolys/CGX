@@ -5,6 +5,9 @@ using UnityEngine;
 class Mage : Player
 {
     public float abilityRange;
+    public float magneticPower;
+    public float floatStrength = 10f;
+    public float amplitude = 0.5f;
 
     [SerializeField]
     protected LayerMask partyMask = 0;
@@ -53,32 +56,53 @@ class Mage : Player
 
     public override void Ability()
     {
+       // StopAllCoroutines();
 
-        GameObject[] partyMembers;
+        List<GameObject> partyMembers = new List<GameObject>();
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, abilityRange, partyMask);
         if (colliders.Length > 0)
         {
             foreach(Collider2D collider in colliders)
             {
-                
+                partyMembers.Add(collider.gameObject);
             }
         }
 
-        StartCoroutine(FloatParty());
+        partyMembers.Add(this.gameObject);//add the mage
+         
+        StartCoroutine(FloatParty(partyMembers,this.transform.position.y));
     }
 
-    IEnumerator FloatParty()
+    IEnumerator FloatParty(List<GameObject> partyMembers, float floatingHeight)
     {
-        collider.transform.position = new Vector3(collider.transform.position.x, this.transform.position.y, collider.transform.position.z);
 
-        if ()//ability breaks
+        
+        
+
+        while (abilityAnimating)
         {
+            foreach (GameObject member in partyMembers)
+            {
+                //floatingHeight += Mathf.Sin(Time.time * floatStrength)* Time.deltaTime;
+                Vector3 newPos = new Vector3(member.transform.position.x, floatingHeight + Mathf.Sin(Time.time * floatStrength) * amplitude , member.transform.position.z);
+                member.transform.position = Vector3.Lerp(member.transform.position, newPos, magneticPower);
 
-            yield break;
+
+
+                member.GetComponent<Player>().FloatAgent(-0.1f, -0.1f);
+               
+                //member.transform.position = newPos;
+            }
+
+            yield return null;
         }
+      
+
+        yield break;
+       
 
 
-        yield return null;
+      
     }
 }
