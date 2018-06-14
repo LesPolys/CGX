@@ -38,19 +38,18 @@ class Mage : Player
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("MageRun"));
-                //AkSoundEngine.PostEvent("Mage_Footsteps", gameObject);
                 AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("MageJump"));
-                //AkSoundEngine.PostEvent("Mage_Jump", gameObject);
+                AkSoundEngine.PostEvent("Mage_Jump", gameObject);
                 break;
             case 3: //fall down
                 _animator.Play(Animator.StringToHash("MageFall"));
                 break;
             case 4: //ability
                 _animator.Play(Animator.StringToHash("MagePower"));
-                //AkSoundEngine.PostEvent("Mage_Attack", gameObject);
+                AkSoundEngine.PostEvent("Mage_Attack", gameObject);
                 break;
             case 5: //fainting
                 break;

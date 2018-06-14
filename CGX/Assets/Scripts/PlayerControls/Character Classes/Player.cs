@@ -126,7 +126,7 @@ public class Player : Agent
 
 
         _velocity.y += gravity * Time.deltaTime;
-        print(_velocity.y);
+        //print(_velocity.y);
 
       
 
