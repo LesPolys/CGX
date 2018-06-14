@@ -25,7 +25,20 @@
 						</Folder>
 						<Folder Name="Actions" ID="{ADB2929B-A712-4BC9-8126-29FDCE5833BF}" ShortID="1033363660">
 							<ChildrenList>
-								<Event Name="Player_Death" ID="{712300B7-AE5C-4B9F-B312-DDBBBDDCDE92}"/>
+								<Event Name="Player_Death" ID="{712300B7-AE5C-4B9F-B312-DDBBBDDCDE92}">
+									<ChildrenList>
+										<Action Name="" ID="{EA8EAA04-D656-4B86-A320-C45A855C9935}" ShortID="559075623">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Player_Death" ID="{A09885B9-4913-4400-A4C9-7807F74C9E45}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -298,9 +311,9 @@
 				</Folder>
 				<Folder Name="Enemies" ID="{DC9BD50D-6058-4D48-BBB7-29D549DC4F34}" ShortID="973694088">
 					<ChildrenList>
-						<Folder Name="Rogue" ID="{5A76A74B-0B9E-4BE7-86FF-F0840820D281}" ShortID="321835032">
+						<Folder Name="FG" ID="{5A76A74B-0B9E-4BE7-86FF-F0840820D281}" ShortID="321835032">
 							<ChildrenList>
-								<Event Name="Rogue_Attack" ID="{F99D0350-6978-4D0D-A2D3-CE24CB526779}"/>
+								<Event Name="FG_Attack" ID="{F99D0350-6978-4D0D-A2D3-CE24CB526779}"/>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Minotaur" ID="{DD5136DF-2603-403C-8D11-22068987374B}" ShortID="918657162">

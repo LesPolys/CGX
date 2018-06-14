@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
 	<RootPaths>
-		<ProjectRoot>F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -26,6 +26,7 @@
 				<Event Id="588867630" Name="Druid_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Footsteps_Start"/>
 				<Event Id="1056055054" Name="Druid_Footsteps_Stop" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Footsteps_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="1045264174" Name="Druid_Jump" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Jump"/>
+				<Event Id="3959127699" Name="FG_Attack" ObjectPath="\Events\Default Work Unit\Enemies\FG\FG_Attack" MaxAttenuation="0.000000"/>
 				<Event Id="2965945301" Name="Knight_Attack" ObjectPath="\Events\Default Work Unit\Classes\Knight\Knight_Attack"/>
 				<Event Id="2446639207" Name="Knight_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Knight\Knight_Footsteps_Start"/>
 				<Event Id="3614010765" Name="Knight_Footsteps_Stop" ObjectPath="\Events\Default Work Unit\Classes\Knight\Knight_Footsteps_Stop" MaxAttenuation="0.000000"/>
@@ -37,15 +38,18 @@
 				<Event Id="2072673020" Name="Menu_Scroll" ObjectPath="\Events\Default Work Unit\Ui\Menu\Menu_Scroll" MaxAttenuation="0.000000"/>
 				<Event Id="4203375351" Name="Menu_Select" ObjectPath="\Events\Default Work Unit\Ui\Menu\Menu_Select" MaxAttenuation="0.000000"/>
 				<Event Id="3668249301" Name="Minotaur_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Minotaur\Minotaur_Attack" MaxAttenuation="0.000000"/>
-				<Event Id="3083087645" Name="Player_Death" ObjectPath="\Events\Default Work Unit\Character-World\Actions\Player_Death" MaxAttenuation="0.000000"/>
+				<Event Id="3083087645" Name="Player_Death" ObjectPath="\Events\Default Work Unit\Character-World\Actions\Player_Death"/>
 				<Event Id="3022924773" Name="Ranger_Attack" ObjectPath="\Events\Default Work Unit\Classes\Ranger\Ranger_Attack"/>
 				<Event Id="3333697559" Name="Ranger_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Ranger\Ranger_Footsteps_Start"/>
 				<Event Id="893890045" Name="Ranger_Footsteps_Stop" ObjectPath="\Events\Default Work Unit\Classes\Ranger\Ranger_Footsteps_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="1341943729" Name="Ranger_Jump" ObjectPath="\Events\Default Work Unit\Classes\Ranger\Ranger_Jump"/>
-				<Event Id="3675485020" Name="Rogue_Attack" ObjectPath="\Events\Default Work Unit\Enemies\Rogue\Rogue_Attack" MaxAttenuation="0.000000"/>
 				<Event Id="2152959665" Name="Town_Track" ObjectPath="\Events\Default Work Unit\Music\Main_Music\Town_Track"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="2046924" Language="SFX">
+					<ShortName>Player_Death_02.wav</ShortName>
+					<Path>SFX\Player_Death_02_1C9C67B2.wem</Path>
+				</File>
 				<File Id="15109588" Language="SFX">
 					<ShortName>Knight_Jump_V2_02.wav</ShortName>
 					<Path>SFX\Knight_Jump_V2_02_1C9C67B2.wem</Path>
@@ -90,9 +94,13 @@
 					<ShortName>Concrete_Steps_20.wav</ShortName>
 					<Path>SFX\Concrete_Steps_20_1C9C67B2.wem</Path>
 				</File>
-				<File Id="386107184" Language="SFX">
-					<ShortName>Gravel_Steps_13.wav</ShortName>
-					<Path>SFX\Gravel_Steps_13_1C9C67B2.wem</Path>
+				<File Id="371124851" Language="SFX">
+					<ShortName>Player_Death_04.wav</ShortName>
+					<Path>SFX\Player_Death_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="393497284" Language="SFX">
+					<ShortName>footsteps_female_heels_concrete_03.wav</ShortName>
+					<Path>SFX\footsteps_female_heels_concrete_03_1C9C67B2.wem</Path>
 				</File>
 				<File Id="424612533" Language="SFX">
 					<ShortName>Ranger_Jump_V1_01.wav</ShortName>
@@ -101,6 +109,10 @@
 				<File Id="425700718" Language="SFX">
 					<ShortName>NiceDayDotJPEG_V3.wav</ShortName>
 					<Path>SFX\NiceDayDotJPEG_V3_F17FB28C.wem</Path>
+				</File>
+				<File Id="436824989" Language="SFX">
+					<ShortName>footsteps_female_heels_concrete_02.wav</ShortName>
+					<Path>SFX\footsteps_female_heels_concrete_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="436852125" Language="SFX">
 					<ShortName>Mage_Jump_V8_03.wav</ShortName>
@@ -122,13 +134,21 @@
 					<ShortName>Coin_Pickup_V4_03.wav</ShortName>
 					<Path>SFX\Coin_Pickup_V4_03_1C9C67B2.wem</Path>
 				</File>
-				<File Id="680253440" Language="SFX">
-					<ShortName>Gravel_Steps_16.wav</ShortName>
-					<Path>SFX\Gravel_Steps_16_1C9C67B2.wem</Path>
+				<File Id="729251879" Language="SFX">
+					<ShortName>footsteps_female_heels_concrete_01.wav</ShortName>
+					<Path>SFX\footsteps_female_heels_concrete_01_1C9C67B2.wem</Path>
 				</File>
 				<File Id="731524336" Language="SFX">
 					<ShortName>Concrete_Steps_23.wav</ShortName>
 					<Path>SFX\Concrete_Steps_23_1C9C67B2.wem</Path>
+				</File>
+				<File Id="746124079" Language="SFX">
+					<ShortName>Player_Death_03.wav</ShortName>
+					<Path>SFX\Player_Death_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="788807419" Language="SFX">
+					<ShortName>footsteps_female_heels_concrete_05.wav</ShortName>
+					<Path>SFX\footsteps_female_heels_concrete_05_1C9C67B2.wem</Path>
 				</File>
 				<File Id="838095883" Language="SFX">
 					<ShortName>Knight_Jump_V2_03.wav</ShortName>
@@ -142,9 +162,9 @@
 					<ShortName>Concrete_Steps_22.wav</ShortName>
 					<Path>SFX\Concrete_Steps_22_1C9C67B2.wem</Path>
 				</File>
-				<File Id="883384221" Language="SFX">
-					<ShortName>Gravel_Steps_14.wav</ShortName>
-					<Path>SFX\Gravel_Steps_14_1C9C67B2.wem</Path>
+				<File Id="867590590" Language="SFX">
+					<ShortName>Player_Death_01.wav</ShortName>
+					<Path>SFX\Player_Death_01_1C9C67B2.wem</Path>
 				</File>
 				<File Id="924259518" Language="SFX">
 					<ShortName>Mage_Attack_V1.wav</ShortName>
@@ -154,13 +174,9 @@
 					<ShortName>Druid_Jump_V1_03.wav</ShortName>
 					<Path>SFX\Druid_Jump_V1_03_1C9C67B2.wem</Path>
 				</File>
-				<File Id="959457032" Language="SFX">
-					<ShortName>Gravel_Steps_15.wav</ShortName>
-					<Path>SFX\Gravel_Steps_15_1C9C67B2.wem</Path>
-				</File>
-				<File Id="963927184" Language="SFX">
-					<ShortName>Gravel_Steps_12.wav</ShortName>
-					<Path>SFX\Gravel_Steps_12_1C9C67B2.wem</Path>
+				<File Id="950085750" Language="SFX">
+					<ShortName>footsteps_female_heels_concrete_04.wav</ShortName>
+					<Path>SFX\footsteps_female_heels_concrete_04_1C9C67B2.wem</Path>
 				</File>
 				<File Id="973625299" Language="SFX">
 					<ShortName>Mage_Jump_V8_02.wav</ShortName>

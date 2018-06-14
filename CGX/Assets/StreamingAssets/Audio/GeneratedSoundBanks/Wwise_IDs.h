@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID DRUID_FOOTSTEPS_START = 588867630U;
         static const AkUniqueID DRUID_FOOTSTEPS_STOP = 1056055054U;
         static const AkUniqueID DRUID_JUMP = 1045264174U;
+        static const AkUniqueID FG_ATTACK = 3959127699U;
         static const AkUniqueID KNIGHT_ATTACK = 2965945301U;
         static const AkUniqueID KNIGHT_FOOTSTEPS_START = 2446639207U;
         static const AkUniqueID KNIGHT_FOOTSTEPS_STOP = 3614010765U;
@@ -34,7 +35,6 @@ namespace AK
         static const AkUniqueID RANGER_FOOTSTEPS_START = 3333697559U;
         static const AkUniqueID RANGER_FOOTSTEPS_STOP = 893890045U;
         static const AkUniqueID RANGER_JUMP = 1341943729U;
-        static const AkUniqueID ROGUE_ATTACK = 3675485020U;
         static const AkUniqueID TOWN_TRACK = 2152959665U;
     } // namespace EVENTS
 
