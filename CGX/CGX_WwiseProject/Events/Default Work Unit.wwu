@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{032E0657-2410-45BE-97DA-B9D2266BB823}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Character-World Interactions" ID="{AFA68EE5-3876-4368-A23B-985E4E60D53D}" ShortID="635720664">
+				<Folder Name="Character-World" ID="{AFA68EE5-3876-4368-A23B-985E4E60D53D}" ShortID="635720664">
 					<ChildrenList>
 						<Folder Name="Coin" ID="{04A14BBB-69B4-47BF-9C2C-EDD546040ED2}" ShortID="713679595">
 							<ChildrenList>
@@ -21,6 +21,11 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Actions" ID="{ADB2929B-A712-4BC9-8126-29FDCE5833BF}" ShortID="1033363660">
+							<ChildrenList>
+								<Event Name="Player_Death" ID="{712300B7-AE5C-4B9F-B312-DDBBBDDCDE92}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -43,7 +48,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Ranger_Footsteps" ID="{9CD6FB9D-390A-4186-AC2D-C65693D92E94}">
+								<Event Name="Ranger_Footsteps_Start" ID="{9CD6FB9D-390A-4186-AC2D-C65693D92E94}">
 									<ChildrenList>
 										<Action Name="" ID="{D94D43AF-3653-4BD7-9A0E-383A86B257B4}" ShortID="90711103">
 											<PropertyList>
@@ -71,6 +76,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Ranger_Footsteps_Stop" ID="{32AF8DEF-9AA6-414E-8DB2-4A9BAD6C414C}">
+									<ChildrenList>
+										<Action Name="" ID="{B2F1F3C7-46DF-46FF-8B5A-4411C33D7452}" ShortID="869484324">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ranger_Footsteps" ID="{95283487-EE97-4577-A4A7-93C56366E1D1}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Druid" ID="{9C261BE6-D224-4E91-9B9B-3E0F7EC8004F}" ShortID="997596472">
@@ -89,9 +108,9 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Druid_Footsteps" ID="{A190FFB6-9029-4B9F-A27A-4D1743319B68}">
+								<Event Name="Druid_Footsteps_Start" ID="{A190FFB6-9029-4B9F-A27A-4D1743319B68}">
 									<ChildrenList>
-										<Action Name="" ID="{5753CE46-CE46-4731-9F7C-AD12C6AA63F4}" ShortID="581981103">
+										<Action Name="" ID="{AFE89C4B-CE4D-4928-BA88-DC3E03C837C7}" ShortID="773296445">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
@@ -117,6 +136,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Druid_Footsteps_Stop" ID="{1CEBA638-721E-47D8-BC00-7095F3FE67E9}">
+									<ChildrenList>
+										<Action Name="" ID="{A730C7E3-B0AF-4E16-812A-27CE8A2DDF7D}" ShortID="418883587">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Druid_Footsteps" ID="{512F0478-A26F-44AD-A7C2-0E7048790702}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Knight" ID="{DDF0B2F4-C2F1-4DD8-95EE-387456BDE86E}" ShortID="109777016">
@@ -135,7 +168,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Knight_Footsteps" ID="{9D372342-726C-4F60-86CF-1077F1368E63}">
+								<Event Name="Knight_Footsteps_Start" ID="{9D372342-726C-4F60-86CF-1077F1368E63}">
 									<ChildrenList>
 										<Action Name="" ID="{4FD8C6FB-1B1D-4D4B-B281-5D6ADCAE8C43}" ShortID="613290949">
 											<PropertyList>
@@ -163,6 +196,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Knight_Footsteps_Stop" ID="{122641C8-175B-44CE-9499-415144255929}">
+									<ChildrenList>
+										<Action Name="" ID="{78663EAE-1885-46AC-B69E-2CFE66DB4C1A}" ShortID="85745806">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Knight_Footsteps" ID="{CA8F38C7-4A3C-4A54-B289-84E9CD0A69EB}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Mage" ID="{2FD040E2-6C13-45CA-BB45-455367A2BB76}" ShortID="946012029">
@@ -181,7 +228,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Mage_Footsteps" ID="{979B486E-D0FB-4D3E-BE3E-48EC846A36A8}">
+								<Event Name="Mage_Footsteps_Start" ID="{979B486E-D0FB-4D3E-BE3E-48EC846A36A8}">
 									<ChildrenList>
 										<Action Name="" ID="{EE0A4494-B605-4CA3-9DDA-3933BA9979D3}" ShortID="613676591">
 											<PropertyList>
@@ -209,6 +256,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Mage_Footsteps_Stop" ID="{E5B2250E-07A0-43FD-ACEF-515E169B3D82}">
+									<ChildrenList>
+										<Action Name="" ID="{9EFEA89F-BE39-40C1-B8B2-8EFDC5F45B21}" ShortID="1028855722">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Mage_Footsteps" ID="{53DB9329-633F-48C6-914C-736409778B8F}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -219,7 +280,7 @@
 							<ChildrenList>
 								<Event Name="Town_Track" ID="{0A53A264-14B6-4594-ABDA-6215143808D1}">
 									<ChildrenList>
-										<Action Name="" ID="{F95C10B4-302F-4C83-8399-71930C6F5CDE}" ShortID="855782574">
+										<Action Name="" ID="{9CB061A2-B174-48C3-BEEA-98D5DEB8865B}" ShortID="821365430">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
@@ -231,6 +292,30 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{DC9BD50D-6058-4D48-BBB7-29D549DC4F34}" ShortID="973694088">
+					<ChildrenList>
+						<Folder Name="Rogue" ID="{5A76A74B-0B9E-4BE7-86FF-F0840820D281}" ShortID="321835032">
+							<ChildrenList>
+								<Event Name="Rogue_Attack" ID="{F99D0350-6978-4D0D-A2D3-CE24CB526779}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Minotaur" ID="{DD5136DF-2603-403C-8D11-22068987374B}" ShortID="918657162">
+							<ChildrenList>
+								<Event Name="Minotaur_Attack" ID="{43316B88-B6F9-49DC-92E9-7D14C6E2046A}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ui" ID="{F576AE6B-6704-4D45-82A2-6E537FB03DB1}" ShortID="561337773">
+					<ChildrenList>
+						<Folder Name="Menu" ID="{F75239AC-6D9C-4537-B6E3-0A3A73EB24FE}" ShortID="841886145">
+							<ChildrenList>
+								<Event Name="Menu_Scroll" ID="{F8BD3ABC-51BF-4423-A919-C91949FCD992}"/>
+								<Event Name="Menu_Select" ID="{AB21AED7-0FAE-42A5-8427-CBD6785F3446}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

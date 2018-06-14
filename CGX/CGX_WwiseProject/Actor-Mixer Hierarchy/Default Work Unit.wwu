@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Character-World Interactions" ID="{355BBCE8-FFF7-4B10-9406-8A420C3C2F0E}" ShortID="450608774">
+				<Folder Name="Character-World" ID="{355BBCE8-FFF7-4B10-9406-8A420C3C2F0E}" ShortID="450608774">
 					<ChildrenList>
 						<Folder Name="Coin" ID="{3536FFAC-A55A-4803-831F-914A9337E7DE}" ShortID="51382613">
 							<ChildrenList>
@@ -119,6 +119,7 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Actions" ID="{65A21152-C7D7-4249-B34A-D0C71C31E612}" ShortID="665899133"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Classes" ID="{07340C50-91C4-466F-ADF3-49A60380F9FF}" ShortID="321311078">
@@ -149,6 +150,11 @@
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -366,7 +372,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -503,11 +509,6 @@
 								<RandomSequenceContainer Name="Druid_Footsteps" ID="{512F0478-A26F-44AD-A7C2-0E7048790702}" ShortID="87948700">
 									<PropertyList>
 										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>20</Value>
-											</ValueList>
-										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>2</Value>
@@ -515,12 +516,15 @@
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>350</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{56D2732D-A556-4359-84EA-90B79D3CD09B}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Max" Type="Real64" Value="177"/>
 															<Property Name="Min" Type="Real64" Value="-25"/>
 														</PropertyList>
 													</Modifier>
@@ -530,7 +534,7 @@
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2">
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.13">
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{97EDF9AD-6A3B-4AE7-B81A-D902D650D37B}"/>
@@ -538,14 +542,9 @@
 											</ModifierList>
 										</Property>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-15</Value>
+												<Value>-22</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -557,103 +556,6 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
 										</Reference>
 									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Dirt_Steps_02" ID="{93A19183-9DC6-4B63-8C87-D8FC0C14E9E5}" ShortID="248435725">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Dirt_Steps_02" ID="{3BAC2434-AF01-4103-AA77-10772E690DB7}" ShortID="849946840">
-													<Language>SFX</Language>
-													<AudioFile>Dirt_Steps_02.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Dirt_Steps_02" ID="{3BAC2434-AF01-4103-AA77-10772E690DB7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Dirt_Steps_03" ID="{C038EB30-123E-4A79-B68D-22355D1E7312}" ShortID="689760527">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Dirt_Steps_03" ID="{B99B41FC-0D06-4E87-ADA2-DB8C8E035EEA}" ShortID="573991957">
-													<Language>SFX</Language>
-													<AudioFile>Dirt_Steps_03.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Dirt_Steps_03" ID="{B99B41FC-0D06-4E87-ADA2-DB8C8E035EEA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Dirt_Steps_04" ID="{564D95F4-2307-4BD9-8251-FD376C842599}" ShortID="864237590">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Dirt_Steps_04" ID="{692D0334-BFF1-47A9-9805-7D2D03D7CD1E}" ShortID="470495367">
-													<Language>SFX</Language>
-													<AudioFile>Dirt_Steps_04.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Dirt_Steps_04" ID="{692D0334-BFF1-47A9-9805-7D2D03D7CD1E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Dirt_Steps_05" ID="{4EED6C41-1E97-40AC-A7BB-677F8ADBD82F}" ShortID="184425920">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Dirt_Steps_05" ID="{744BAE68-0753-4590-BDA2-0A55B63FCEA7}" ShortID="584269635">
-													<Language>SFX</Language>
-													<AudioFile>Dirt_Steps_05.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Dirt_Steps_05" ID="{744BAE68-0753-4590-BDA2-0A55B63FCEA7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Dirt_Steps_06" ID="{4D34E640-BDDD-4742-A14A-660AAA51DD48}" ShortID="152931698">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Dirt_Steps_06" ID="{8B3A480D-A260-4738-8576-7EFBC43C7BC6}" ShortID="373236575">
-													<Language>SFX</Language>
-													<AudioFile>Dirt_Steps_06.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Dirt_Steps_06" ID="{8B3A480D-A260-4738-8576-7EFBC43C7BC6}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Druid_Jump" ID="{46D35986-C8A9-4551-8D0B-3696E059216F}" ShortID="1035475719">
 									<PropertyList>
@@ -675,7 +577,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>-11</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -688,7 +590,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Mage_Jump_V5" ID="{4D705548-7310-4FD0-81B3-A283BDE9C771}" ShortID="879009011">
+										<Sound Name="Druid_Jump_V1_01" ID="{EC0A7F41-F5F3-4274-896A-13F08D574BF3}" ShortID="479291934">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
@@ -698,16 +600,51 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Mage_Jump_V5" ID="{4935A746-3B8C-48A8-9468-92C5A6B6BC9A}" ShortID="1010661751">
+												<AudioFileSource Name="Druid_Jump_V1_01" ID="{0503F96B-FDE8-4F0F-916B-433F42A6BC46}" ShortID="446454408">
 													<Language>SFX</Language>
-													<AudioFile>Mage_Jump_V5.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="944463585"/>
-													</ConvertedFileIDList>
+													<AudioFile>Druid_Jump_V1_01.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Mage_Jump_V5" ID="{4935A746-3B8C-48A8-9468-92C5A6B6BC9A}" Platform="Linked"/>
+												<ActiveSource Name="Druid_Jump_V1_01" ID="{0503F96B-FDE8-4F0F-916B-433F42A6BC46}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Druid_Jump_V1_02" ID="{4D73FFA9-50C8-410D-B895-5C30ED54688E}" ShortID="804071306">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Druid_Jump_V1_02" ID="{72A775DF-CDBB-4C7A-AEAF-51B08D9F857E}" ShortID="363037985">
+													<Language>SFX</Language>
+													<AudioFile>Druid_Jump_V1_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Druid_Jump_V1_02" ID="{72A775DF-CDBB-4C7A-AEAF-51B08D9F857E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Druid_Jump_V1_03" ID="{69DB5CB5-A10C-4B6E-AF54-541CAB8408D2}" ShortID="700368424">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Druid_Jump_V1_03" ID="{E859F88C-5B3E-456A-A84B-B4BE959114AE}" ShortID="933448769">
+													<Language>SFX</Language>
+													<AudioFile>Druid_Jump_V1_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Druid_Jump_V1_03" ID="{E859F88C-5B3E-456A-A84B-B4BE959114AE}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -788,7 +725,7 @@
 													<Modifier Name="" ID="{71283090-A73D-4D4C-B8D3-3BB4ECB90BE9}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="328"/>
+															<Property Name="Max" Type="Real64" Value="909"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -797,16 +734,11 @@
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.22"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.19"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>-13</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -933,6 +865,20 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Knight_Jump" ID="{DC7E3465-32F1-4D42-ACE7-FDB3BD4DA736}" ShortID="161170112">
 									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{AF1362F4-925F-4C35-B113-82A9F4BC15F9}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="126"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-3</Value>
@@ -948,7 +894,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Knight_Jump_V1" ID="{897787BA-746D-481C-9A4E-6E91CD162C2E}" ShortID="123590851">
+										<Sound Name="Knight_Jump_V2_01" ID="{18A67CFD-39FB-4537-845C-258B38BB84D5}" ShortID="1029321646">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
@@ -958,13 +904,51 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Knight_Jump_V1" ID="{59DDD544-5170-42D8-8CA8-67BD1CA621E6}" ShortID="935821706">
+												<AudioFileSource Name="Knight_Jump_V2_01" ID="{7F838B92-FF2F-4C8F-904C-2FE8244F4B9F}" ShortID="295259108">
 													<Language>SFX</Language>
-													<AudioFile>Knight_Jump_V1.wav</AudioFile>
+													<AudioFile>Knight_Jump_V2_01.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Knight_Jump_V1" ID="{59DDD544-5170-42D8-8CA8-67BD1CA621E6}" Platform="Linked"/>
+												<ActiveSource Name="Knight_Jump_V2_01" ID="{7F838B92-FF2F-4C8F-904C-2FE8244F4B9F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Knight_Jump_V2_02" ID="{73A636FF-476E-4E9A-846E-23A0093CFD6F}" ShortID="459609730">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Knight_Jump_V2_02" ID="{7B5EA874-467E-42B9-B40B-407033CE11F6}" ShortID="15109588">
+													<Language>SFX</Language>
+													<AudioFile>Knight_Jump_V2_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Knight_Jump_V2_02" ID="{7B5EA874-467E-42B9-B40B-407033CE11F6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Knight_Jump_V2_03" ID="{0A092188-2F19-4E11-A947-518ACB2FA36B}" ShortID="872950755">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Knight_Jump_V2_03" ID="{E6CEADBB-2FCB-4F59-AE77-CCF36B73060A}" ShortID="838095883">
+													<Language>SFX</Language>
+													<AudioFile>Knight_Jump_V2_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Knight_Jump_V2_03" ID="{E6CEADBB-2FCB-4F59-AE77-CCF36B73060A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1058,7 +1042,7 @@
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.21"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.15"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -1068,7 +1052,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-19</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1196,7 +1180,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1270,17 +1254,6 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
-						<SwitchContainer Name="New Switch Container" ID="{000BB74F-47FD-4A67-B521-8FD435815E36}" ShortID="950414399">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
-								</Reference>
-							</ReferenceList>
-							<GroupingInfo/>
-						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Main Music" ID="{BED7EAE1-B6B9-4603-BACD-95802B64CD9B}" ShortID="814136066">
@@ -1310,6 +1283,12 @@
 								<ActiveSource Name="NiceDayDotJPEG_V3" ID="{D1B926DC-33A4-4E0D-8FFD-CEC8DA522C87}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{C0BDC57A-2DB0-45B7-911A-20E28A3766BA}" ShortID="8115304"/>
+				<Folder Name="UI" ID="{C5836DF4-191D-42B2-AB32-52613EBDB112}" ShortID="508105046">
+					<ChildrenList>
+						<Folder Name="Menu" ID="{41429C88-7BFB-43F6-93C7-932B863B5679}" ShortID="547740066"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -1,54 +1,62 @@
 Event	ID	Name			Wwise Object Path	Notes
-	98870701	Coin_Pickup			\Default Work Unit\Character-World Interactions\Coin\Coin_Pickup	
-	267328355	Druid_Footsteps			\Default Work Unit\Classes\Druid\Druid_Footsteps	
-	915474462	Ranger_Footsteps			\Default Work Unit\Classes\Ranger\Ranger_Footsteps	
-	921890035	Mage_Footsteps			\Default Work Unit\Classes\Mage\Mage_Footsteps	
+	98870701	Coin_Pickup			\Default Work Unit\Character-World\Coin\Coin_Pickup	
+	302126430	Mage_Footsteps_Start			\Default Work Unit\Classes\Mage\Mage_Footsteps_Start	
+	309985790	Mage_Footsteps_Stop			\Default Work Unit\Classes\Mage\Mage_Footsteps_Stop	
+	588867630	Druid_Footsteps_Start			\Default Work Unit\Classes\Druid\Druid_Footsteps_Start	
+	893890045	Ranger_Footsteps_Stop			\Default Work Unit\Classes\Ranger\Ranger_Footsteps_Stop	
 	1045264174	Druid_Jump			\Default Work Unit\Classes\Druid\Druid_Jump	
+	1056055054	Druid_Footsteps_Stop			\Default Work Unit\Classes\Druid\Druid_Footsteps_Stop	
 	1341943729	Ranger_Jump			\Default Work Unit\Classes\Ranger\Ranger_Jump	
+	2072673020	Menu_Scroll			\Default Work Unit\Ui\Menu\Menu_Scroll	
 	2152959665	Town_Track			\Default Work Unit\Music\Main_Music\Town_Track	
+	2446639207	Knight_Footsteps_Start			\Default Work Unit\Classes\Knight\Knight_Footsteps_Start	
 	2560653066	Druid_Attack			\Default Work Unit\Classes\Druid\Druid_Attack	
-	2574148174	Knight_Footsteps			\Default Work Unit\Classes\Knight\Knight_Footsteps	
 	2965945301	Knight_Attack			\Default Work Unit\Classes\Knight\Knight_Attack	
 	3022924773	Ranger_Attack			\Default Work Unit\Classes\Ranger\Ranger_Attack	
+	3083087645	Player_Death			\Default Work Unit\Character-World\Actions\Player_Death	
+	3333697559	Ranger_Footsteps_Start			\Default Work Unit\Classes\Ranger\Ranger_Footsteps_Start	
+	3614010765	Knight_Footsteps_Stop			\Default Work Unit\Classes\Knight\Knight_Footsteps_Stop	
+	3668249301	Minotaur_Attack			\Default Work Unit\Enemies\Minotaur\Minotaur_Attack	
+	3675485020	Rogue_Attack			\Default Work Unit\Enemies\Rogue\Rogue_Attack	
 	3864212094	Mage_Jump			\Default Work Unit\Classes\Mage\Mage_Jump	
 	3926355425	Knight_Jump			\Default Work Unit\Classes\Knight\Knight_Jump	
 	4114500570	Mage_Attack			\Default Work Unit\Classes\Mage\Mage_Attack	
+	4203375351	Menu_Select			\Default Work Unit\Ui\Menu\Menu_Select	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	35215529	Coin_Pickup_V4_06	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World Interactions\Coin\Coin_Pickup\Coin_Pickup_V4_06		26944
-	87758470	Coin_Pickup_V4_02	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World Interactions\Coin\Coin_Pickup\Coin_Pickup_V4_02		41024
-	96230328	Druid_Attack_V1	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Attack\Druid_Attack_V1		174144
-	136010794	Coin_Pickup_V4_05	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World Interactions\Coin\Coin_Pickup\Coin_Pickup_V4_05		34880
-	136660730	Knight_Attack_V1	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Attack\Knight_Attack_V1		168000
-	189906918	Coin_Pickup_V4_04	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World Interactions\Coin\Coin_Pickup\Coin_Pickup_V4_04		31552
-	235965064	Ranger_Jump_V1_03	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_03		102464
-	367791495	Concrete_Steps_20	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_20_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_20		12096
-	373236575	Dirt_Steps_06	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dirt_Steps_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\Dirt_Steps_06		41024
-	386107184	Gravel_Steps_13	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_13_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_13		38464
-	424612533	Ranger_Jump_V1_01	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_01		88128
-	425700718	NiceDayDotJPEG_V3	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\NiceDayDotJPEG_V3_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Music\NiceDayDotJPEG_V3		11642464
-	436852125	Mage_Jump_V8_03	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_03		146496
-	461350670	Ranger_Jump_V1_02	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_02		98368
-	470495367	Dirt_Steps_04	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dirt_Steps_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\Dirt_Steps_04		42816
-	573991957	Dirt_Steps_03	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dirt_Steps_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\Dirt_Steps_03		37696
-	584269635	Dirt_Steps_05	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dirt_Steps_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\Dirt_Steps_05		42816
-	635049112	Concrete_Steps_21	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_21_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_21		18752
-	660316188	Coin_Pickup_V4_03	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World Interactions\Coin\Coin_Pickup\Coin_Pickup_V4_03		24896
-	680253440	Gravel_Steps_16	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_16_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_16		51776
-	731524336	Concrete_Steps_23	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_23_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_23		16960
-	845333328	Concrete_Steps_19	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_19_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_19		16896
-	847416279	Concrete_Steps_22	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_22_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_22		18240
-	849946840	Dirt_Steps_02	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dirt_Steps_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\Dirt_Steps_02		31040
-	883384221	Gravel_Steps_14	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_14_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_14		41920
-	924259518	Mage_Attack_V1	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Attack\Mage_Attack_V1		126016
-	935821706	Knight_Jump_V1	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Jump_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Jump\Knight_Jump_V1		38464
-	944463585	Mage_Jump_V5	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Mage_Jump_V5		105536
-	959457032	Gravel_Steps_15	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_15_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_15		36672
-	963927184	Gravel_Steps_12	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_12		35904
-	973625299	Mage_Jump_V8_02	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_02		133184
-	1012814379	Ranger_Attack_V1	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Attack\Ranger_Attack_V1		63552
-	1068518527	Mage_Jump_V8_01	C:\Users\Connor\Documents\GitHub\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_01		116288
+	15109588	Knight_Jump_V2_02	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Jump_V2_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Jump\Knight_Jump_V2_02		81792
+	35215529	Coin_Pickup_V4_06	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_06		26944
+	87758470	Coin_Pickup_V4_02	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_02		41024
+	96230328	Druid_Attack_V1	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Attack\Druid_Attack_V1		174144
+	136010794	Coin_Pickup_V4_05	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_05		34880
+	136660730	Knight_Attack_V1	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Attack\Knight_Attack_V1		168000
+	189906918	Coin_Pickup_V4_04	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_04		31552
+	235965064	Ranger_Jump_V1_03	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_03		102464
+	295259108	Knight_Jump_V2_01	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Jump_V2_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Jump\Knight_Jump_V2_01		85184
+	363037985	Druid_Jump_V1_02	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Jump_V1_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Druid_Jump_V1_02		94272
+	367791495	Concrete_Steps_20	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_20_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_20		12096
+	386107184	Gravel_Steps_13	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_13_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_13		38464
+	424612533	Ranger_Jump_V1_01	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_01		88128
+	425700718	NiceDayDotJPEG_V3	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\NiceDayDotJPEG_V3_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Music\NiceDayDotJPEG_V3		11642464
+	436852125	Mage_Jump_V8_03	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_03		146496
+	446454408	Druid_Jump_V1_01	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Jump_V1_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Druid_Jump_V1_01		47936
+	461350670	Ranger_Jump_V1_02	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_02		98368
+	635049112	Concrete_Steps_21	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_21_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_21		18752
+	660316188	Coin_Pickup_V4_03	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_03		24896
+	680253440	Gravel_Steps_16	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_16_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_16		51776
+	731524336	Concrete_Steps_23	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_23_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_23		16960
+	838095883	Knight_Jump_V2_03	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Jump_V2_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Jump\Knight_Jump_V2_03		141888
+	845333328	Concrete_Steps_19	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_19_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_19		16896
+	847416279	Concrete_Steps_22	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_22_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_22		18240
+	883384221	Gravel_Steps_14	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_14_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_14		41920
+	924259518	Mage_Attack_V1	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Attack\Mage_Attack_V1		126016
+	933448769	Druid_Jump_V1_03	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Jump_V1_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Druid_Jump_V1_03		92736
+	959457032	Gravel_Steps_15	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_15_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_15		36672
+	963927184	Gravel_Steps_12	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Gravel_Steps_12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\Gravel_Steps_12		35904
+	973625299	Mage_Jump_V8_02	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_02		133184
+	1012814379	Ranger_Attack_V1	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Attack\Ranger_Attack_V1		63552
+	1068518527	Mage_Jump_V8_01	F:\Documents\GitHub\test\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_01		116288
 

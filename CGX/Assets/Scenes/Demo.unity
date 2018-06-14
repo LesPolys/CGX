@@ -154,7 +154,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1576335689937302, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114440609997738142, guid: 5c883f67a59694b3db247b3b84a71b4c,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
@@ -272,12 +277,17 @@ Prefab:
         type: 3}
     - target: {fileID: 1416491309599416, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114681654475375316, guid: 488c77f4bb0391e4da006e6ced0291fb,
         type: 2}
       propertyPath: enemyMask.m_Bits
       value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654655282882022, guid: 488c77f4bb0391e4da006e6ced0291fb,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
