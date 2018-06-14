@@ -6,6 +6,9 @@ public class Druid : Player
 {
 
     public float attackRange;
+    public float rootTime;
+
+    public ObjectPooler[] vinePooler;
 
     Druid()
     {
@@ -66,17 +69,31 @@ public class Druid : Player
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
         if (colliders.Length > 0)
         {
-            foreach (Collider2D collider in colliders){
-               // SpawnVine(collider.gameObject);
-               // collider.gameObject.
-            }   
+     
+          
+                for (int i = 0; i < colliders.Length; i ++)
+                {
+
+				if(colliders[i].gameObject.GetComponent<Agent>().IsGrounded()){
+					GameObject newVine = vinePooler[0].GetPooledObject();
+
+					newVine.transform.position = colliders[i].gameObject.transform.position;
+					newVine.SetActive(true);
+
+					colliders[i].gameObject.GetComponent<Enemy>().Root(0, rootTime);
+				}
+                   
+
+                }
+              
+                
         }
 
     }
 
     public void SpawnVine(GameObject target)
     {
-        //Instantiate(vinesPrefab, target.position);
+       
     }
 
 

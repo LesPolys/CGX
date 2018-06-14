@@ -6,15 +6,27 @@ public class Ranger : Player
 {
 
     public GameObject arrowPrefab;
+	public GameObject crossHair;
     public int numArrows;
 
     public float attackRange;
 
 
+	private GameObject currentTarget;
+
+
     Ranger()
     {
         actionKey = KeyCode.E;
+
     }
+
+	void Start(){
+		StartCoroutine (CurrentTargetDisplay ());
+	}
+
+
+
     public override void PlayRunSound()
     {
         AkSoundEngine.PostEvent("Ranger_Footsteps_Start", gameObject);
@@ -48,6 +60,7 @@ public class Ranger : Player
                 _animator.Play(Animator.StringToHash("RangerFall"));
                 break;
             case 4: //ability
+				//check if no enemy?
                 _animator.Play(Animator.StringToHash("RangerPower"));
                 AkSoundEngine.PostEvent("Ranger_Attack", gameObject);
                 break;
@@ -66,11 +79,9 @@ public class Ranger : Player
 
     public override void Ability()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
-        if (colliders.Length > 0)
-        {
-            Shoot(colliders[colliders.Length-1].transform);
-        }
+		if(currentTarget != null){
+			Shoot(currentTarget.transform);
+		}
 
     }
 
@@ -87,11 +98,35 @@ public class Ranger : Player
         //arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
         arrow.GetComponent<Arrow>().Target(target);
 
-        // Destroy the bullet after 2 seconds
-        Destroy(arrow, 2.0f);
     }
 
+	IEnumerator CurrentTargetDisplay(){
 
-  
+		while (true) {
+			
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
+			if (colliders.Length > 0) {
+				currentTarget = colliders [colliders.Length - 1].gameObject;
+				MoveCrossHair (currentTarget.transform.position);
+			} else {
+				currentTarget = null;
+			}
+
+
+			if (currentTarget != null) {
+				crossHair.SetActive (true);
+			} else {
+				crossHair.SetActive (false);
+			}
+
+			yield return null;
+		}
+		yield break;
+	}
+
+	public void MoveCrossHair(Vector3 targetPos){
+		crossHair.transform.position = Vector3.Lerp(crossHair.transform.position, targetPos, 0.5f);
+	}
+
 
 }

@@ -42,12 +42,15 @@ public class Arrow : MonoBehaviour {
             Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
             return;
         }
-        var otherObj = other.gameObject;
-        //var health = otherObj.GetComponent<HealthRTS>();
-        //if (health != null)
-        //{
-        //    health.TakeDamage(10);
-        //}
+
+		if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
+		{
+			//knockback and damage
+			other.gameObject.GetComponent<Agent>().Damage(1);
+			return;
+		}
+    
+        
         Destroy(gameObject);
     }
 }

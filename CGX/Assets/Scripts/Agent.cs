@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Prime31;
 
+
+[RequireComponent(typeof(CharacterController2D))]
 public class Agent : MonoBehaviour
 {
 
@@ -81,9 +83,20 @@ public class Agent : MonoBehaviour
 		health -= damage;
 	}
 
-	public void Root(){
-		moveSpeed = 0;
-	}
+
+    public void Root(float newSpeed, float abilityTime)
+    {
+        StartCoroutine(RootRoutine(newSpeed, abilityTime));
+    }
+
+    IEnumerator RootRoutine(float newSpeed, float abilityTime)
+    {
+        float startSpeed = moveSpeed;
+		_velocity.x = newSpeed;//remove for gradual velocity reduction, should probably lerp between the values.
+        moveSpeed = newSpeed;
+        yield return new WaitForSeconds(abilityTime);
+        moveSpeed = startSpeed;
+    }
 
     IEnumerator AlterSpeedTemp(float speedChange, float abilityTime)
     {
@@ -102,6 +115,10 @@ public class Agent : MonoBehaviour
     {
         _velocity = newVelocity;
     }
+
+	public bool IsGrounded(){
+		return _controller.isGrounded;
+	}
 
 
 
