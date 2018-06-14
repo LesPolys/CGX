@@ -26,9 +26,9 @@ public class Player : Agent
 
 
     protected RaycastHit2D _lastControllerColliderHit;
-   
 
     protected KeyCode actionKey;
+    private bool isPlayingRunSound;
 
     /// <summary>
     /// mask with all layers that trigger events should fire when intersected
@@ -63,7 +63,21 @@ public class Player : Agent
             // run sound
 
         }
- 
+
+        //sound toggle
+        if (_controller.isGrounded && !isPlayingRunSound)
+        {
+            PlayRunSound();
+            isPlayingRunSound = true;
+
+        }
+        else if (!_controller.isGrounded)
+        {
+            StopRunSound();
+            isPlayingRunSound = false;
+        }
+
+
 
 
         // we can only jump whilst grounded
@@ -128,6 +142,16 @@ public class Player : Agent
     }
 
     public virtual void Animation(int anim)
+    {
+
+    }
+
+
+    public virtual void PlayRunSound()
+    {
+
+    }
+    public virtual void StopRunSound()
     {
 
     }

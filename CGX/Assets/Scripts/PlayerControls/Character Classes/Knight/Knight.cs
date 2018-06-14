@@ -11,6 +11,15 @@ public class Knight : Player
         actionKey = KeyCode.R;
     }
 
+    public override void PlayRunSound()
+    {
+        AkSoundEngine.PostEvent("Knight_Footsteps_Start", gameObject);
+    }
+
+    public override void StopRunSound()
+    {
+        AkSoundEngine.PostEvent("Knight_Footsteps_Stop", gameObject);
+    }
 
     public override void Animation(int anim)
     {

@@ -17,6 +17,16 @@ class Mage : Player
         actionKey = KeyCode.W;
     }
 
+    public override void PlayRunSound()
+    {
+        AkSoundEngine.PostEvent("Mage_Footsteps_Start", gameObject);
+    }
+
+    public override void StopRunSound()
+    {
+        AkSoundEngine.PostEvent("Mage_Footsteps_Stop", gameObject);
+    }
+
     public override void Animation(int anim)
     {
         switch (anim)

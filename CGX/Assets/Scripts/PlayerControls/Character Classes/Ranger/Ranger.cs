@@ -15,6 +15,16 @@ public class Ranger : Player
     {
         actionKey = KeyCode.E;
     }
+    public override void PlayRunSound()
+    {
+        AkSoundEngine.PostEvent("Ranger_Footsteps_Start", gameObject);
+    }
+
+    public override void StopRunSound()
+    {
+        AkSoundEngine.PostEvent("Ranger_Footsteps_Stop", gameObject);
+    }
+
 
 
     public override void Animation(int anim)
@@ -28,19 +38,18 @@ public class Ranger : Player
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("RangerRun"));
-               // AkSoundEngine.PostEvent("Ranger_Footsteps", gameObject);
                 AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("RangerJump"));
-                //AkSoundEngine.PostEvent("Ranger_Jump", gameObject);
+                AkSoundEngine.PostEvent("Ranger_Jump", gameObject);
                 break;
             case 3: //fall down
                 _animator.Play(Animator.StringToHash("RangerFall"));
                 break;
             case 4: //ability
                 _animator.Play(Animator.StringToHash("RangerPower"));
-                //AkSoundEngine.PostEvent("Ranger_Attack", gameObject);
+                AkSoundEngine.PostEvent("Ranger_Attack", gameObject);
                 break;
             case 5: //fainting
                 break;
