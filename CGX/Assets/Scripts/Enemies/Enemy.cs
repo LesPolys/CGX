@@ -19,18 +19,8 @@ public class Enemy : Agent {
 	// Update is called once per frame
 	void Update () {
 
-		normalizedHorizontalSpeed = 1;
-		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * moveSpeed, Time.deltaTime );
 
-
-		_velocity.y += gravity * Time.deltaTime;
-
-
-
-		_controller.move(_velocity * Time.deltaTime);
-
-		// grab our current _velocity to use as a base for all calculations
-		_velocity = _controller.velocity;
+	
 
 	}
 }

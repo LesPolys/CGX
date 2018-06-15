@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ShockWave : MonoBehaviour {
 
+	public float damage;
+	public float kbPower;
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -28,9 +32,8 @@ public class ShockWave : MonoBehaviour {
         if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
         {
             //knockback and damage
-            other.gameObject.GetComponent<Agent>().Damage(1);
-            other.gameObject.GetComponent<Agent>().KnockBack(10, (other.transform.position - transform.position).normalized);
-            Destroy(gameObject);
+			other.gameObject.GetComponent<Agent>().Damage(damage);
+			other.gameObject.GetComponent<Agent>().KnockBack(kbPower, (other.transform.position - transform.position).normalized);
             return;
         }
 

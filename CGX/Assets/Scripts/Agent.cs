@@ -72,6 +72,7 @@ public class Agent : MonoBehaviour
 
     public void KnockBack( float power, Vector2 knockBackDirection)
     {
+		knockBackDirection += new Vector2 (0, 3);
         changeVelocity(knockBackDirection * power);
     }
 

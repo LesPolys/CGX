@@ -118,7 +118,23 @@ public class Ranger : Player
 			
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
 			if (colliders.Length > 0) {
-				currentTarget = colliders [colliders.Length - 1].gameObject;
+				//currentTarget = colliders [colliders.Length - 1].gameObject;
+
+				float smallestDistance = 1000.0f;//absurd starting value
+
+
+				foreach (Collider2D collider in colliders) { // sort by closest
+					
+					float distance = Vector3.Distance (collider.transform.position, transform.position);
+
+					if(distance < smallestDistance){
+						smallestDistance = distance;
+						currentTarget = collider.gameObject;
+					}
+
+				}
+
+
 				MoveCrossHair (currentTarget.transform.position);
 			} else {
 				currentTarget = null;
