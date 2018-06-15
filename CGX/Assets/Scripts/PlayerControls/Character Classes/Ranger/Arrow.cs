@@ -34,23 +34,27 @@ public class Arrow : MonoBehaviour {
         //Move Projectile
         transform.position += transform.right * arrowSpeed * Time.deltaTime;
     }
-    void OnTriggerEnter(Collider other)//void OnCollisionEnter(Collision hit)
+    void OnTriggerEnter2D(Collider2D other)
+    //void OnCollisionEnter(Collision hit)
     {
         if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
         {
+            print("Player");
             // Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
-            Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
+            Physics2D.IgnoreCollision(other.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             return;
         }
 
 		if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
 		{
-			//knockback and damage
+            //knockback and damage
 			other.gameObject.GetComponent<Agent>().Damage(1);
-			return;
+            other.gameObject.GetComponent<Agent>().KnockBack(2, (other.transform.position - transform.position).normalized);
+            gameObject.SetActive(false);
+            return;
 		}
     
         
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

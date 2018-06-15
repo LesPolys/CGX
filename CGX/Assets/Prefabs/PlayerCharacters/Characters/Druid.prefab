@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 95320536493450048}
   - component: {fileID: 114623677544055748}
   - component: {fileID: 114156527949890286}
+  - component: {fileID: 114490723072271624}
   m_Layer: 10
   m_Name: Druid
   m_TagString: Player
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277517150510006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.194, y: 5.087, z: 0}
+  m_LocalPosition: {x: -7, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,7 +131,24 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
-  attackRange: 0
+  attackRange: 20.8
+  rootTime: 5
+  vinePooler:
+  - {fileID: 114490723072271624}
+--- !u!114 &114490723072271624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277517150510006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 1451386187821814, guid: f636254d34712ba468ca6a10842a169e,
+    type: 2}
+  pooledAmount: 10
 --- !u!114 &114623677544055748
 MonoBehaviour:
   m_ObjectHideFlags: 1

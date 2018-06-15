@@ -12,7 +12,11 @@ public class Ranger : Player
     public float attackRange;
 
 
-	private GameObject currentTarget;
+
+    public ObjectPooler[] arrowPooler;
+
+
+    private GameObject currentTarget;
 
 
     Ranger()
@@ -79,24 +83,32 @@ public class Ranger : Player
 
     public override void Ability()
     {
-		if(currentTarget != null){
+		/*if(currentTarget != null){
 			Shoot(currentTarget.transform);
-		}
+		}*/
 
     }
 
 
-    void Shoot(Transform target)
+    void Shoot()
     {
-       
-        var arrow = (GameObject)Instantiate(
-            arrowPrefab,
-            transform.position,
-            Quaternion.identity);
+        if (currentTarget != null)
+        {
+
+            GameObject arrow = arrowPooler[0].GetPooledObject();
+
+            arrow.transform.position = transform.position;
+            arrow.SetActive(true);
+
+            /*var arrow = (GameObject)Instantiate(
+             arrowPrefab,
+             transform.position,
+             Quaternion.identity);*/
 
        
-        //arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
-        arrow.GetComponent<Arrow>().Target(target);
+            //arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
+            arrow.GetComponent<Arrow>().Target(currentTarget.transform);
+        }
 
     }
 

@@ -207,7 +207,7 @@ MonoBehaviour:
     m_Bits: 512
   triggerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   oneWayPlatformMask:
     serializedVersion: 2
     m_Bits: 0
@@ -257,7 +257,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 490717409}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -585,12 +585,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114654655282882022, guid: 488c77f4bb0391e4da006e6ced0291fb,
-        type: 2}
-      propertyPath: arrowPrefab
-      value: 
-      objectReference: {fileID: 1070132052650802, guid: 85228a796745eeb48a1a300383c505d8,
-        type: 2}
     - target: {fileID: 114654655282882022, guid: 488c77f4bb0391e4da006e6ced0291fb,
         type: 2}
       propertyPath: crossHair

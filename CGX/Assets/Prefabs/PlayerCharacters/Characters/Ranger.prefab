@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50891640964410680}
   - component: {fileID: 114633282944631738}
   - component: {fileID: 114654655282882022}
+  - component: {fileID: 114304658990624570}
   m_Layer: 10
   m_Name: Ranger
   m_TagString: Player
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416491309599416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.841, y: 3.665, z: 0}
+  m_LocalPosition: {x: -5.33, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,6 +109,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114304658990624570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416491309599416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 1070132052650802, guid: 85228a796745eeb48a1a300383c505d8,
+    type: 2}
+  pooledAmount: 10
 --- !u!114 &114633282944631738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +141,7 @@ MonoBehaviour:
     m_Bits: 512
   triggerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   oneWayPlatformMask:
     serializedVersion: 2
     m_Bits: 0
@@ -191,8 +206,11 @@ MonoBehaviour:
     m_Bits: 2048
   arrowPrefab: {fileID: 1070132052650802, guid: 85228a796745eeb48a1a300383c505d8,
     type: 2}
+  crossHair: {fileID: 0}
   numArrows: 1
   attackRange: 10
+  arrowPooler:
+  - {fileID: 114304658990624570}
 --- !u!212 &212324302579871578
 SpriteRenderer:
   m_ObjectHideFlags: 1

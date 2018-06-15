@@ -6,6 +6,8 @@ public class Knight : Player
 {
 
 
+    public ObjectPooler[] shockWavePooler;
+
     Knight()
     {
         actionKey = KeyCode.R;
@@ -59,5 +61,14 @@ public class Knight : Player
     public override void Ability()
     {
 
+    }
+
+    public void SpawnShockWave()
+    {
+        print("ELLo");
+        GameObject shockwave = shockWavePooler[0].GetPooledObject();
+
+        shockwave.transform.position = transform.position;
+        shockwave.SetActive(true);
     }
 }

@@ -113,58 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &312178240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 312178243}
-  - component: {fileID: 312178242}
-  - component: {fileID: 312178241}
-  m_Layer: 0
-  m_Name: WwiseGlobal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &312178241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 312178240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 398c64a3ee420a9419a37a36a006bcb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &312178242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 312178240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08fd7772c0bdf4745a5626bbfe69a53f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &312178243
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 312178240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &317495486
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042719212
 GameObject:
@@ -241,8 +189,6 @@ GameObject:
   - component: {fileID: 1042719216}
   - component: {fileID: 1042719215}
   - component: {fileID: 1042719214}
-  - component: {fileID: 1042719217}
-  - component: {fileID: 1042719213}
   - component: {fileID: 1042719219}
   - component: {fileID: 1042719218}
   - component: {fileID: 1042719220}
@@ -253,17 +199,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1042719213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1042719212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 383b77b72c5b73b40bd90cedab4e9dd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &1042719214
 Behaviour:
   m_ObjectHideFlags: 0
@@ -320,17 +255,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1042719217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1042719212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13e237ac4ae0a841a5518d330952b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1042719218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +556,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114440609997738142, guid: 5c883f67a59694b3db247b3b84a71b4c,
+        type: 2}
+      propertyPath: shockWavePooler.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4873212891637534, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.79
@@ -662,8 +591,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4873212891637534, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114135974918082014, guid: 5c883f67a59694b3db247b3b84a71b4c,
+        type: 2}
+      propertyPath: pooledObject
+      value: 
+      objectReference: {fileID: 1445085193187194, guid: 9552b0777eb90334eac0adea50bd9324,
+        type: 2}
+    - target: {fileID: 114135974918082014, guid: 5c883f67a59694b3db247b3b84a71b4c,
+        type: 2}
+      propertyPath: pooledAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114440609997738142, guid: 5c883f67a59694b3db247b3b84a71b4c,
+        type: 2}
+      propertyPath: shockWavePooler.Array.data[0]
+      value: 
+      objectReference: {fileID: 2133479166}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2133479166 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114135974918082014, guid: 5c883f67a59694b3db247b3b84a71b4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2133479165}
+  m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}

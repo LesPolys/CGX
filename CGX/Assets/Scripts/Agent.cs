@@ -70,13 +70,9 @@ public class Agent : MonoBehaviour
 
 	}
 
-    public IEnumerator KnockBack(float duration, float power, Vector2 knockBackDirection)
+    public void KnockBack( float power, Vector2 knockBackDirection)
     {
-
-      
-
-
-        yield return 0;
+        changeVelocity(knockBackDirection * power);
     }
 
 	public void Damage(float damage){ //reduce health stat by X
