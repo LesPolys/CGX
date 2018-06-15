@@ -27,6 +27,9 @@ public class Minos : Enemy {
 	void Update () {
 		//DrawRay( transform.position, transform.right * losRange, Color.red );
 
+		if(Input.GetKeyDown(KeyCode.A)){
+			ChangeFacing();
+		}
 		
 
 		if(enraged){
@@ -55,10 +58,10 @@ public class Minos : Enemy {
 		normalizedHorizontalSpeed = normalizedHorizontalSpeed * -1;
 
 		if(normalizedHorizontalSpeed == 1){//face and move right
-			transform.rotation = new Vector3(transform.rotation.x,0,transform.rotation.z);
+			transform.rotation = new Quaternion(transform.rotation.x,0,transform.rotation.z, 0);
 		}
 		if(normalizedHorizontalSpeed == -1){//face and move left
-			transform.rotation.y = new Vector3(transform.rotation.x,180,transform.rotation.z);;
+			transform.rotation = new Quaternion(transform.rotation.x,180,transform.rotation.z, 0);
 		}
 	}
 
