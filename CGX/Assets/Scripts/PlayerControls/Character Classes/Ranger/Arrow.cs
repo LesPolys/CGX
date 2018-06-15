@@ -39,7 +39,7 @@ public class Arrow : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
         {
-            print("Player");
+            //print("Player");
             // Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
             Physics2D.IgnoreCollision(other.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             return;
