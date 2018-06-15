@@ -113,11 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &332570219 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1442206837235710, guid: 6520b3a6ed5ffde47a6c42901a9495e1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1154362112}
 --- !u!1 &353226423
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,56 +334,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4266187963880900, guid: c41e05399f4ef4e4f9d9c89588e4f80e,
     type: 2}
   m_PrefabInternal: {fileID: 2116614081}
---- !u!1001 &1154362112
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675832151162912, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1442206837235710, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_Name
-      value: ReticuleTest
-      objectReference: {fileID: 0}
-    - target: {fileID: 1442206837235710, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6520b3a6ed5ffde47a6c42901a9495e1, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1188972349
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +363,7 @@ Transform:
   - {fileID: 353226424}
   - {fileID: 788384764}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1386949117
 GameObject:
@@ -433,6 +378,7 @@ GameObject:
   - component: {fileID: 1386949120}
   - component: {fileID: 1386949119}
   - component: {fileID: 1386949118}
+  - component: {fileID: 1386949124}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -549,6 +495,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1386949124
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386949117}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 385a0f9e572763b4cae7fcc4634b2193, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1571993480
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,11 +618,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114654655282882022, guid: 488c77f4bb0391e4da006e6ced0291fb,
-        type: 2}
-      propertyPath: crossHair
-      value: 
-      objectReference: {fileID: 332570219}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 488c77f4bb0391e4da006e6ced0291fb, type: 2}
   m_IsPrefabParent: 0

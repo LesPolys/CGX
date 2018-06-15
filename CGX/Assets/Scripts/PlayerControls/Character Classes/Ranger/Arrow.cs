@@ -9,6 +9,8 @@ public class Arrow : MonoBehaviour {
     public float speed = 30.0f; //Probably don't need a slerp for this
  
 
+	private Transform arrowTarget;
+
 
    
 
@@ -20,6 +22,10 @@ public class Arrow : MonoBehaviour {
     //    Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
     //    transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
     //}
+
+	public void SetTarget(Transform newTarget){
+		arrowTarget = newTarget;
+	}
     
     public void Target(Transform target)
     {
@@ -32,8 +38,11 @@ public class Arrow : MonoBehaviour {
     void Update()
     {
         //Move Projectile
+		Target (arrowTarget);
         transform.position += transform.right * arrowSpeed * Time.deltaTime;
     }
+
+
     void OnTriggerEnter2D(Collider2D other)
     //void OnCollisionEnter(Collision hit)
     {
@@ -47,6 +56,7 @@ public class Arrow : MonoBehaviour {
 
 		if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
 		{
+			print ("hi");
             //knockback and damage
 			other.gameObject.GetComponent<Agent>().Damage(1);
             other.gameObject.GetComponent<Agent>().KnockBack(2, (other.transform.position - transform.position).normalized);
