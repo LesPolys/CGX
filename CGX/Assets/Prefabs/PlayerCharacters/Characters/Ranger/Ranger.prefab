@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114633282944631738}
   - component: {fileID: 114654655282882022}
   - component: {fileID: 114304658990624570}
+  - component: {fileID: 114863285491568884}
   m_Layer: 10
   m_Name: Ranger
   m_TagString: Player
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416491309599416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.33, y: 0.77, z: 0}
+  m_LocalPosition: {x: -1.61, y: -1.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 1070132052650802, guid: 85228a796745eeb48a1a300383c505d8,
+  pooledObject: {fileID: 1729277268655034, guid: 85228a796745eeb48a1a300383c505d8,
     type: 2}
   pooledAmount: 10
 --- !u!114 &114633282944631738
@@ -200,17 +201,31 @@ MonoBehaviour:
   jumpEndMultiplier: -25
   groundDamping: 20
   inAirDamping: 5
-  jumpHeight: 3
+  jumpHeight: 9.84
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
   arrowPrefab: {fileID: 1070132052650802, guid: 85228a796745eeb48a1a300383c505d8,
     type: 2}
-  crossHair: {fileID: 0}
   numArrows: 1
   attackRange: 10
-  arrowPooler:
+  rangerPooler:
   - {fileID: 114304658990624570}
+  - {fileID: 114863285491568884}
+--- !u!114 &114863285491568884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416491309599416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 1936735055520866, guid: 3af350e366fd6cb43bc0372404fff9b6,
+    type: 2}
+  pooledAmount: 2
 --- !u!212 &212324302579871578
 SpriteRenderer:
   m_ObjectHideFlags: 1

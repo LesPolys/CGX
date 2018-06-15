@@ -5,15 +5,15 @@ using UnityEngine;
 public class Ranger : Player
 {
 
-    public GameObject arrowPrefab;
-	public GameObject crossHair;
+    //public GameObject arrowPrefab;
+	//public GameObject crossHair;
     public int numArrows;
 
     public float attackRange;
 
 
 
-    public ObjectPooler[] arrowPooler;
+    public ObjectPooler[] rangerPooler;
 
 
     private GameObject currentTarget;
@@ -83,31 +83,28 @@ public class Ranger : Player
 
     public override void Ability()
     {
-		/*if(currentTarget != null){
-			Shoot(currentTarget.transform);
-		}*/
+
 
     }
+
+	public void DisplayCrosshair(){
+		if (currentTarget != null) {
+			GameObject crosshair = rangerPooler [1].GetPooledObject ();
+			crosshair.SetActive (true);
+			crosshair.GetComponent<Crosshair> ().AssignTarget (currentTarget);
+			crosshair.GetComponent<Crosshair> ().PlayZoomIn ();
+		}
+	}
 
 
     void Shoot()
     {
         if (currentTarget != null)
         {
-
-            GameObject arrow = arrowPooler[0].GetPooledObject();
-
-            arrow.transform.position = transform.position;
+            GameObject arrow = rangerPooler[0].GetPooledObject();
+			arrow.transform.position = transform.position;
             arrow.SetActive(true);
-
-            /*var arrow = (GameObject)Instantiate(
-             arrowPrefab,
-             transform.position,
-             Quaternion.identity);*/
-
-       
-            //arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
-            arrow.GetComponent<Arrow>().Target(currentTarget.transform);
+			arrow.GetComponent<Arrow>().SetTarget(currentTarget.transform);
         }
 
     }
@@ -135,26 +132,26 @@ public class Ranger : Player
 				}
 
 
-				MoveCrossHair (currentTarget.transform.position);
+				//MoveCrossHair (currentTarget.transform.position);
 			} else {
 				currentTarget = null;
 			}
 
-
+            /*
 			if (currentTarget != null) {
 				crossHair.SetActive (true);
 			} else {
 				crossHair.SetActive (false);
-			}
+			}*/
 
 			yield return null;
 		}
 		yield break;
 	}
 
-	public void MoveCrossHair(Vector3 targetPos){
+	/*public void MoveCrossHair(Vector3 targetPos){
 		crossHair.transform.position = Vector3.Lerp(crossHair.transform.position, targetPos, 0.5f);
-	}
+	}*/
 
 
 }
