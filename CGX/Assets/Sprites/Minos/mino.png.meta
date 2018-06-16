@@ -1,27 +1,39 @@
 fileFormatVersion: 2
-guid: 98d532ed68506d3489246ccb787e9b5c
+guid: 99b61b1471d45b44da461a44adfbf6d4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mino
-    21300002: mino_0
-    21300004: mino_1
-    21300006: mino_2
-    21300008: mino_3
-    21300010: mino_4
-    21300012: mino_5
-    21300014: mino_6
-    21300016: mino_7
-    21300018: mino_8
-    21300020: mino_9
-    21300022: mino_10
-    21300024: mino_11
-    21300026: mino_12
-    21300028: mino_13
-    21300030: mino_14
-    21300032: mino_15
-    21300034: mino_16
-    21300036: mino_17
-    21300038: mino_18
+    21300000: mino_0
+    21300002: mino_1
+    21300004: mino_2
+    21300006: mino_3
+    21300008: mino_4
+    21300010: mino_5
+    21300012: mino_6
+    21300014: mino_7
+    21300016: mino_8
+    21300018: mino_9
+    21300020: mino_10
+    21300022: mino_11
+    21300024: mino_12
+    21300026: mino_13
+    21300028: mino_14
+    21300030: mino_15
+    21300032: mino_16
+    21300034: mino_17
+    21300036: mino_18
+    21300038: mino_19
+    21300040: mino_20
+    21300042: mino_21
+    21300044: mino_22
+    21300046: mino_23
+    21300048: mino_24
+    21300050: mino_25
+    21300052: mino_26
+    21300054: mino_27
+    21300056: mino_28
+    21300058: mino_29
+    21300060: mino_30
+    21300062: mino_31
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -128,17 +140,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0afb661f538c3684da3c6a8bfa34a650
+      spriteID: 091b05d2e089a4c44b87a098ecc9212f
       vertices: []
       indices: 
       edges: []
@@ -148,17 +160,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 639fcc475c038534093e2ed31d42ddc8
+      spriteID: 9bc35a8368ed67e4b93e4d8055e069f2
       vertices: []
       indices: 
       edges: []
@@ -168,17 +180,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c12c5c5623d5bc408f20915a06cff9f
+      spriteID: 91057a2452502734e8799f2743ccb9d7
       vertices: []
       indices: 
       edges: []
@@ -188,17 +200,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c930bfd4b467f444284f5262d375c335
+      spriteID: c2cf30b1fe1dad34fa83fb84387a53cf
       vertices: []
       indices: 
       edges: []
@@ -208,17 +220,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 448
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f13ee73fabb702a419887334a29d6111
+      spriteID: b9d535c734af6f6419466a8c2b7a6101
       vertices: []
       indices: 
       edges: []
@@ -228,17 +240,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 560
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a68dcb887d6ba488f457ad0bb1f103
+      spriteID: c44992c676faed441b169be5f2200e0e
       vertices: []
       indices: 
       edges: []
@@ -248,17 +260,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 672
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2cd1098bd1d51643bddec110c0ef4ea
+      spriteID: ba571c1c5c8398049b4edd4c8ee55dff
       vertices: []
       indices: 
       edges: []
@@ -268,17 +280,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 784
-        y: 210
+        y: 315
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e46f8ce796f75c43986cc40da4a2c6c
+      spriteID: 319855ee5630feb488c36caa97a45549
       vertices: []
       indices: 
       edges: []
@@ -288,17 +300,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 105
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a540e82515e917f47be8501f3b81f6e4
+      spriteID: d540923e3f6e20c49a58bfad81739a23
       vertices: []
       indices: 
       edges: []
@@ -308,17 +320,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 105
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16160d84dd41d0e48b0ab1ad3ec1acfd
+      spriteID: 8d4cdf8f793a49b4cabbd031bfd9da3a
       vertices: []
       indices: 
       edges: []
@@ -328,17 +340,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 105
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7f87ae54008cae4c9af4bf03518a956
+      spriteID: bf689b071b8510f4081ab6c35b84572b
       vertices: []
       indices: 
       edges: []
@@ -348,17 +360,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 105
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cdbc4502ec51fb4eb99006008d8c24d
+      spriteID: 510953a7b35751c44b2862fece96ce31
       vertices: []
       indices: 
       edges: []
@@ -367,18 +379,18 @@ TextureImporter:
       name: mino_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 448
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e595f05b3acca1e4fb56f90fd4b7f611
+      spriteID: 4e7df62861132fc4aabfb7484c502d5f
       vertices: []
       indices: 
       edges: []
@@ -387,18 +399,18 @@ TextureImporter:
       name: mino_13
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
+        x: 560
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f85ef97f4b5333469d766e4b4219033
+      spriteID: c6a689d6e30c73f4a9c84ccaa41ec9d9
       vertices: []
       indices: 
       edges: []
@@ -407,18 +419,18 @@ TextureImporter:
       name: mino_14
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
+        x: 672
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a248d0aafae834eb97f0e3177f7871
+      spriteID: 6f9dd38ecc5d7cd48ad1bc3fd1460363
       vertices: []
       indices: 
       edges: []
@@ -427,18 +439,18 @@ TextureImporter:
       name: mino_15
       rect:
         serializedVersion: 2
-        x: 336
-        y: 0
+        x: 784
+        y: 210
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddad303f15a671b45ab478a3c22c00a2
+      spriteID: a834b750c9d75444283bd0263d0469aa
       vertices: []
       indices: 
       edges: []
@@ -447,18 +459,18 @@ TextureImporter:
       name: mino_16
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
+        x: 0
+        y: 105
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45ee459089f5b2948b448840a0587cbe
+      spriteID: 1c80e8d6a9d4661498a55317ad72124c
       vertices: []
       indices: 
       edges: []
@@ -467,18 +479,18 @@ TextureImporter:
       name: mino_17
       rect:
         serializedVersion: 2
-        x: 560
-        y: 0
+        x: 112
+        y: 105
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71d7838f28dc1a04581960588885dbb9
+      spriteID: c6eb084f58dcaeb41bbb613410c48c59
       vertices: []
       indices: 
       edges: []
@@ -487,18 +499,278 @@ TextureImporter:
       name: mino_18
       rect:
         serializedVersion: 2
-        x: 672
-        y: 0
+        x: 224
+        y: 105
         width: 112
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b147307ecaf326942b9439df3d1a9a23
+      spriteID: 66bbe2b99d076a848a7e31c1deb1fd42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_19
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 105
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287719080e310cf4280165e6f3515cc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_20
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 105
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29490f2a4c91e774cbbbfa62c20d80ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_21
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 105
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbe285bc5738e54cb09c3038917346c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_22
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 105
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba96d10b4dda90429a9552364503afd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_23
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 105
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45653e984a85ec4d939dc1903a1e43a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac8721f68e34ab4b94da5b9dcdd8f94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_25
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f09775cb14ffec4a935235a4c9f591f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_26
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc2e454c1888854cb43fc66ec205c4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_27
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094e3ba5eaa65cc4d9946436215700e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_28
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610e22f749b0ddc44800c40d16a85021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_29
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790abddffefc98b4e9e8db18b253a3d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_30
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0f71a247467a148b49084fa53ddf4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mino_31
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 112
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cf2d60cf9a265498aa9e4c620caf4e
       vertices: []
       indices: 
       edges: []
@@ -506,7 +778,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 529c585db1078ba4289b225636243864
+    spriteID: 47eadceefc6c6144c8a644948eef7d82
     vertices: []
     indices: 
     edges: []
