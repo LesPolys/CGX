@@ -8,6 +8,11 @@ public class Knight : Player
 
     public ObjectPooler[] shockWavePooler;
 
+	[SerializeField]
+	private Transform shockWaveSpawnPoint;
+
+	private bool isSlamming = false;
+
     Knight()
     {
         actionKey = KeyCode.R;
@@ -33,8 +38,16 @@ public class Knight : Player
                 AnimationEnd();
                 break;
             case 1: //run
+
+				if(isSlamming){
+					abilityAnimating = false;
+					isSlamming = false;
+					SpawnShockWave();
+				}
+
                 _animator.Play(Animator.StringToHash("KnightRun"));
                 AnimationEnd();
+
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("KnightJump"));
@@ -63,12 +76,29 @@ public class Knight : Player
 
     }
 
+	public void KnightSlam(){
+		isSlamming = true;
+		_animator.Play(Animator.StringToHash("KnightSlam"));
+	}
+
+
     public void SpawnShockWave()
     {
-        print("ELLo");
+       
         GameObject shockwave = shockWavePooler[0].GetPooledObject();
 
-        shockwave.transform.position = transform.position;
+		shockwave.transform.position = shockWaveSpawnPoint.position;// transform.position;
         shockwave.SetActive(true);
     }
+
+	void OnTriggerEnter2D(Collider2D collider){
+
+		print ("TEST");
+
+		if(abilityAnimating && isSlamming){
+
+		}
+
+	}
+
 }

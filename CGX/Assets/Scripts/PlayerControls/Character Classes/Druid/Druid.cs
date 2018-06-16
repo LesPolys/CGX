@@ -74,7 +74,7 @@ public class Druid : Player
 				if(colliders[i].gameObject.GetComponent<Agent>().IsGrounded()){
 					GameObject newVine = vinePooler[0].GetPooledObject();
 
-					newVine.transform.position =  colliders[i].transform.position;
+					newVine.transform.position =  colliders[i].gameObject.transform.GetChild(0).position;
 
 
 					newVine.SetActive(true);

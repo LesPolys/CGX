@@ -179,81 +179,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &595142504
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573499248473042, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9552b0777eb90334eac0adea50bd9324, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &595142505 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1445085193187194, guid: 9552b0777eb90334eac0adea50bd9324,
-    type: 2}
-  m_PrefabInternal: {fileID: 595142504}
---- !u!114 &595142506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 595142505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46e630d3fd01234a8d6ba861d73f989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 2
-  kbPower: 3
---- !u!58 &595142507
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 595142505}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.06691241, y: 0.27851868}
-  serializedVersion: 2
-  m_Radius: 0.5424812
 --- !u!1 &1042719212
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,18 +619,13 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114440609997738142, guid: 5c883f67a59694b3db247b3b84a71b4c,
-        type: 2}
-      propertyPath: shockWavePooler.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4873212891637534, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.79
+      value: -4.781
       objectReference: {fileID: 0}
     - target: {fileID: 4873212891637534, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: 1.202
       objectReference: {fileID: 0}
     - target: {fileID: 4873212891637534, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -735,24 +655,8 @@ Prefab:
         type: 2}
       propertyPath: pooledObject
       value: 
-      objectReference: {fileID: 1445085193187194, guid: 9552b0777eb90334eac0adea50bd9324,
+      objectReference: {fileID: 1535934282759316, guid: ab0832e4b6b02ce42ae29b843df65db0,
         type: 2}
-    - target: {fileID: 114135974918082014, guid: 5c883f67a59694b3db247b3b84a71b4c,
-        type: 2}
-      propertyPath: pooledAmount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114440609997738142, guid: 5c883f67a59694b3db247b3b84a71b4c,
-        type: 2}
-      propertyPath: shockWavePooler.Array.data[0]
-      value: 
-      objectReference: {fileID: 2133479166}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &2133479166 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114135974918082014, guid: 5c883f67a59694b3db247b3b84a71b4c,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133479165}
-  m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}
