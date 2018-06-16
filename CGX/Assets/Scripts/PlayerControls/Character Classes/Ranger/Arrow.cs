@@ -10,7 +10,7 @@ public class Arrow : MonoBehaviour {
  
 
 	private Transform arrowTarget;
-
+	private Animator _animator;
 
    
 
@@ -23,8 +23,16 @@ public class Arrow : MonoBehaviour {
     //    transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
     //}
 
+	void Awake(){
+		_animator = GetComponent<Animator>();
+	}
+
 	public void SetTarget(Transform newTarget){
 		arrowTarget = newTarget;
+	}
+
+	public void Animate (){
+		_animator.Play(Animator.StringToHash("Arrow"));
 	}
     
     public void Target(Transform target)
@@ -59,7 +67,7 @@ public class Arrow : MonoBehaviour {
 			print ("hi");
             //knockback and damage
 			other.gameObject.GetComponent<Agent>().Damage(1);
-            other.gameObject.GetComponent<Agent>().KnockBack(2, (other.transform.position - transform.position).normalized);
+            other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position).normalized);
             gameObject.SetActive(false);
             return;
 		}

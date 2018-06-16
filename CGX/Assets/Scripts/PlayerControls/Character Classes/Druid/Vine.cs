@@ -15,6 +15,18 @@ public class Vine : MonoBehaviour {
 	//think about making the slow call a part of the vine and not a part of the druid, more flexible that way
 	//vines could store a reference to their enemy is probably the way to go
 
+	void Awake()
+	{
+		_animator = GetComponent<Animator> ();
+	}
+
+	public void Grow(){
+		_animator.Play (Animator.StringToHash("Grow"));
+	}
+
+	public void EndAnimation(){
+		gameObject.SetActive(false);
+	}
 
 
 }

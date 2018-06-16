@@ -34,12 +34,9 @@ public class Druid : Player
 
             case 0: // idle
                 _animator.Play(Animator.StringToHash("DruidIdle"));
-                AnimationEnd();
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("DruidRun"));
-               
-                AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("DruidJump"));
@@ -77,9 +74,11 @@ public class Druid : Player
 				if(colliders[i].gameObject.GetComponent<Agent>().IsGrounded()){
 					GameObject newVine = vinePooler[0].GetPooledObject();
 
-					newVine.transform.position = colliders[i].gameObject.transform.position;
-					newVine.SetActive(true);
+					newVine.transform.position =  colliders[i].transform.position;
 
+
+					newVine.SetActive(true);
+					newVine.gameObject.GetComponent<Vine>().Grow();
 					colliders[i].gameObject.GetComponent<Enemy>().Root(0, rootTime);
 				}
                    

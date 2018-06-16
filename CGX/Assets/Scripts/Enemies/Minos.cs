@@ -5,8 +5,10 @@ using UnityEngine;
 public class Minos : Enemy {
 
 	public float losRange;
+	public enum MinosStates {IDLE, ENRAGED, WALK, CHARGING };
 
-	bool enraged = false;
+
+	MinosStates currentState = MinosStates.IDLE;
 
 	[SerializeField]
 	Transform LPP;
@@ -14,8 +16,11 @@ public class Minos : Enemy {
 	[SerializeField]
 	Transform RPP;
 
+	protected float groundDamping = 20f; // how fast do we change direction? higher means faster
+	protected float inAirDamping = 5f;
 
-	enum MinosStates {PATROL, ENRAGED, CHARGING };
+
+
 	 
 
 	// Use this for initialization
@@ -27,19 +32,49 @@ public class Minos : Enemy {
 	void Update () {
 		//DrawRay( transform.position, transform.right * losRange, Color.red );
 
-		if(Input.GetKeyDown(KeyCode.A)){
-			ChangeFacing();
-		}
 		
 
-		if(enraged){
-			
-			_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * moveSpeed, Time.deltaTime );
-			_velocity.y += gravity * Time.deltaTime;
-			_controller.move(_velocity * Time.deltaTime);
-			// grab our current _velocity to use as a base for all calculations
-			_velocity = _controller.velocity;
+	
+
+
+		switch (currentState) {
+
+		case MinosStates.IDLE:
+			moveSpeed = 0;
+			_animator.Play(Animator.StringToHash("MinosIdle"));
+			break;
+
+		case MinosStates.WALK:
+			moveSpeed = 1;
+			_animator.Play(Animator.StringToHash("MinosRun"));
+			break;
+
+		case MinosStates.ENRAGED:
+			moveSpeed = 5;
+//			_animator.Play(Animator.StringToHash("MinosEnraged"));
+			_animator.Play(Animator.StringToHash("MinosAttack"));
+			break;
+
+		case MinosStates.CHARGING:
+			moveSpeed = 5;
+				_animator.Play(Animator.StringToHash("MinosAttack"));
+			break;
+
 		}
+
+
+		
+		//basic move and gravity
+		var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
+		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * moveSpeed, Time.deltaTime * smoothedMovementFactor);
+	
+		_velocity.y += gravity * Time.deltaTime;
+		//print(_velocity.y);
+		_controller.move(_velocity * Time.deltaTime);		
+		// grab our current _velocity to use as a base for all calculations
+		_velocity = _controller.velocity;
+
+
 
 	}
 
@@ -49,9 +84,14 @@ public class Minos : Enemy {
 	}
 
 	public void EnemyInRange(){
-		enraged = true;
-		moveSpeed = 10;
+		currentState = MinosStates.ENRAGED;
 	}
+
+
+	public void SetState(MinosStates newState){
+		currentState = newState;
+	}
+
 
 	void ChangeFacing(){//swap sprite facing and forward movement multipluer
 		
@@ -63,6 +103,21 @@ public class Minos : Enemy {
 		if(normalizedHorizontalSpeed == -1){//face and move left
 			transform.rotation = new Quaternion(transform.rotation.x,180,transform.rotation.z, 0);
 		}
+	}
+
+
+	void OnTriggerEnter2D(Collider2D other)
+		//void OnCollisionEnter(Collision hit)
+	{
+		print ("w");
+		if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
+		{
+			print ("hit");
+			other.gameObject.GetComponent<Agent>().KnockBack(5, 10,(other.transform.position - transform.position).normalized);
+			return;
+		}
+		
+	
 	}
 
 	

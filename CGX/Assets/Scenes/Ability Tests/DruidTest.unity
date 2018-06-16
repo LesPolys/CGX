@@ -653,25 +653,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &714435607 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1277517150510006, guid: b9f467e59923f4c3d9386cdee4dc8498,
-    type: 2}
-  m_PrefabInternal: {fileID: 1599598303}
---- !u!114 &714435608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 714435607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc13ad15304e2e54bb26733c81216cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject: {fileID: 1451386187821814, guid: f636254d34712ba468ca6a10842a169e,
-    type: 2}
-  pooledAmount: 10
 --- !u!4 &868588113 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4337514080505348, guid: 61f1dc949b2824083afb409dee7178de,
@@ -753,7 +734,7 @@ Transform:
   - {fileID: 2039500877}
   - {fileID: 2014997461}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1263786978
 GameObject:
@@ -1099,11 +1080,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114156527949890286, guid: b9f467e59923f4c3d9386cdee4dc8498,
-        type: 2}
-      propertyPath: vinePooler.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4427220017335532, guid: b9f467e59923f4c3d9386cdee4dc8498, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -1134,21 +1110,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4427220017335532, guid: b9f467e59923f4c3d9386cdee4dc8498, type: 2}
       propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114156527949890286, guid: b9f467e59923f4c3d9386cdee4dc8498,
-        type: 2}
-      propertyPath: vinePooler.Array.data[0]
-      value: 
-      objectReference: {fileID: 714435608}
-    - target: {fileID: 114156527949890286, guid: b9f467e59923f4c3d9386cdee4dc8498,
-        type: 2}
-      propertyPath: attackRange
-      value: 20.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114156527949890286, guid: b9f467e59923f4c3d9386cdee4dc8498,
-        type: 2}
-      propertyPath: rootTime
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

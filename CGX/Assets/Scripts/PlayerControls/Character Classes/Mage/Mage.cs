@@ -34,11 +34,9 @@ class Mage : Player
 
             case 0: // idle
                 _animator.Play(Animator.StringToHash("MageIdle"));
-                AnimationEnd();
                 break;
             case 1: //run
                 _animator.Play(Animator.StringToHash("MageRun"));
-                AnimationEnd();
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("MageJump"));

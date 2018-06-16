@@ -19,6 +19,8 @@ public class MinosFOVTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+
+		//print ("TEST");
 		if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
 		{
 			print("Player");

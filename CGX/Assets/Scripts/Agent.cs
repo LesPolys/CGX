@@ -70,10 +70,10 @@ public class Agent : MonoBehaviour
 
 	}
 
-    public void KnockBack( float power, Vector2 knockBackDirection)
+    public void KnockBack( float xPower, float yPower, Vector2 knockBackDirection)
     {
-		knockBackDirection += new Vector2 (0, 3);
-        changeVelocity(knockBackDirection * power);
+		knockBackDirection += (new Vector2 (0, 1) * yPower);
+		moveVelocity(knockBackDirection * xPower);
     }
 
 	public void Damage(float damage){ //reduce health stat by X
@@ -112,6 +112,11 @@ public class Agent : MonoBehaviour
     {
         _velocity = newVelocity;
     }
+
+	protected void moveVelocity(Vector3 newVelocity)
+	{
+		_velocity += newVelocity;
+	}
 
 	public bool IsGrounded(){
 		return _controller.isGrounded;
