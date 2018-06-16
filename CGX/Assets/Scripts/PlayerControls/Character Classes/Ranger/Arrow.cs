@@ -67,7 +67,9 @@ public class Arrow : MonoBehaviour {
 			print ("hi");
             //knockback and damage
 			other.gameObject.GetComponent<Agent>().Damage(1);
-            other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position).normalized);
+			//other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position).normalized);
+
+            other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position.x - transform.position.x));
             gameObject.SetActive(false);
             return;
 		}

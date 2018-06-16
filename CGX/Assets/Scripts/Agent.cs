@@ -36,13 +36,13 @@ public class Agent : MonoBehaviour
 
     void onTriggerEnterEvent(Collider2D col)
     {
-        Debug.Log("onTriggerEnterEvent: " + col.gameObject.name);
+        //Debug.Log("onTriggerEnterEvent: " + col.gameObject.name);
     }
 
 
     void onTriggerExitEvent(Collider2D col)
     {
-        Debug.Log("onTriggerExitEvent: " + col.gameObject.name);
+        //Debug.Log("onTriggerExitEvent: " + col.gameObject.name);
     }
 
     #endregion
@@ -70,10 +70,14 @@ public class Agent : MonoBehaviour
 
 	}
 
-    public void KnockBack( float xPower, float yPower, Vector2 knockBackDirection)
+    public void KnockBack( float xPower, float yPower, float knockBackDirection)
     {
-		knockBackDirection += (new Vector2 (0, 1) * yPower);
-		moveVelocity(knockBackDirection * xPower);
+		//knockBackDirection += (new Vector2 (0, yPower) );
+		//moveVelocity(knockBackDirection * xPower);
+
+
+
+		moveVelocity(new Vector2 (knockBackDirection * xPower, yPower) );
     }
 
 	public void Damage(float damage){ //reduce health stat by X

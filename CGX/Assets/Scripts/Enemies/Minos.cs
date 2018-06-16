@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Minos : Enemy {
 
-	public float losRange;
+	public float losFrontRange;
+	public float losBackRange;
+
 	public enum MinosStates {IDLE, ENRAGED, WALK, CHARGING };
 
 
@@ -41,18 +43,36 @@ public class Minos : Enemy {
 
 		case MinosStates.IDLE:
 			moveSpeed = 0;
+
+			ScanForEnemies();
 			_animator.Play(Animator.StringToHash("MinosIdle"));
 			break;
 
 		case MinosStates.WALK:
 			moveSpeed = 1;
+
+			ScanForEnemies();
+	
+
+			//1 for right -1 for left
+			if(normalizedHorizontalSpeed > 0.0f){
+				if(transform.position.x >= RPP.position.x){
+					SetState(MinosStates.IDLE);
+				}
+			}else if(normalizedHorizontalSpeed < 0.0f){
+			
+				if(transform.position.x <= LPP.position.x){
+					SetState(MinosStates.IDLE);
+				}
+			}
+
 			_animator.Play(Animator.StringToHash("MinosRun"));
 			break;
 
 		case MinosStates.ENRAGED:
-			moveSpeed = 5;
+			moveSpeed = 0;
 //			_animator.Play(Animator.StringToHash("MinosEnraged"));
-			_animator.Play(Animator.StringToHash("MinosAttack"));
+			_animator.Play(Animator.StringToHash("MinosAlert"));
 			break;
 
 		case MinosStates.CHARGING:
@@ -92,28 +112,32 @@ public class Minos : Enemy {
 		currentState = newState;
 	}
 
+	public void ScanForEnemies(){
 
-	void ChangeFacing(){//swap sprite facing and forward movement multipluer
-		
-		normalizedHorizontalSpeed = normalizedHorizontalSpeed * -1;
-
-		if(normalizedHorizontalSpeed == 1){//face and move right
-			transform.rotation = new Quaternion(transform.rotation.x,0,transform.rotation.z, 0);
+		DrawRay(transform.position + new Vector3((0.65f * transform.right).x,0.5f,0), transform.right * losFrontRange, Color.red);
+		if (Physics2D.Raycast(transform.position + new Vector3((0.65f * transform.right).x,0.5f,0), transform.right, losFrontRange)){
+			SetState(MinosStates.ENRAGED);
 		}
-		if(normalizedHorizontalSpeed == -1){//face and move left
-			transform.rotation = new Quaternion(transform.rotation.x,180,transform.rotation.z, 0);
+		
+		
+		DrawRay(transform.position + new Vector3((-0.65f * transform.right).x ,0.5f,0), -1 * transform.right * losBackRange, Color.blue);
+		if (Physics2D.Raycast(transform.position + new Vector3((-0.65f * transform.right).x ,0.5f,0), -1 * transform.right, losBackRange)){
+			ChangeFacing();
+			SetState(MinosStates.ENRAGED);
 		}
 	}
 
 
-	void OnTriggerEnter2D(Collider2D other)
+
+
+	void OnCollisionEnter2D(Collision2D other)
 		//void OnCollisionEnter(Collision hit)
 	{
-		print ("w");
+		//print ("w");
 		if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
 		{
 			print ("hit");
-			other.gameObject.GetComponent<Agent>().KnockBack(5, 10,(other.transform.position - transform.position).normalized);
+			other.gameObject.GetComponent<Agent>().KnockBack(5, 5,(other.transform.position.x - transform.position.x));
 			return;
 		}
 		

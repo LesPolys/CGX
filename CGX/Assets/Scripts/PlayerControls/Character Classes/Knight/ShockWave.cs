@@ -35,7 +35,9 @@ public class ShockWave : MonoBehaviour {
             //knockback and damage
 			print ("WTW");
 			other.gameObject.GetComponent<Agent>().Damage(damage);
-			other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position - transform.position).normalized);
+			//other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position.x - transform.position.x).normalized);
+			other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position.x - transform.position.x));
+
             return;
         }
 
