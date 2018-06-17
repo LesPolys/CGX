@@ -19,12 +19,12 @@ class Mage : Player
 
     public override void PlayRunSound()
     {
-        AkSoundEngine.PostEvent("Mage_Footsteps_Start", gameObject);
+        //AkSoundEngine.PostEvent("Mage_Footsteps_Start", gameObject);
     }
 
     public override void StopRunSound()
     {
-        AkSoundEngine.PostEvent("Mage_Footsteps_Stop", gameObject);
+       // AkSoundEngine.PostEvent("Mage_Footsteps_Stop", gameObject);
     }
 
     public override void Animation(int anim)
@@ -40,14 +40,14 @@ class Mage : Player
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("MageJump"));
-                AkSoundEngine.PostEvent("Mage_Jump", gameObject);
+                //AkSoundEngine.PostEvent("Mage_Jump", gameObject);
                 break;
             case 3: //fall down
                 _animator.Play(Animator.StringToHash("MageFall"));
                 break;
             case 4: //ability
                 _animator.Play(Animator.StringToHash("MagePower"));
-                AkSoundEngine.PostEvent("Mage_Attack", gameObject);
+                //AkSoundEngine.PostEvent("Mage_Attack", gameObject);
                 break;
             case 5: //fainting
                 break;
@@ -94,8 +94,6 @@ class Mage : Player
                 //floatingHeight += Mathf.Sin(Time.time * floatStrength)* Time.deltaTime;
                 Vector3 newPos = new Vector3(member.transform.position.x, floatingHeight + Mathf.Sin(Time.time * floatStrength) * amplitude , member.transform.position.z);
                 member.transform.position = Vector3.Lerp(member.transform.position, newPos, magneticPower);
-
-
 
                 member.GetComponent<Player>().FloatAgent(-0.1f, -0.1f);
                

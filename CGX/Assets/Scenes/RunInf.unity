@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &7688272 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4427220017335532, guid: b9f467e59923f4c3d9386cdee4dc8498,
+    type: 2}
+  m_PrefabInternal: {fileID: 1345232019}
 --- !u!1 &71284562
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +682,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 492276841}
-  - component: {fileID: 492276842}
   - component: {fileID: 492276844}
   - component: {fileID: 492276843}
   m_Layer: 0
@@ -703,28 +707,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &492276842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492276840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c505b7a17ae4301469c74defdb02b23c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 1813090969}
-  - {fileID: 1350213450}
-  - {fileID: 571802326}
-  - {fileID: 1470431289}
-  offset: {x: 3.5, y: 1, z: -10}
-  smoothTime: 0
-  minZoom: 100
-  maxZoom: 30
-  zoomLimiter: 50
-  cam: {fileID: 1344622691}
 --- !u!114 &492276843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +948,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7858311b50c444d55a92274a989fdd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  moveSpeed: 0
+  gravity: -25
+  jumpStartMultiplier: -25
+  jumpEndMultiplier: -25
+  groundDamping: 20
+  inAirDamping: 5
+  jumpHeight: 3
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  abilityRange: 0
+  magneticPower: 0
+  floatStrength: 10
+  amplitude: 0.5
+  partyMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!222 &571802329
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -985,13 +985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0575f968d0c9644cdafd3116dc5e9937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theClass: 2
-  jumpVelocity: 7
-  groundedSkin: 0.05
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
-  gameManager: {fileID: 790718371}
 --- !u!114 &571802331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,7 +1109,7 @@ SpriteRenderer:
   m_Size: {x: 1.11, y: 1.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1001 &614358837
 Prefab:
@@ -1165,11 +1158,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c883f67a59694b3db247b3b84a71b4c, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &614358838 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4508121346997978, guid: 5c883f67a59694b3db247b3b84a71b4c,
-    type: 2}
-  m_PrefabInternal: {fileID: 614358837}
 --- !u!1 &637237843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1538,6 @@ MonoBehaviour:
   Roughness: 1
   FadeOutTime: 0.5
   cameraHolder: {fileID: 492276840}
-  partyHolder: {fileID: 1844941306}
 --- !u!4 &790718372
 Transform:
   m_ObjectHideFlags: 0
@@ -1664,8 +1651,6 @@ MonoBehaviour:
   - {fileID: 1112744812}
   maxHeightPoint: {fileID: 1450738041}
   maxHeightDifference: 5
-  coinGenerator: {fileID: 1512369532}
-  randomCoinThreshhold: 100
 --- !u!4 &935025909
 Transform:
   m_ObjectHideFlags: 0
@@ -3174,14 +3159,13 @@ Prefab:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 790718371}
+    - target: {fileID: 4427220017335532, guid: b9f467e59923f4c3d9386cdee4dc8498, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9f467e59923f4c3d9386cdee4dc8498, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1345232020 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4725794673796078, guid: b9f467e59923f4c3d9386cdee4dc8498,
-    type: 2}
-  m_PrefabInternal: {fileID: 1345232019}
 --- !u!1 &1350213450 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1416491309599416, guid: 488c77f4bb0391e4da006e6ced0291fb,
@@ -3464,11 +3448,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4307827319365324, guid: 1e4d7bd30f5c6764182217b66802dfc3,
     type: 2}
   m_PrefabInternal: {fileID: 1375077683}
---- !u!1 &1470431289 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1847370634570206, guid: b9f467e59923f4c3d9386cdee4dc8498,
-    type: 2}
-  m_PrefabInternal: {fileID: 1345232019}
 --- !u!1 &1473643961
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3570,11 @@ MonoBehaviour:
   minCoinYDisplacement: 1.3
   maxCoinYDisplacement: 2.5
   distanceBetweenCoins: 1
+--- !u!4 &1545565143 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4873212891637534, guid: 5c883f67a59694b3db247b3b84a71b4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 614358837}
 --- !u!1 &1550213319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,29 +3818,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4057444564508472, guid: baacde18bf3bceb42b711c231f77e1a7,
     type: 2}
   m_PrefabInternal: {fileID: 889510936}
---- !u!1 &1813090969 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1984998272695058, guid: 5c883f67a59694b3db247b3b84a71b4c,
-    type: 2}
-  m_PrefabInternal: {fileID: 614358837}
---- !u!114 &1813090976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1813090969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0575f968d0c9644cdafd3116dc5e9937, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theClass: 0
-  jumpVelocity: 5
-  groundedSkin: 0.05
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
-  gameManager: {fileID: 790718371}
 --- !u!1 &1844941306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,10 +3844,10 @@ Transform:
   m_LocalPosition: {x: -16.57, y: -4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 614358838}
+  - {fileID: 1545565143}
   - {fileID: 193153725}
   - {fileID: 1045982312}
-  - {fileID: 1345232020}
+  - {fileID: 7688272}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3903,10 +3864,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partyMoveSpeed: 5
   partyMembers:
-  - {fileID: 1813090969}
+  - {fileID: 0}
   - {fileID: 1350213450}
   - {fileID: 571802326}
-  - {fileID: 1470431289}
+  - {fileID: 0}
 --- !u!1 &1874070938
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class Enemy : Agent {
 	protected float gravity = -25f;
    
 	[HideInInspector]
-	protected float normalizedHorizontalSpeed = 0;
+	protected float normalizedHorizontalSpeed = 1;
 
     // Use this for initialization
     void Start () {
@@ -19,14 +19,14 @@ public class Enemy : Agent {
 	// Update is called once per frame
 	void Update () {
 
-		/*
+		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * moveSpeed, Time.deltaTime );
 												//basic move and gravity
 		_velocity.y += gravity * Time.deltaTime;
 		//print(_velocity.y);
 		_controller.move(_velocity * Time.deltaTime);		
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
-		*/
+
 	}
 
 	protected void ChangeFacing(){//swap sprite facing and forward movement multipluer

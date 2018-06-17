@@ -44,10 +44,27 @@ public class Player : Agent
     protected enum PlayerState {IDLE, RUNNING, JUMPING, FALLING, ABILITY };
     protected  PlayerState currentState;
     
+	[SerializeField]
+	protected Transform partyPosition;
 
 
     void Update()
     {
+
+		if(partyPosition != null){
+			if(transform.position.x < partyPosition.position.x){
+
+				moveSpeed = 0.6f;
+			}
+
+			if(transform.position.x > partyPosition.position.x){
+
+				moveSpeed = -0.3f;
+			}
+		}
+
+
+
         if (_controller.isGrounded)
             _velocity.y = 0;
 
@@ -80,24 +97,7 @@ public class Player : Agent
 
 
 
-        // we can only jump whilst grounded
-        if (_controller.isGrounded && Input.GetKeyDown(actionKey))
-        {
-            _velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-            currentState = PlayerState.JUMPING;
-            Animation(2); //jump
-            //jump sound
-        }
-
-        if (!_controller.isGrounded && Input.GetKeyDown(actionKey))
-        {
-            currentState = PlayerState.ABILITY;
-            Animation(4);
-            abilityAnimating = true;
-            Ability();
-            //shoot sound
-
-        }
+     
 
         if (!_controller.isGrounded && _velocity.y < 0 && !abilityAnimating)
         {
@@ -174,8 +174,34 @@ public class Player : Agent
 
     }
 
+	public void Jump(){
+
+		// we can only jump whilst grounded
+		if (_controller.isGrounded && Input.GetKeyDown(actionKey))
+		{
+			_velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
+			currentState = PlayerState.JUMPING;
+			Animation(2); //jump
+			//jump sound
+		}
+		
+		if (!_controller.isGrounded && Input.GetKeyDown(actionKey))
+		{
+			currentState = PlayerState.ABILITY;
+			Animation(4);
+			abilityAnimating = true;
+			Ability();
+			//shoot sound
+			
+		}
+	}
 
 
+	public void SetPartyPosition(Transform targetPos){
+		partyPosition = targetPos;
+	}
+	
+	
+	
 }
 
-  

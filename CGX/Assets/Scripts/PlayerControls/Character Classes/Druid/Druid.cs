@@ -62,16 +62,21 @@ public class Druid : Player
 
     public override void Ability()//find all the enemies in range and root them (Spawn a group of vines, )
     {
+	
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
         if (colliders.Length > 0)
         {
      
-          
+		
                 for (int i = 0; i < colliders.Length; i ++)
                 {
 
+				print (colliders[i].gameObject.tag);
+
 				if(colliders[i].gameObject.GetComponent<Agent>().IsGrounded()){
+					print (colliders[i].gameObject.tag);
+
 					GameObject newVine = vinePooler[0].GetPooledObject();
 
 					newVine.transform.position =  colliders[i].gameObject.transform.GetChild(0).position;

@@ -15,22 +15,22 @@ public class GameManager : MonoBehaviour {
     public GameObject cameraHolder;
     private Vector3 initCamHolderPos;
 
-    public GameObject partyHolder;
-    private PartyProperties theParty;
-    private Vector3 partyStartPoint;
+    //public GameObject partyHolder;
+    //private PartyProperties theParty;
+    //private Vector3 partyStartPoint;
 
     private PlatformDestroyer[] platformList;
 
-    private ScoreManager scoreManager;
+    //private ScoreManager scoreManager;
 
 
 	// Use this for initialization
 	void Start () {
         initCamHolderPos = cameraHolder.transform.position;
         platformsStartPoint = platformGenerator.position;
-		scoreManager = FindObjectOfType<ScoreManager>();
-        theParty = partyHolder.GetComponent<PartyProperties>();
-        partyStartPoint = partyHolder.transform.position;
+		//scoreManager = FindObjectOfType<ScoreManager>();
+        //theParty = partyHolder.GetComponent<PartyProperties>();
+        //partyStartPoint = partyHolder.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -46,11 +46,11 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator RestartGameCo()
     {
-        scoreManager.scoreIncreasing = false;
+        //scoreManager.scoreIncreasing = false;
         //thePlayer.gameObject.SetActive(false);
-        for(int i = 0; i < theParty.partyMembers.Length; i++){
+       /* for(int i = 0; i < theParty.partyMembers.Length; i++){
             theParty.partyMembers[i].SetActive(false);
-        }
+        }*/
         
 
         yield return new WaitForSeconds(0.5f);
@@ -62,22 +62,22 @@ public class GameManager : MonoBehaviour {
 
      
         
-        theParty.transform.position = partyStartPoint;
-        for(int i = 0; i < theParty.partyMembers.Length; i++){
-            theParty.partyMembers[i].transform.position = theParty.GetPartyMemberStartPos(i);
-        }
+        //theParty.transform.position = partyStartPoint;
+       // for(int i = 0; i < theParty.partyMembers.Length; i++){
+         //   theParty.partyMembers[i].transform.position = theParty.GetPartyMemberStartPos(i);
+       // }
 
         cameraHolder.transform.position = initCamHolderPos;
         platformGenerator.position = platformsStartPoint;
         
-        for(int i = 0; i < theParty.partyMembers.Length; i++){
-            theParty.partyMembers[i].SetActive(true);
+      //  for(int i = 0; i < theParty.partyMembers.Length; i++){
+        //    theParty.partyMembers[i].SetActive(true);
     //        theParty.partyMembers[i].GetComponent<PlayerClass>().SetIsDead(false);
-        }
+      //  }
 
         //thePlayer.gameObject.SetActive(true);
-        scoreManager.scoreCount = 0;
-        scoreManager.scoreIncreasing = true;
+        //scoreManager.scoreCount = 0;
+        //scoreManager.scoreIncreasing = true;
        
     }
 

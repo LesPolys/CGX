@@ -93,7 +93,7 @@ public class Knight : Player
 
 	void OnTriggerEnter2D(Collider2D collider){
 
-		print ("TEST");
+	
 
 		if(abilityAnimating && isSlamming){
 
