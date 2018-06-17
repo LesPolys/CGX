@@ -13,12 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CAVE_TRACK = 281929850U;
         static const AkUniqueID COIN_PICKUP = 98870701U;
         static const AkUniqueID DRUID_ATTACK = 2560653066U;
         static const AkUniqueID DRUID_FOOTSTEPS_START = 588867630U;
         static const AkUniqueID DRUID_FOOTSTEPS_STOP = 1056055054U;
         static const AkUniqueID DRUID_JUMP = 1045264174U;
         static const AkUniqueID FG_ATTACK = 3959127699U;
+        static const AkUniqueID FG_EMIT = 2530935754U;
         static const AkUniqueID KNIGHT_ATTACK = 2965945301U;
         static const AkUniqueID KNIGHT_FOOTSTEPS_START = 2446639207U;
         static const AkUniqueID KNIGHT_FOOTSTEPS_STOP = 3614010765U;
@@ -30,7 +32,9 @@ namespace AK
         static const AkUniqueID MENU_SCROLL = 2072673020U;
         static const AkUniqueID MENU_SELECT = 4203375351U;
         static const AkUniqueID MINOTAUR_ATTACK = 3668249301U;
+        static const AkUniqueID MINOTAUR_EMIT = 1798683420U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;
+        static const AkUniqueID PLAYER_HITENEMY = 1841594088U;
         static const AkUniqueID RANGER_ATTACK = 3022924773U;
         static const AkUniqueID RANGER_FOOTSTEPS_START = 3333697559U;
         static const AkUniqueID RANGER_FOOTSTEPS_STOP = 893890045U;

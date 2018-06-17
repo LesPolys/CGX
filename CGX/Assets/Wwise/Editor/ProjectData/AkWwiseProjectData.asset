@@ -13,23 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - Guid: '{71064263-12F7-40C3-9797-BE1FCF23ECC1}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 863929930
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -207913703
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   autoPopulateEnabled: 1
   AuxBusWwu:
   - Guid: '{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 859610817
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -211852488
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{09BD853D-F44B-45B9-B39E-89DC72B2251C}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 863894898
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -207953734
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -48,8 +48,8 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{032E0657-2410-45BE-97DA-B9D2266BB823}'
-    m_lastTimePart2: -1999253099
-    m_lastTimePsrt1: -2042494246
+    m_lastTimePart2: -1999252887
+    m_lastTimePsrt1: 660662093
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -145,6 +145,22 @@ MonoBehaviour:
       - ElementName: FG
         ObjectType: 4
       - ElementName: FG_Attack
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5348f404a9e707419c684df5b073e096
+      ID: -1764031542
+      Name: FG_Emit
+      Path: Default Work Unit\Enemies\FG\FG_Emit
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: FG
+        ObjectType: 4
+      - ElementName: FG_Emit
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -325,6 +341,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 1b65caaedeaff14aad3f584f341a350f
+      ID: 1798683420
+      Name: Minotaur_Emit
+      Path: Default Work Unit\Enemies\Minotaur\Minotaur_Emit
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Minotaur
+        ObjectType: 4
+      - ElementName: Minotaur_Emit
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: b70023715cae9f4bb312ddbbbddcde92
       ID: -1211879651
       Name: Player_Death
@@ -337,6 +369,22 @@ MonoBehaviour:
       - ElementName: Actions
         ObjectType: 4
       - ElementName: Player_Death
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b9267f115c39ba4981f617fb20c53ffc
+      ID: 1841594088
+      Name: Player_HitEnemy
+      Path: Default Work Unit\Character-World\Actions\Player_HitEnemy
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character-World
+        ObjectType: 4
+      - ElementName: Actions
+        ObjectType: 4
+      - ElementName: Player_HitEnemy
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -425,11 +473,8 @@ MonoBehaviour:
   - /CGX_WwiseProject
   - /CGX_WwiseProject/Events
   - /CGX_WwiseProject/Events/Default Work Unit
-  - /CGX_WwiseProject/Events/Default Work Unit/Classes
-  - /CGX_WwiseProject/Events/Default Work Unit/Classes/Druid
-  - /CGX_WwiseProject/Events/Default Work Unit/Classes/Knight
-  - /CGX_WwiseProject/Events/Default Work Unit/Classes/Mage
-  - /CGX_WwiseProject/Events/Default Work Unit/Classes/Ranger
+  - /CGX_WwiseProject/Events/Default Work Unit/Enemies
+  - /CGX_WwiseProject/Events/Default Work Unit/Enemies/Minotaur
   - /CGX_WwiseProject/Events/Default Work Unit/Music
   - /CGX_WwiseProject/Events/Default Work Unit/Music/Main_Music
   - /CGX_WwiseProject/SoundBanks
@@ -442,30 +487,30 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{39E10261-DD8B-449F-94FF-3CD7AB7DD182}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 857829119
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -213529295
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List: []
   StateWwu:
   - Guid: '{0A35D18D-798C-46A2-81B8-AE61098EE334}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 863909910
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -207938722
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List: []
   streamingPoolSize: 1024
   SwitchWwu:
   - Guid: '{C9457357-8434-4C5F-97CD-C4E96D1CD101}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 863914916
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -207928715
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{E8B206A8-CA42-4DAA-83FA-EA7EF7E3FE0D}'
-    m_lastTimePart2: -1999255154
-    m_lastTimePsrt1: 863924925
+    m_lastTimePart2: -1999253510
+    m_lastTimePsrt1: -207918708
     ParentPhysicalPath: 
     PhysicalPath: Triggers\Default Work Unit.wwu
     List: []
