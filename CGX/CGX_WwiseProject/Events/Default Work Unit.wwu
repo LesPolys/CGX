@@ -39,6 +39,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Player_HitEnemy" ID="{117F26B9-395C-49BA-81F6-17FB20C53FFC}">
+									<ChildrenList>
+										<Action Name="" ID="{6A4363D5-F6CB-42FA-9244-3D599A0D3F30}" ShortID="1034726571">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Player_HitEnemy" ID="{EEB3D1AB-10F9-4210-BBF8-B6EE251B99F3}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -84,6 +98,16 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Ranger_Jump" ID="{4BD2655A-7806-4671-BB8F-3EF1A5D77A57}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{454B2754-BEE8-4EC9-AC8F-70F98E34C518}" ShortID="46406741">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ranger_Vocalizations" ID="{E1FA8913-3141-4D4F-ADF9-ABD2A5464D48}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -147,6 +171,16 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{18F521ED-671F-44B5-9D64-5BD7E39FDEA5}" ShortID="546112618">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Druid_Vocalizations" ID="{D357CFCD-FEE8-4210-A1F0-F7997B015570}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Druid_Footsteps_Stop" ID="{1CEBA638-721E-47D8-BC00-7095F3FE67E9}">
@@ -204,6 +238,16 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Knight_Jump" ID="{DC7E3465-32F1-4D42-ACE7-FDB3BD4DA736}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{70A6AA60-A2EE-48D4-AECB-64D7524787C1}" ShortID="209746451">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Knight_Vocalizations" ID="{681F1B95-DE3D-41BA-A52A-5ACFA8CD7508}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -267,6 +311,16 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{3808C479-F436-4F2A-956F-DE5BCB2F45B2}" ShortID="776031733">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Mage_Vocalizations" ID="{D66ED894-9E8E-41B2-83E1-92D1422FCB23}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Mage_Footsteps_Stop" ID="{E5B2250E-07A0-43FD-ACEF-515E169B3D82}">
@@ -305,6 +359,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Cave_Track" ID="{9794EF28-5E48-4221-A28F-1DDF21EDCCA5}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -314,11 +369,39 @@
 						<Folder Name="FG" ID="{5A76A74B-0B9E-4BE7-86FF-F0840820D281}" ShortID="321835032">
 							<ChildrenList>
 								<Event Name="FG_Attack" ID="{F99D0350-6978-4D0D-A2D3-CE24CB526779}"/>
+								<Event Name="FG_Emit" ID="{04F44853-E7A9-4107-9C68-4DF5B073E096}"/>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Minotaur" ID="{DD5136DF-2603-403C-8D11-22068987374B}" ShortID="918657162">
 							<ChildrenList>
-								<Event Name="Minotaur_Attack" ID="{43316B88-B6F9-49DC-92E9-7D14C6E2046A}"/>
+								<Event Name="Minotaur_Attack" ID="{43316B88-B6F9-49DC-92E9-7D14C6E2046A}">
+									<ChildrenList>
+										<Action Name="" ID="{2B450C6C-9315-46E6-B529-22647D0E9D51}" ShortID="127500000">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Minotaur_Attack" ID="{502C2BD7-5145-4A63-8A4F-6BF03017576A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Minotaur_Emit" ID="{AECA651B-AFDE-4AF1-AD3F-584F341A350F}">
+									<ChildrenList>
+										<Action Name="" ID="{A2A56634-C74F-4218-BD17-62F239E5BE20}" ShortID="902555300">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Minotaur_Emit" ID="{4E4EA595-E1F9-4775-85B3-31C0C45C11CD}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -327,8 +410,34 @@
 					<ChildrenList>
 						<Folder Name="Menu" ID="{F75239AC-6D9C-4537-B6E3-0A3A73EB24FE}" ShortID="841886145">
 							<ChildrenList>
-								<Event Name="Menu_Scroll" ID="{F8BD3ABC-51BF-4423-A919-C91949FCD992}"/>
-								<Event Name="Menu_Select" ID="{AB21AED7-0FAE-42A5-8427-CBD6785F3446}"/>
+								<Event Name="Menu_Scroll" ID="{F8BD3ABC-51BF-4423-A919-C91949FCD992}">
+									<ChildrenList>
+										<Action Name="" ID="{597929EF-028A-4D52-941E-378725004FE8}" ShortID="725211931">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Menu_Scroll" ID="{903E1948-4C6E-4B94-9721-B6E58760889B}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Menu_Select" ID="{AB21AED7-0FAE-42A5-8427-CBD6785F3446}">
+									<ChildrenList>
+										<Action Name="" ID="{716F6C42-AB64-4126-A8F2-9C813A32F5F7}" ShortID="9620341">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Menu_Select" ID="{4EF85A88-EE82-450F-8637-FB68C55D981A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
