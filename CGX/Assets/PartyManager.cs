@@ -7,19 +7,16 @@ public class PartyManager : MonoBehaviour {
 	//Manages the control of the actual player characters
 
 
-	struct PlayerStats{
-	// movement config
-		public float gravity = -25f;
-		public float jumpStartMultiplier = -25f;
-		public float jumpEndMultiplier = -25f;
-		public float groundDamping = 20f; // how fast do we change direction? higher means faster
-		public float inAirDamping = 5f;
-		public float jumpHeight = 3f;
-	}
-	
-	PlayerStats stats
-	//contains a data structure to cycle between the various characters
-	//the active character will control the jump height and the active power
+	public float partyMoveSpeed;
+
+	public float partyGravity;
+	public float partyJumpStartMultiplier;
+	public float partyJumpEndMultiplier;
+	public float partyJumpHeight;
+
+
+	public float partyForwardSpeedOffset;
+	public float partyBackwardSpeedOffset;
 
 	public List<Player> tempPartyHolder;
 	public LinkedList<Player> theParty = new LinkedList<Player>();
@@ -33,7 +30,11 @@ public class PartyManager : MonoBehaviour {
 	void OnEnable(){
 		foreach (Player member in tempPartyHolder) {
 			theParty.AddFirst(member);
+			member.ChangeMoveSpeed(partyMoveSpeed);
 		}
+		currentPlayer = theParty.First.Value;
+
+		OrganizeParty ();
 
 	}
 
@@ -46,6 +47,8 @@ public class PartyManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+
 		if(Input.GetKeyDown(KeyCode.RightArrow)){
 			NextMember();
 		}
@@ -55,8 +58,12 @@ public class PartyManager : MonoBehaviour {
 		}
 
 		if(Input.GetKeyDown(KeyCode.UpArrow)){//jump
-			currentPlayer.Jump();
+	
+			currentPlayer.SetJumpSignal(true);
 		}
+
+			
+		transform.Translate(transform.right * partyMoveSpeed * Time.deltaTime);
 
 		
 	}
@@ -68,7 +75,7 @@ public class PartyManager : MonoBehaviour {
 		theParty.AddFirst (temp);
 		OrganizeParty ();
 		SetCurrentPlayer ();
-
+		UpdatePartyStats ();
 		 //PrintPartyList ();
 	}
 
@@ -78,7 +85,7 @@ public class PartyManager : MonoBehaviour {
 		theParty.AddLast (temp);
 		OrganizeParty ();
 		SetCurrentPlayer ();
-
+		UpdatePartyStats ();
 		//PrintPartyList ();
 	}
 
@@ -107,6 +114,14 @@ public class PartyManager : MonoBehaviour {
 		print ( currentPlayer);
 		print (" ");
 		print (" ");
+	}
+
+	void UpdatePartyStats(){
+		
+		foreach (Player member in theParty) {
+			member.ChangeMoveSpeed(partyMoveSpeed);
+			member.SetSpeedOffsets(partyForwardSpeedOffset, partyBackwardSpeedOffset);
+		}
 	}
 
 }

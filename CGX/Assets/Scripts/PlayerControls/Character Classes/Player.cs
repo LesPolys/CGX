@@ -47,28 +47,67 @@ public class Player : Agent
 	[SerializeField]
 	protected Transform partyPosition;
 
+	private bool jumpSignal;
+
+	private float forwardSpeedOffset;
+	private float backwardSpeedOffset;
+	private float alteredMoveSpeed;
 
     void Update()
     {
 
-		if(partyPosition != null){
+		if (partyPosition != null && _controller.isGrounded) {
+		
+
+			//print (partyPosition);
+			//print(partyPosition.transform.position);
+			/*
 			if(transform.position.x < partyPosition.position.x){
 
-				moveSpeed = 0.6f;
-			}
+				alteredMoveSpeed = moveSpeed + forwardSpeedOffset;
+			}else if(transform.position.x > partyPosition.position.x){
 
-			if(transform.position.x > partyPosition.position.x){
+				alteredMoveSpeed = moveSpeed - backwardSpeedOffset;
+			}else{
+				alteredMoveSpeed = moveSpeed;
+			}*/
 
-				moveSpeed = -0.3f;
-			}
+			alteredMoveSpeed = Vector3.SmoothDamp (transform.position, partyPosition.position, ref _velocity, forwardSpeedOffset).x;
+
+
+
+		} else {
+			alteredMoveSpeed = moveSpeed;
 		}
 
 
+		if (_controller.isGrounded)
+			_velocity.y = 0;
 
-        if (_controller.isGrounded)
-            _velocity.y = 0;
 
+		if(jumpSignal){
+			// we can only jump whilst grounded
+			if (_controller.isGrounded)
+			{
+				_velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
+				currentState = PlayerState.JUMPING;
+				Animation(2); //jump
+				//jump sound
+			}
+			
+			if (!_controller.isGrounded)
+			{
+				currentState = PlayerState.ABILITY;
+				Animation(4);
+				abilityAnimating = true;
+				Ability();
+				//shoot sound
+				
+			}
 
+			SetJumpSignal(false);
+		}
+		
         normalizedHorizontalSpeed = 1;
         if (transform.localScale.x < 0f)
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -93,24 +132,16 @@ public class Player : Agent
             StopRunSound();
             isPlayingRunSound = false;
         }
-
-
-
-
-     
-
+		
         if (!_controller.isGrounded && _velocity.y < 0 && !abilityAnimating)
         {
             currentState = PlayerState.FALLING;
             Animation(3);
         }
-
-      
-
-
+		
         // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
         var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
-        _velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * moveSpeed, Time.deltaTime * smoothedMovementFactor);
+		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * alteredMoveSpeed, Time.deltaTime * smoothedMovementFactor);
 
         // apply gravity before moving
 
@@ -135,6 +166,30 @@ public class Player : Agent
         // grab our current _velocity to use as a base for all calculations
         _velocity = _controller.velocity;
     }
+
+	/*
+	protected virtual void Movement(){
+		targetDistance= Vector3.Distance(transform.position, wantedPos);
+		stoppingDistance = GetCurrentStoppingDistance(Velocity.magnitude, acceleration);
+		public Vector3 engineVelocity = transform.forward * acceleration; //assume we are accelerating forward at first
+		if(targetDistance<= stoppingDistance ){
+			engineVelocity = -1 * engineVelocity; //decelerate instead;
+		}
+		else if(targetDistance<= (stoppingDistance * 1.05) ){
+			engineVelocity = Vector3.zero; //stop accelerating  5% of the distance before we need to start slowing to avoid over shoots between frames
+		}
+
+     * set the velocity as a velocity (no mass adjustment needed, this isn't a force being applied. 
+     * Note we SHOULD be using the ridged body ApplyForce and supply it with a VelocityChange force 
+     * type instead) 
+
+		Velocity += engineVelocity; 
+	}
+	
+	private float GetCurrentStoppingDistance(float velocity, float accelerationPossible){
+		return (velocity/acceleration) * velocity * 0.5f;
+	}*/
+
 
     public virtual void Ability()
     {
@@ -174,34 +229,24 @@ public class Player : Agent
 
     }
 
-	public void Jump(){
-
-		// we can only jump whilst grounded
-		if (_controller.isGrounded && Input.GetKeyDown(actionKey))
-		{
-			_velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-			currentState = PlayerState.JUMPING;
-			Animation(2); //jump
-			//jump sound
-		}
-		
-		if (!_controller.isGrounded && Input.GetKeyDown(actionKey))
-		{
-			currentState = PlayerState.ABILITY;
-			Animation(4);
-			abilityAnimating = true;
-			Ability();
-			//shoot sound
-			
-		}
-	}
-
 
 	public void SetPartyPosition(Transform targetPos){
 		partyPosition = targetPos;
 	}
-	
-	
+
+
+	public void SetJumpSignal(bool signalState){
+		jumpSignal = signalState;
+	}
+
+	public void ChangeMoveSpeed(float newSpeed){
+		SetMovementSpeed (newSpeed);
+	}
+
+	public void SetSpeedOffsets(float fSpeed, float bSpeed){
+		forwardSpeedOffset = fSpeed;
+		backwardSpeedOffset = bSpeed;
+	}
 	
 }
 

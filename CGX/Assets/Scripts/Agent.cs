@@ -126,6 +126,9 @@ public class Agent : MonoBehaviour
 		return _controller.isGrounded;
 	}
 
+	protected void SetMovementSpeed(float newSpeed){
+		moveSpeed = newSpeed;
+	}
 
 
 
