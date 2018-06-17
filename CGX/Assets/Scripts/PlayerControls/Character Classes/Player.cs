@@ -15,10 +15,6 @@ public class Player : Agent
     [SerializeField]
     protected float jumpEndMultiplier = -25f;
     [SerializeField]
-    protected float groundDamping = 20f; // how fast do we change direction? higher means faster
-    [SerializeField]
-    protected float inAirDamping = 5f;
-    [SerializeField]
     protected float jumpHeight = 3f;
 
     [HideInInspector]
@@ -49,9 +45,9 @@ public class Player : Agent
 
 	private bool jumpSignal;
 
-	private float forwardSpeedOffset;
-	private float backwardSpeedOffset;
-	private float alteredMoveSpeed;
+	private float speedOffset;
+	public  float alteredMoveSpeed;
+	private float acceptableDistance;
 
     void Update()
     {
@@ -61,19 +57,20 @@ public class Player : Agent
 
 			//print (partyPosition);
 			//print(partyPosition.transform.position);
-			/*
-			if(transform.position.x < partyPosition.position.x){
 
-				alteredMoveSpeed = moveSpeed + forwardSpeedOffset;
-			}else if(transform.position.x > partyPosition.position.x){
+			if (transform.position.x < partyPosition.position.x) {
 
-				alteredMoveSpeed = moveSpeed - backwardSpeedOffset;
-			}else{
+				alteredMoveSpeed = moveSpeed + speedOffset;
+
+			} else if (transform.position.x > partyPosition.position.x) {
+
+				alteredMoveSpeed = moveSpeed - speedOffset;
+			}
+
+
+			if(Mathf.Abs(partyPosition.transform.position.x - transform.position.x) < acceptableDistance){
 				alteredMoveSpeed = moveSpeed;
-			}*/
-
-			alteredMoveSpeed = Vector3.SmoothDamp (transform.position, partyPosition.position, ref _velocity, forwardSpeedOffset).x;
-
+			}
 
 
 		} else {
@@ -139,9 +136,8 @@ public class Player : Agent
             Animation(3);
         }
 		
-        // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
-        var smoothedMovementFactor = _controller.isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
-		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * alteredMoveSpeed, Time.deltaTime * smoothedMovementFactor);
+      
+		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * alteredMoveSpeed, Time.deltaTime );
 
         // apply gravity before moving
 
@@ -166,30 +162,6 @@ public class Player : Agent
         // grab our current _velocity to use as a base for all calculations
         _velocity = _controller.velocity;
     }
-
-	/*
-	protected virtual void Movement(){
-		targetDistance= Vector3.Distance(transform.position, wantedPos);
-		stoppingDistance = GetCurrentStoppingDistance(Velocity.magnitude, acceleration);
-		public Vector3 engineVelocity = transform.forward * acceleration; //assume we are accelerating forward at first
-		if(targetDistance<= stoppingDistance ){
-			engineVelocity = -1 * engineVelocity; //decelerate instead;
-		}
-		else if(targetDistance<= (stoppingDistance * 1.05) ){
-			engineVelocity = Vector3.zero; //stop accelerating  5% of the distance before we need to start slowing to avoid over shoots between frames
-		}
-
-     * set the velocity as a velocity (no mass adjustment needed, this isn't a force being applied. 
-     * Note we SHOULD be using the ridged body ApplyForce and supply it with a VelocityChange force 
-     * type instead) 
-
-		Velocity += engineVelocity; 
-	}
-	
-	private float GetCurrentStoppingDistance(float velocity, float accelerationPossible){
-		return (velocity/acceleration) * velocity * 0.5f;
-	}*/
-
 
     public virtual void Ability()
     {
@@ -243,9 +215,12 @@ public class Player : Agent
 		SetMovementSpeed (newSpeed);
 	}
 
-	public void SetSpeedOffsets(float fSpeed, float bSpeed){
-		forwardSpeedOffset = fSpeed;
-		backwardSpeedOffset = bSpeed;
+	public void SetSpeedOffsets(float nSpeed){
+		speedOffset = nSpeed;
+	
+	}
+	public void SetAcceptableDistance(float newDistance){
+		acceptableDistance = newDistance;
 	}
 	
 }

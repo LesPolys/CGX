@@ -8,15 +8,12 @@ public class PartyManager : MonoBehaviour {
 
 
 	public float partyMoveSpeed;
-
-	public float partyGravity;
-	public float partyJumpStartMultiplier;
-	public float partyJumpEndMultiplier;
-	public float partyJumpHeight;
+	public float acceptableDistance;
 
 
-	public float partyForwardSpeedOffset;
-	public float partyBackwardSpeedOffset;
+	public float jumpDelay;
+
+	public float partySpeedOffset;
 
 	public List<Player> tempPartyHolder;
 	public LinkedList<Player> theParty = new LinkedList<Player>();
@@ -26,6 +23,16 @@ public class PartyManager : MonoBehaviour {
 	int currentPlayerIndex;
 
 	Player currentPlayer;
+
+
+
+	private bool jumpPressed = false;
+
+
+	void OnValidate(){
+		UpdatePartyStats ();
+	}
+
 
 	void OnEnable(){
 		foreach (Player member in tempPartyHolder) {
@@ -41,11 +48,13 @@ public class PartyManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+
 
 
 
@@ -58,14 +67,15 @@ public class PartyManager : MonoBehaviour {
 		}
 
 		if(Input.GetKeyDown(KeyCode.UpArrow)){//jump
-	
-			currentPlayer.SetJumpSignal(true);
+
+			jumpPressed = true;
+			StartCoroutine (GroupJump ());
 		}
 
 			
 		transform.Translate(transform.right * partyMoveSpeed * Time.deltaTime);
 
-		
+
 	}
 
 
@@ -74,8 +84,7 @@ public class PartyManager : MonoBehaviour {
 		theParty.RemoveLast ();
 		theParty.AddFirst (temp);
 		OrganizeParty ();
-		SetCurrentPlayer ();
-		UpdatePartyStats ();
+
 		 //PrintPartyList ();
 	}
 
@@ -84,8 +93,7 @@ public class PartyManager : MonoBehaviour {
 		theParty.RemoveFirst ();
 		theParty.AddLast (temp);
 		OrganizeParty ();
-		SetCurrentPlayer ();
-		UpdatePartyStats ();
+
 		//PrintPartyList ();
 	}
 
@@ -99,6 +107,8 @@ public class PartyManager : MonoBehaviour {
 			member.SetPartyPosition(partyPositions[x]);
 			x++;
 		}
+		SetCurrentPlayer ();
+		UpdatePartyStats ();
 	}
 
 
@@ -120,8 +130,38 @@ public class PartyManager : MonoBehaviour {
 		
 		foreach (Player member in theParty) {
 			member.ChangeMoveSpeed(partyMoveSpeed);
-			member.SetSpeedOffsets(partyForwardSpeedOffset, partyBackwardSpeedOffset);
+			member.SetSpeedOffsets(partySpeedOffset);
+			member.SetAcceptableDistance(acceptableDistance);
 		}
+	}
+
+	IEnumerator GroupJump(){
+			if(jumpPressed){
+				foreach (Player member in theParty) {
+					if(!member.IsGrounded() && currentPlayer == member){
+						member.SetJumpSignal(true);
+						yield return new WaitForSecondsRealtime(jumpDelay);
+					}else if(member.IsGrounded()){
+						member.SetJumpSignal(true);
+						yield return new WaitForSecondsRealtime(jumpDelay);
+					}
+					
+				}
+				jumpPressed = false;
+			}
+	}
+
+	public void AddMember(Player newMember){
+		if(theParty.Count < 4){
+			theParty.AddLast (newMember);
+			OrganizeParty ();
+		}
+	}
+
+	public void RemoveMember(){
+		theParty.First.Value.gameObject.SetActive (false);
+		theParty.RemoveFirst ();
+		OrganizeParty();
 	}
 
 }

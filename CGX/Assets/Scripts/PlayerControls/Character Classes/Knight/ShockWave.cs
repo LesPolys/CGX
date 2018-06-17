@@ -21,10 +21,10 @@ public class ShockWave : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     //void OnCollisionEnter(Collision hit)
     {
-		print ("here");
+		//print ("here");
         if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
         {
-            print("Player");
+           // print("Player");
             // Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<Collider>());
             Physics2D.IgnoreCollision(other.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             return;
@@ -33,7 +33,7 @@ public class ShockWave : MonoBehaviour {
         if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
         {
             //knockback and damage
-			print ("WTW");
+			//print ("WTW");
 			other.gameObject.GetComponent<Agent>().Damage(damage);
 			//other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position.x - transform.position.x).normalized);
 			other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position.x - transform.position.x));
