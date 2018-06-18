@@ -84,6 +84,10 @@ public class PartyManager : MonoBehaviour {
 
 	}
 
+	public void StartParty(){
+		isTalking = false;
+	}
+
 	public void StopPartyCoroutine(){
 		isTalking = !isTalking;
 		StartCoroutine(StopParty());
@@ -93,18 +97,18 @@ public class PartyManager : MonoBehaviour {
 
 		float partyMoveSpeedHolder = partyMoveSpeed;
 		float partySpeedOffsetHolder = partySpeedOffset;
-		float acceptableDistanceHolder = acceptableDistance;
+		//float acceptableDistanceHolder = acceptableDistance;
 
 		while (isTalking) {
 			partyMoveSpeed = 0;
 			partySpeedOffset = 0;
-			acceptableDistance = 0; 
+			//acceptableDistance = 0; 
 			yield return null;
 		}
 
 		partyMoveSpeed = partyMoveSpeedHolder;
 		partySpeedOffset = partySpeedOffsetHolder;
-		acceptableDistance = acceptableDistanceHolder;
+		//acceptableDistance = acceptableDistanceHolder;
 
 	}
 

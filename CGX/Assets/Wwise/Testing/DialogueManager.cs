@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour {
 
 	void Start(){
 		sentences = new Queue<string>();
+		animator.SetBool("IsOpen", false);
 	}
 
 	public void StartDialogue(Dialogue dialogue){
@@ -59,6 +60,7 @@ public class DialogueManager : MonoBehaviour {
 	private void EndDialogue(){
 		//Debug.Log("EOF");
 		animator.SetBool("IsOpen", false);
+		FindObjectOfType<PartyManager>().StartParty();
 		
 	}
 

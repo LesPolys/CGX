@@ -389,6 +389,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18067337e786e8a4ea6cb58dddf8ee08, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &688819737 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114278627762046308, guid: 18067337e786e8a4ea6cb58dddf8ee08,
+    type: 2}
+  m_PrefabInternal: {fileID: 688819736}
+  m_Script: {fileID: 11500000, guid: 83f53932fded846808abaedf423b1597, type: 3}
 --- !u!1001 &789514830
 Prefab:
   m_ObjectHideFlags: 0
@@ -575,6 +581,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114767399870539066, guid: 4fb7c3daeff452c43bdc5571a911f0f2,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4216813877012962, guid: 4fb7c3daeff452c43bdc5571a911f0f2, type: 2}
       propertyPath: m_LocalPosition.x
       value: -397.48398
@@ -611,6 +622,13 @@ Prefab:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114767399870539066, guid: 4fb7c3daeff452c43bdc5571a911f0f2,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Just Some Fine Work
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fb7c3daeff452c43bdc5571a911f0f2, type: 2}
   m_IsPrefabParent: 0
@@ -621,6 +639,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114489984014229104, guid: ddeb08463bab04346ac4c682fa80ee4e,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4394002600917782, guid: ddeb08463bab04346ac4c682fa80ee4e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -365.3154
@@ -656,6 +679,13 @@ Prefab:
     - target: {fileID: 1325487882278520, guid: ddeb08463bab04346ac4c682fa80ee4e, type: 2}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489984014229104, guid: ddeb08463bab04346ac4c682fa80ee4e,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Magical Sentences
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddeb08463bab04346ac4c682fa80ee4e, type: 2}
@@ -724,6 +754,68 @@ Transform:
   m_PrefabParentObject: {fileID: 4057444564508472, guid: baacde18bf3bceb42b711c231f77e1a7,
     type: 2}
   m_PrefabInternal: {fileID: 1325047394}
+--- !u!1 &1332823251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1332823254}
+  - component: {fileID: 1332823253}
+  - component: {fileID: 1332823252}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1332823252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332823251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1332823253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332823251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &1332823254
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332823251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1415076409
 Prefab:
   m_ObjectHideFlags: 0
@@ -835,11 +927,31 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7400000, guid: 4c7418043837349cba84b1aeed3a3063, type: 2}
+      objectReference: {fileID: 688819737}
     - target: {fileID: 114184861375725100, guid: ee69c04d7dc704e42a2ad09bc8f2b923,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 224405093471479268, guid: ee69c04d7dc704e42a2ad09bc8f2b923,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -127
+      objectReference: {fileID: 0}
+    - target: {fileID: 224405093471479268, guid: ee69c04d7dc704e42a2ad09bc8f2b923,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 113.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224405093471479268, guid: ee69c04d7dc704e42a2ad09bc8f2b923,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 174.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 224405093471479268, guid: ee69c04d7dc704e42a2ad09bc8f2b923,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 219.42
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee69c04d7dc704e42a2ad09bc8f2b923, type: 2}
@@ -911,6 +1023,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114099560786923028, guid: 2ad0ecda0efdd944c8f69103d582c18a,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4644767266888802, guid: 2ad0ecda0efdd944c8f69103d582c18a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -443.73
@@ -951,6 +1068,14 @@ Prefab:
         type: 2}
       propertyPath: m_UseFullKinematicContacts
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114099560786923028, guid: 2ad0ecda0efdd944c8f69103d582c18a,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Real Solid Test You Wrote Here!
+
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ad0ecda0efdd944c8f69103d582c18a, type: 2}
