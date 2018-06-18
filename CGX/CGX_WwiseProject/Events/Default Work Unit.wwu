@@ -359,7 +359,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Cave_Track" ID="{9794EF28-5E48-4221-A28F-1DDF21EDCCA5}"/>
+								<Event Name="Cave_Track" ID="{9794EF28-5E48-4221-A28F-1DDF21EDCCA5}">
+									<ChildrenList>
+										<Action Name="" ID="{ACFEC08E-A82C-47E5-B8F0-066A205E4980}" ShortID="698085586">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cave_Music_CGX Mix" ID="{61A95CAF-439F-46B5-ABCD-7AA565201138}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

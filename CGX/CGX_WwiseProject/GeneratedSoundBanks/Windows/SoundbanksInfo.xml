@@ -21,7 +21,7 @@
 			<ShortName>Soundbank01</ShortName>
 			<Path>English(US)\Soundbank01.bnk</Path>
 			<IncludedEvents>
-				<Event Id="281929850" Name="Cave_Track" ObjectPath="\Events\Default Work Unit\Music\Main_Music\Cave_Track" MaxAttenuation="0.000000"/>
+				<Event Id="281929850" Name="Cave_Track" ObjectPath="\Events\Default Work Unit\Music\Main_Music\Cave_Track"/>
 				<Event Id="98870701" Name="Coin_Pickup" ObjectPath="\Events\Default Work Unit\Character-World\Coin\Coin_Pickup"/>
 				<Event Id="2560653066" Name="Druid_Attack" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Attack"/>
 				<Event Id="588867630" Name="Druid_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Footsteps_Start"/>
@@ -301,6 +301,10 @@
 				<File Id="950085750" Language="SFX">
 					<ShortName>footsteps_female_heels_concrete_04.wav</ShortName>
 					<Path>SFX\footsteps_female_heels_concrete_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="962511931" Language="SFX">
+					<ShortName>Cave_Music_CGX Mix.wav</ShortName>
+					<Path>SFX\Cave_Music_CGX Mix_F17FB28C.wem</Path>
 				</File>
 				<File Id="973625299" Language="SFX">
 					<ShortName>Mage_Jump_V8_02.wav</ShortName>
