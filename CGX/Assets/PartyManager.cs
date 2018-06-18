@@ -24,7 +24,7 @@ public class PartyManager : MonoBehaviour {
 
 	Player currentPlayer;
 
-
+	bool isTalking;
 
 	private bool jumpPressed = false;
 
@@ -75,6 +75,36 @@ public class PartyManager : MonoBehaviour {
 			
 		transform.Translate(transform.right * partyMoveSpeed * Time.deltaTime);
 
+		if(Input.GetKeyDown(KeyCode.P)){
+			isTalking = !isTalking;
+			StopPartyCoroutine();
+
+
+		}
+
+	}
+
+	public void StopPartyCoroutine(){
+		isTalking = !isTalking;
+		StartCoroutine(StopParty());
+	}
+
+	IEnumerator StopParty(){
+
+		float partyMoveSpeedHolder = partyMoveSpeed;
+		float partySpeedOffsetHolder = partySpeedOffset;
+		float acceptableDistanceHolder = acceptableDistance;
+
+		while (isTalking) {
+			partyMoveSpeed = 0;
+			partySpeedOffset = 0;
+			acceptableDistance = 0; 
+			yield return null;
+		}
+
+		partyMoveSpeed = partyMoveSpeedHolder;
+		partySpeedOffset = partySpeedOffsetHolder;
+		acceptableDistance = acceptableDistanceHolder;
 
 	}
 

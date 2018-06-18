@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114144481050723802}
   - component: {fileID: 114546780087488050}
   - component: {fileID: 114086865013883278}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -41,9 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4018957647452984}
   - component: {fileID: 114974987811231678}
-  m_Layer: 0
+  - component: {fileID: 61223690655975728}
+  m_Layer: 12
   m_Name: TheParty
-  m_TagString: Untagged
+  m_TagString: ThePlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +57,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4682336348120636}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PartyPos (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897538620317138}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlatformGenerationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4273951677738656}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PartyPos (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4537887176825454}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PartyPos (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +117,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4539702696504644}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlatformDestructionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +135,7 @@ GameObject:
   - component: {fileID: 114429731015599314}
   - component: {fileID: 114513004749800450}
   - component: {fileID: 20647519462403574}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +150,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4252854806615412}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PartyPos (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095306513288294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.72, y: -4.66, z: 0}
+  m_LocalPosition: {x: -485.84, y: 2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4273951677738656}
@@ -353,6 +354,31 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!61 &61223690655975728
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095306513288294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3120728, y: -0.8579111}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.199646, y: 2.7158222}
+  m_EdgeRadius: 0
 --- !u!114 &114086865013883278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -496,13 +522,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMoveSpeed: 2.62
-  acceptableDistance: 0.29
+  acceptableDistance: 0.12
   jumpDelay: 0.09
   partySpeedOffset: 3.5
   tempPartyHolder:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   partyPositions:
   - {fileID: 4273951677738656}

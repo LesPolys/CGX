@@ -12,5 +12,13 @@ public class DialogueTrigger : MonoBehaviour {
 
 	}
 
+	void OnTriggerEnter2D(Collider2D collider){
+
+		if(collider.gameObject.tag == "TheParty"){
+			print ("jhgvmkgvb");
+			TriggerDialogue();
+			collider.gameObject.GetComponent<PartyManager>().StopPartyCoroutine();
+		}
+	}
 
 }
