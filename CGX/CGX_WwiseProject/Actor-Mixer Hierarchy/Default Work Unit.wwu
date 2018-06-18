@@ -2215,6 +2215,28 @@
 								<ActiveSource Name="NiceDayDotJPEG_V3" ID="{D1B926DC-33A4-4E0D-8FFD-CEC8DA522C87}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Cave_Music_CGX Mix" ID="{61A95CAF-439F-46B5-ABCD-7AA565201138}" ShortID="824415521">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cave_Music_CGX Mix" ID="{B7F89E22-FE7E-4F09-B00F-4598322ACC97}" ShortID="962511931">
+									<Language>SFX</Language>
+									<AudioFile>Cave_Music_CGX Mix.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cave_Music_CGX Mix" ID="{B7F89E22-FE7E-4F09-B00F-4598322ACC97}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{C0BDC57A-2DB0-45B7-911A-20E28A3766BA}" ShortID="8115304">
