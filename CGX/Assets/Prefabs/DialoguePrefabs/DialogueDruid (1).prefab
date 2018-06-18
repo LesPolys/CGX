@@ -9,48 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1325487882278520}
+  m_RootGameObject: {fileID: 1385891920240278}
   m_IsPrefabParent: 1
---- !u!1 &1325487882278520
+--- !u!1 &1385891920240278
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4394002600917782}
-  - component: {fileID: 212624421223637818}
-  - component: {fileID: 61744864792036830}
-  - component: {fileID: 50154153173714984}
-  - component: {fileID: 95664010120304926}
-  - component: {fileID: 114489984014229104}
+  - component: {fileID: 4358532337392016}
+  - component: {fileID: 212704393930983956}
+  - component: {fileID: 61138372089412454}
+  - component: {fileID: 50538140722272238}
+  - component: {fileID: 95167720143596626}
+  - component: {fileID: 114939902417472832}
   m_Layer: 8
-  m_Name: DialogueMage
+  m_Name: DialogueDruid (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4394002600917782
+--- !u!4 &4358532337392016
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1385891920240278}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -4.0263257, y: -2.379434, z: 0}
+  m_LocalPosition: {x: -6.524941, y: -1.7468733, z: 0}
   m_LocalScale: {x: 0.1428, y: 0.1428, z: 0.1428}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!50 &50154153173714984
+--- !u!50 &50538140722272238
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1385891920240278}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -64,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61744864792036830
+--- !u!61 &61138372089412454
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1385891920240278}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: fad4314b8d5b4f744a1580c607d58929, type: 2}
@@ -89,16 +89,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.904226, y: 1.385572}
   m_EdgeRadius: 0
---- !u!95 &95664010120304926
+--- !u!95 &95167720143596626
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1385891920240278}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b46e97f894bd7a4f9dadeaf934b91ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: c8a3bc1e1d1413142a2e482de61f677c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,26 +107,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114489984014229104
+--- !u!114 &114939902417472832
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1385891920240278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f911ee865a6e42e09139f4a8676c02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Mage Mike
+    name: Druid Daryl
     sentences: []
---- !u!212 &212624421223637818
+--- !u!212 &212704393930983956
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1385891920240278}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300050, guid: 9f84d791ced896543aa0171e470a0910, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b454caf5bdc5664fa3703296eb03e01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

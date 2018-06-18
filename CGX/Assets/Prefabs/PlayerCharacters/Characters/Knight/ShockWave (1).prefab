@@ -9,96 +9,65 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1325487882278520}
+  m_RootGameObject: {fileID: 1243981736436216}
   m_IsPrefabParent: 1
---- !u!1 &1325487882278520
+--- !u!1 &1243981736436216
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4394002600917782}
-  - component: {fileID: 212624421223637818}
-  - component: {fileID: 61744864792036830}
-  - component: {fileID: 50154153173714984}
-  - component: {fileID: 95664010120304926}
-  - component: {fileID: 114489984014229104}
-  m_Layer: 8
-  m_Name: DialogueMage
-  m_TagString: Player
+  - component: {fileID: 4789260667034030}
+  - component: {fileID: 212080859174487260}
+  - component: {fileID: 58111139301670870}
+  - component: {fileID: 114615968623177134}
+  - component: {fileID: 95574118318999850}
+  m_Layer: 0
+  m_Name: ShockWave (1)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4394002600917782
+--- !u!4 &4789260667034030
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -4.0263257, y: -2.379434, z: 0}
+  m_GameObject: {fileID: 1243981736436216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.289, y: -1.937, z: 0}
   m_LocalScale: {x: 0.1428, y: 0.1428, z: 0.1428}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!50 &50154153173714984
-Rigidbody2D:
-  serializedVersion: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58111139301670870
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &61744864792036830
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1243981736436216}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: fad4314b8d5b4f744a1580c607d58929, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9952203, y: 0.18907285}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.54}
-    newSize: {x: 1.4, y: 1.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.06691241, y: 0.27851868}
   serializedVersion: 2
-  m_Size: {x: 2.904226, y: 1.385572}
-  m_EdgeRadius: 0
---- !u!95 &95664010120304926
+  m_Radius: 0.5424812
+--- !u!95 &95574118318999850
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1243981736436216}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b46e97f894bd7a4f9dadeaf934b91ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: edb2b11cfa1b28f4a8b6121de9f186c7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,26 +76,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114489984014229104
+--- !u!114 &114615968623177134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1243981736436216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f911ee865a6e42e09139f4a8676c02a, type: 3}
+  m_Script: {fileID: 11500000, guid: b46e630d3fd01234a8d6ba861d73f989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Mage Mike
-    sentences: []
---- !u!212 &212624421223637818
+  damage: 2
+  kbPower: 3
+--- !u!212 &212080859174487260
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325487882278520}
+  m_GameObject: {fileID: 1243981736436216}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -156,12 +124,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300050, guid: 9f84d791ced896543aa0171e470a0910, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b4cb61532ffa75439def55a236d8db3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.4, y: 1.54}
+  m_Size: {x: 2.8, y: 2.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
