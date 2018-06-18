@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - KillBox
+  - ThePlayer
+  - TheParty
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Floor
   - Player
   - Enemy
-  - 
+  - TheParty
   - 
   - 
   - 

@@ -109,13 +109,22 @@ public class Player : Agent
         if (transform.localScale.x < 0f)
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
-        if( _controller.isGrounded)
+        if( _controller.isGrounded && moveSpeed > 0)
         {
             currentState = PlayerState.RUNNING;
             Animation(1); //run anim
             // run sound
 
         }
+
+		if( _controller.isGrounded && moveSpeed <= 0)
+		{
+			currentState = PlayerState.IDLE;
+			Animation(0); //run anim
+			// run sound
+			
+		}
+
 
         //sound toggle
         if (_controller.isGrounded && !isPlayingRunSound)

@@ -130,6 +130,7 @@ public class Agent : MonoBehaviour
 		moveSpeed = newSpeed;
 	}
 
+		
 
 
 
