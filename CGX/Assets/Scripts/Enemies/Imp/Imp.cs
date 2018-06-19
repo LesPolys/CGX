@@ -46,9 +46,15 @@ public class Imp : Enemy {
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
 
+		if(Input.GetKeyDown(KeyCode.P)){
+			AkSoundEngine.PostEvent("FG_Attack", gameObject);
+		}
+
+
 	}
 
 	public void SpawnFireBall(Vector3 target){
+
 		GameObject fireBall = fireBallPooler[0].GetPooledObject();
 		fireBall.transform.position = fireBallSpawnPoint.position;
 		fireBall.SetActive(true);
@@ -71,6 +77,7 @@ public class Imp : Enemy {
 		RaycastHit2D hit = Physics2D.Raycast(circlePoint + transform.position + new Vector3( sightDistance * normalizedHorizontalSpeed , 0.0f ,0.0f), (circlePoint ), attackRange);
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player"){
 				SpawnFireBall(circlePoint);
+
 		}
 	}
 

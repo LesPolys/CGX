@@ -22,7 +22,8 @@ public class Minos : Enemy {
 	protected float inAirDamping = 5f;
 
 
-
+	public float xknockback;
+	public float yknockback;
 	 
 
 	// Use this for initialization
@@ -77,7 +78,8 @@ public class Minos : Enemy {
 
 		case MinosStates.CHARGING:
 			moveSpeed = 5;
-				_animator.Play(Animator.StringToHash("MinosAttack"));
+			_animator.Play(Animator.StringToHash("MinosAttack"));
+
 			break;
 
 		}
@@ -96,6 +98,10 @@ public class Minos : Enemy {
 
 
 
+	}
+
+	public void Scream(){
+		AkSoundEngine.PostEvent("Minotaur_Attack", gameObject);
 	}
 
 	void DrawRay( Vector3 start, Vector3 dir, Color color )
@@ -130,14 +136,14 @@ public class Minos : Enemy {
 
 
 
-	void OnCollisionEnter2D(Collision2D other)
+	void OnTriggerEnter2D(Collider2D other)
 		//void OnCollisionEnter(Collision hit)
 	{
 		//print ("w");
 		if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
 		{
 			print ("hit");
-			other.gameObject.GetComponent<Agent>().KnockBack(5, 5,(other.transform.position.x - transform.position.x));
+			other.gameObject.GetComponent<Agent>().KnockBack(xknockback, yknockback,(other.transform.position.x - transform.position.x));
 			return;
 		}
 		

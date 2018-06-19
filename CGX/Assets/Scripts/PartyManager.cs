@@ -17,8 +17,13 @@ public class PartyManager : MonoBehaviour {
 
 	public List<Player> tempPartyHolder;
 	public LinkedList<Player> theParty = new LinkedList<Player>();
+
 	[SerializeField]
 	Transform[] partyPositions;
+
+	[SerializeField]
+	public List<GameObject> spawnablePlayerPrefabs;
+
 
 	int currentPlayerIndex;
 
@@ -54,10 +59,6 @@ public class PartyManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
-
-
 		if(Input.GetKeyDown(KeyCode.RightArrow)){
 			NextMember();
 		}
@@ -77,9 +78,7 @@ public class PartyManager : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.P)){
 			isTalking = !isTalking;
-			StopPartyCoroutine();
-
-
+			StopPartyCoroutine(1);
 		}
 
 	}
@@ -88,12 +87,12 @@ public class PartyManager : MonoBehaviour {
 		isTalking = false;
 	}
 
-	public void StopPartyCoroutine(){
+	public void StopPartyCoroutine(int i){
 		isTalking = !isTalking;
-		StartCoroutine(StopParty());
+		StartCoroutine(StopParty(i));
 	}
 
-	IEnumerator StopParty(){
+	IEnumerator StopParty(int i){
 
 		float partyMoveSpeedHolder = partyMoveSpeed;
 		float partySpeedOffsetHolder = partySpeedOffset;
@@ -105,7 +104,7 @@ public class PartyManager : MonoBehaviour {
 			//acceptableDistance = 0; 
 			yield return null;
 		}
-
+		CreatePartyMember (i);
 		partyMoveSpeed = partyMoveSpeedHolder;
 		partySpeedOffset = partySpeedOffsetHolder;
 		//acceptableDistance = acceptableDistanceHolder;
@@ -198,4 +197,11 @@ public class PartyManager : MonoBehaviour {
 		OrganizeParty();
 	}
 
+	public void CreatePartyMember(int index){
+		if(theParty.Count < 4){
+			GameObject newMember = Instantiate (spawnablePlayerPrefabs[index], partyPositions[theParty.Count].position, Quaternion.identity);
+			theParty.AddLast(newMember.GetComponent<Player>());
+			OrganizeParty();
+		}
+	}
 }

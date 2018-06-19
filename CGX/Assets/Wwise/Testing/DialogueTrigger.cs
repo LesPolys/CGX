@@ -6,6 +6,9 @@ public class DialogueTrigger : MonoBehaviour {
 
 	public Dialogue dialogue;
 
+	[Tooltip("0=K, 1=R, 2=M, 3=D")]
+	public int whichCharacter;
+
 	public void TriggerDialogue(){
 		//change this to a singleton pattern later
 		FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
@@ -22,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour {
 		if(collider.gameObject.tag == "TheParty"){
 
 			TriggerDialogue();
-			collider.gameObject.GetComponent<PartyManager>().StopPartyCoroutine();
+			collider.gameObject.GetComponent<PartyManager>().StopPartyCoroutine(whichCharacter);
 		}
 	}
 

@@ -52,6 +52,11 @@ public class Player : Agent
     void Update()
     {
 
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			SetJumpSignal(true);
+
+		}
+
 		if (partyPosition != null && _controller.isGrounded) {
 		
 

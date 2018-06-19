@@ -15,6 +15,9 @@ public class Agent : MonoBehaviour
     protected float moveSpeed;
 
 
+	[SerializeField]
+	AnimationCurve knockbackCurve;
+
 	protected CharacterController2D _controller;
     protected Animator _animator;
 
@@ -75,9 +78,9 @@ public class Agent : MonoBehaviour
 		//knockBackDirection += (new Vector2 (0, yPower) );
 		//moveVelocity(knockBackDirection * xPower);
 
+		knockbackCurve.Evaluate ();
 
-
-		moveVelocity(new Vector2 (knockBackDirection * xPower, yPower) );
+		changeVelocity(new Vector2 (knockBackDirection * xPower, knockBackDirection * yPower) );
     }
 
 	public void Damage(float damage){ //reduce health stat by X
