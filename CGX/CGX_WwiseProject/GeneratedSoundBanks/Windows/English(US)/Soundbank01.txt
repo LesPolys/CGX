@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	281929850	Cave_Track			\Default Work Unit\Music\Main_Music\Cave_Track	
 	302126430	Mage_Footsteps_Start			\Default Work Unit\Classes\Mage\Mage_Footsteps_Start	
 	309985790	Mage_Footsteps_Stop			\Default Work Unit\Classes\Mage\Mage_Footsteps_Stop	
+	493036092	Enemy_Alert			\Default Work Unit\Enemies\Alert\Enemy_Alert	
 	588867630	Druid_Footsteps_Start			\Default Work Unit\Classes\Druid\Druid_Footsteps_Start	
 	893890045	Ranger_Footsteps_Stop			\Default Work Unit\Classes\Ranger\Ranger_Footsteps_Stop	
 	1045264174	Druid_Jump			\Default Work Unit\Classes\Druid\Druid_Jump	
@@ -12,10 +13,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	1841594088	Player_HitEnemy			\Default Work Unit\Character-World\Actions\Player_HitEnemy	
 	2072673020	Menu_Scroll			\Default Work Unit\Ui\Menu\Menu_Scroll	
 	2152959665	Town_Track			\Default Work Unit\Music\Main_Music\Town_Track	
+	2344392194	Dialogue_Quips			\Default Work Unit\Dialogue\Dialogue_Quips	
 	2446639207	Knight_Footsteps_Start			\Default Work Unit\Classes\Knight\Knight_Footsteps_Start	
 	2530935754	FG_Emit			\Default Work Unit\Enemies\FG\FG_Emit	
 	2560653066	Druid_Attack			\Default Work Unit\Classes\Druid\Druid_Attack	
 	2965945301	Knight_Attack			\Default Work Unit\Classes\Knight\Knight_Attack	
+	3015998970	Break_Crate			\Default Work Unit\Character-World\Actions\Break_Crate	
 	3022924773	Ranger_Attack			\Default Work Unit\Classes\Ranger\Ranger_Attack	
 	3083087645	Player_Death			\Default Work Unit\Character-World\Actions\Player_Death	
 	3333697559	Ranger_Footsteps_Start			\Default Work Unit\Classes\Ranger\Ranger_Footsteps_Start	
@@ -44,9 +47,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	41677025	Player_HitEnemy_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Player_HitEnemy_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Actions\Player_HitEnemy\Player_HitEnemy\Player_HitEnemy_01		25920
 	42184936	Jump_Effort_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Knight_Vocalizations\Jump_Effort_01		27712
 	81894662	Jump_Effort_17	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_17_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Druid_Vocalizations\Jump_Effort_17		23616
+	82401677	Dialogue_Quips_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dialogue_Quips_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue_Quips\Dialogue_Quips_01		128064
 	87758470	Coin_Pickup_V4_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_02		41024
 	96230328	Druid_Attack_V1	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Attack\Druid_Attack_V1		174144
 	101881139	Jump_Effort_12	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Druid_Vocalizations\Jump_Effort_12		19520
+	112804150	Dialogue_Quips_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dialogue_Quips_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue_Quips\Dialogue_Quips_02		111680
 	136010794	Coin_Pickup_V4_05	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Coin_Pickup_V4_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Coin\Coin_Pickup\Coin_Pickup_V4_05		34880
 	141919586	Minotaur_Attack_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Minotaur_Attack_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Minotaur\Minotaur_Attack\Minotaur_Attack_03		294976
 	163651235	Jump_Effort_08	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_08_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Ranger_Vocalizations\Jump_Effort_08		15168
@@ -58,10 +63,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	235965064	Ranger_Jump_V1_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_03		102464
 	295259108	Knight_Jump_V2_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Jump_V2_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Jump\Knight_Jump_V2_01		85184
 	310407956	FG_Attack_02_V2	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\FG_Attack_02_V2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\FG\FG_Attack\FG_Attack_02_V2		172608
+	356883731	Dialogue_Quips_04	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dialogue_Quips_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue_Quips\Dialogue_Quips_04		122944
 	363037985	Druid_Jump_V1_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Jump_V1_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Druid_Jump_V1_02		94272
 	367791495	Concrete_Steps_20	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_20_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_20		12096
 	371124851	Player_Death_04	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Player_Death_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Actions\Player_Death\Player_Death\Player_Death_04		105536
 	393497284	footsteps_female_heels_concrete_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\footsteps_female_heels_concrete_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\footsteps_female_heels_concrete_03		29674
+	402129259	Dialogue_Quips_05	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dialogue_Quips_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue_Quips\Dialogue_Quips_05		97344
 	424612533	Ranger_Jump_V1_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_01		88128
 	425700718	NiceDayDotJPEG_V3	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\NiceDayDotJPEG_V3_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Music\NiceDayDotJPEG_V3		11642464
 	436190008	Jump_Effort_11	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_11_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Druid_Vocalizations\Jump_Effort_11		25152
@@ -69,6 +76,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	436852125	Mage_Jump_V8_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_03		146496
 	446454408	Druid_Jump_V1_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Jump_V1_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Druid_Jump_V1_01		47936
 	461350670	Ranger_Jump_V1_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Ranger_Jump_V1_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Jump\Ranger_Jump_V1_02		98368
+	465918903	Enemy_Alert_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Enemy_Alert_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Alert\Enemy_Alert\Enemy_Alert_03		192064
 	468100868	Jump_Effort_07	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_07_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Ranger_Vocalizations\Jump_Effort_07		25408
 	478336105	Menu_Scroll	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Menu_Scroll_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu\Menu_Scroll		17648
 	488197685	BOOT_CONC CLEAN_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\BOOT_CONC CLEAN_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\BOOT_CONC CLEAN_03		12864
@@ -76,6 +84,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	524617033	BOOT_CONC CLEAN_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\BOOT_CONC CLEAN_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\BOOT_CONC CLEAN_01		13632
 	530245803	BOOT_CONC CLEAN_05	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\BOOT_CONC CLEAN_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Footsteps\BOOT_CONC CLEAN_05		12456
 	598915359	Jump_Effort_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Knight_Vocalizations\Jump_Effort_03		18496
+	606754309	Dialogue_Quips_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dialogue_Quips_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue_Quips\Dialogue_Quips_03		117824
 	607802966	Jump_Effort_05	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Ranger_Vocalizations\Jump_Effort_05		24384
 	628265266	Jump_Effort_14	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_14_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Mage_Vocalizations\Jump_Effort_14		21312
 	635049112	Concrete_Steps_21	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_21_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_21		18752
@@ -91,14 +100,17 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	776100826	Minotaur_Emit_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Minotaur_Emit_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Minotaur\Minotaur_Emit\Minotaur_Emit_02		793864
 	788807419	footsteps_female_heels_concrete_05	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\footsteps_female_heels_concrete_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\footsteps_female_heels_concrete_05		39132
 	802395473	Jump_Effort_16	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_16_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Mage_Vocalizations\Jump_Effort_16		24384
+	809673753	Dialogue_Quips_06	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Dialogue_Quips_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Dialogue_Quips\Dialogue_Quips_06		81984
 	838095883	Knight_Jump_V2_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Knight_Jump_V2_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Knight\Knight_Jump\Knight_Jump_V2_03		141888
 	845333328	Concrete_Steps_19	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_19_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_19		16896
 	847416279	Concrete_Steps_22	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Concrete_Steps_22_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Ranger\Ranger_Footsteps\Concrete_Steps_22		18240
 	852238440	Menu_Select	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Menu_Select_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu\Menu_Select		157544
 	867590590	Player_Death_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Player_Death_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Actions\Player_Death\Player_Death\Player_Death_01		72768
+	893476485	Wood Cutout_Smash_01	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Wood Cutout_Smash_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character-World\Actions\Break_Object\Break_Crate\Wood Cutout_Smash_01		226368
 	902905373	Jump_Effort_10	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Jump_Effort_10_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Jump Vocalizations\Druid_Vocalizations\Jump_Effort_10		22336
 	924259518	Mage_Attack_V1	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Attack_V1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Attack\Mage_Attack_V1		126016
 	933448769	Druid_Jump_V1_03	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Druid_Jump_V1_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Jump\Druid_Jump_V1_03		92736
+	946410815	Enemy_Alert_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Enemy_Alert_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Alert\Enemy_Alert\Enemy_Alert_02		192064
 	950085750	footsteps_female_heels_concrete_04	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\footsteps_female_heels_concrete_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Druid\Druid_Footsteps\footsteps_female_heels_concrete_04		36916
 	962511931	Cave_Music_CGX Mix	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Cave_Music_CGX Mix_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Music\Cave_Music_CGX Mix		19756864
 	973625299	Mage_Jump_V8_02	F:\Documents\GitHub\June 11\CGX\CGX\CGX_WwiseProject\.cache\Windows\SFX\Mage_Jump_V8_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Classes\Mage\Mage_Jump\Mage_Jump_V8_02		133184
