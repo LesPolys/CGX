@@ -21,14 +21,17 @@
 			<ShortName>Soundbank01</ShortName>
 			<Path>English(US)\Soundbank01.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3015998970" Name="Break_Crate" ObjectPath="\Events\Default Work Unit\Character-World\Actions\Break_Crate"/>
 				<Event Id="281929850" Name="Cave_Track" ObjectPath="\Events\Default Work Unit\Music\Main_Music\Cave_Track"/>
 				<Event Id="98870701" Name="Coin_Pickup" ObjectPath="\Events\Default Work Unit\Character-World\Coin\Coin_Pickup"/>
+				<Event Id="2344392194" Name="Dialogue_Quips" ObjectPath="\Events\Default Work Unit\Dialogue\Dialogue_Quips"/>
 				<Event Id="2560653066" Name="Druid_Attack" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Attack"/>
 				<Event Id="588867630" Name="Druid_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Footsteps_Start"/>
 				<Event Id="1056055054" Name="Druid_Footsteps_Stop" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Footsteps_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="1045264174" Name="Druid_Jump" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Jump"/>
-				<Event Id="3959127699" Name="FG_Attack" ObjectPath="\Events\Default Work Unit\Enemies\FG\FG_Attack" MaxAttenuation="0.000000"/>
-				<Event Id="2530935754" Name="FG_Emit" ObjectPath="\Events\Default Work Unit\Enemies\FG\FG_Emit" MaxAttenuation="0.000000"/>
+				<Event Id="493036092" Name="Enemy_Alert" ObjectPath="\Events\Default Work Unit\Enemies\Alert\Enemy_Alert"/>
+				<Event Id="3959127699" Name="FG_Attack" ObjectPath="\Events\Default Work Unit\Enemies\FG\FG_Attack"/>
+				<Event Id="2530935754" Name="FG_Emit" ObjectPath="\Events\Default Work Unit\Enemies\FG\FG_Emit"/>
 				<Event Id="2965945301" Name="Knight_Attack" ObjectPath="\Events\Default Work Unit\Classes\Knight\Knight_Attack"/>
 				<Event Id="2446639207" Name="Knight_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Knight\Knight_Footsteps_Start"/>
 				<Event Id="3614010765" Name="Knight_Footsteps_Stop" ObjectPath="\Events\Default Work Unit\Classes\Knight\Knight_Footsteps_Stop" MaxAttenuation="0.000000"/>
@@ -78,6 +81,10 @@
 					<ShortName>Jump_Effort_17.wav</ShortName>
 					<Path>SFX\Jump_Effort_17_1C9C67B2.wem</Path>
 				</File>
+				<File Id="82401677" Language="SFX">
+					<ShortName>Dialogue_Quips_01.wav</ShortName>
+					<Path>SFX\Dialogue_Quips_01_1C9C67B2.wem</Path>
+				</File>
 				<File Id="87758470" Language="SFX">
 					<ShortName>Coin_Pickup_V4_02.wav</ShortName>
 					<Path>SFX\Coin_Pickup_V4_02_1C9C67B2.wem</Path>
@@ -89,6 +96,10 @@
 				<File Id="101881139" Language="SFX">
 					<ShortName>Jump_Effort_12.wav</ShortName>
 					<Path>SFX\Jump_Effort_12_1C9C67B2.wem</Path>
+				</File>
+				<File Id="112804150" Language="SFX">
+					<ShortName>Dialogue_Quips_02.wav</ShortName>
+					<Path>SFX\Dialogue_Quips_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="136010794" Language="SFX">
 					<ShortName>Coin_Pickup_V4_05.wav</ShortName>
@@ -134,6 +145,10 @@
 					<ShortName>FG_Attack_02_V2.wav</ShortName>
 					<Path>SFX\FG_Attack_02_V2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="356883731" Language="SFX">
+					<ShortName>Dialogue_Quips_04.wav</ShortName>
+					<Path>SFX\Dialogue_Quips_04_1C9C67B2.wem</Path>
+				</File>
 				<File Id="363037985" Language="SFX">
 					<ShortName>Druid_Jump_V1_02.wav</ShortName>
 					<Path>SFX\Druid_Jump_V1_02_1C9C67B2.wem</Path>
@@ -149,6 +164,10 @@
 				<File Id="393497284" Language="SFX">
 					<ShortName>footsteps_female_heels_concrete_03.wav</ShortName>
 					<Path>SFX\footsteps_female_heels_concrete_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="402129259" Language="SFX">
+					<ShortName>Dialogue_Quips_05.wav</ShortName>
+					<Path>SFX\Dialogue_Quips_05_1C9C67B2.wem</Path>
 				</File>
 				<File Id="424612533" Language="SFX">
 					<ShortName>Ranger_Jump_V1_01.wav</ShortName>
@@ -178,6 +197,10 @@
 					<ShortName>Ranger_Jump_V1_02.wav</ShortName>
 					<Path>SFX\Ranger_Jump_V1_02_1C9C67B2.wem</Path>
 				</File>
+				<File Id="465918903" Language="SFX">
+					<ShortName>Enemy_Alert_03.wav</ShortName>
+					<Path>SFX\Enemy_Alert_03_1C9C67B2.wem</Path>
+				</File>
 				<File Id="468100868" Language="SFX">
 					<ShortName>Jump_Effort_07.wav</ShortName>
 					<Path>SFX\Jump_Effort_07_1C9C67B2.wem</Path>
@@ -205,6 +228,10 @@
 				<File Id="598915359" Language="SFX">
 					<ShortName>Jump_Effort_03.wav</ShortName>
 					<Path>SFX\Jump_Effort_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="606754309" Language="SFX">
+					<ShortName>Dialogue_Quips_03.wav</ShortName>
+					<Path>SFX\Dialogue_Quips_03_1C9C67B2.wem</Path>
 				</File>
 				<File Id="607802966" Language="SFX">
 					<ShortName>Jump_Effort_05.wav</ShortName>
@@ -266,6 +293,10 @@
 					<ShortName>Jump_Effort_16.wav</ShortName>
 					<Path>SFX\Jump_Effort_16_1C9C67B2.wem</Path>
 				</File>
+				<File Id="809673753" Language="SFX">
+					<ShortName>Dialogue_Quips_06.wav</ShortName>
+					<Path>SFX\Dialogue_Quips_06_1C9C67B2.wem</Path>
+				</File>
 				<File Id="838095883" Language="SFX">
 					<ShortName>Knight_Jump_V2_03.wav</ShortName>
 					<Path>SFX\Knight_Jump_V2_03_1C9C67B2.wem</Path>
@@ -286,6 +317,10 @@
 					<ShortName>Player_Death_01.wav</ShortName>
 					<Path>SFX\Player_Death_01_1C9C67B2.wem</Path>
 				</File>
+				<File Id="893476485" Language="SFX">
+					<ShortName>Wood Cutout_Smash_01.wav</ShortName>
+					<Path>SFX\Wood Cutout_Smash_01_1C9C67B2.wem</Path>
+				</File>
 				<File Id="902905373" Language="SFX">
 					<ShortName>Jump_Effort_10.wav</ShortName>
 					<Path>SFX\Jump_Effort_10_1C9C67B2.wem</Path>
@@ -297,6 +332,10 @@
 				<File Id="933448769" Language="SFX">
 					<ShortName>Druid_Jump_V1_03.wav</ShortName>
 					<Path>SFX\Druid_Jump_V1_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="946410815" Language="SFX">
+					<ShortName>Enemy_Alert_02.wav</ShortName>
+					<Path>SFX\Enemy_Alert_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="950085750" Language="SFX">
 					<ShortName>footsteps_female_heels_concrete_04.wav</ShortName>

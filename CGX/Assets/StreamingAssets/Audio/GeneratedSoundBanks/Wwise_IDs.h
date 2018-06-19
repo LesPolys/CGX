@@ -13,12 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BREAK_CRATE = 3015998970U;
         static const AkUniqueID CAVE_TRACK = 281929850U;
         static const AkUniqueID COIN_PICKUP = 98870701U;
+        static const AkUniqueID DIALOGUE_QUIPS = 2344392194U;
         static const AkUniqueID DRUID_ATTACK = 2560653066U;
         static const AkUniqueID DRUID_FOOTSTEPS_START = 588867630U;
         static const AkUniqueID DRUID_FOOTSTEPS_STOP = 1056055054U;
         static const AkUniqueID DRUID_JUMP = 1045264174U;
+        static const AkUniqueID ENEMY_ALERT = 493036092U;
         static const AkUniqueID FG_ATTACK = 3959127699U;
         static const AkUniqueID FG_EMIT = 2530935754U;
         static const AkUniqueID KNIGHT_ATTACK = 2965945301U;

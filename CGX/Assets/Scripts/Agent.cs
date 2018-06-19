@@ -78,9 +78,10 @@ public class Agent : MonoBehaviour
 		//knockBackDirection += (new Vector2 (0, yPower) );
 		//moveVelocity(knockBackDirection * xPower);
 
-		knockbackCurve.Evaluate ();
+		//knockbackCurve.Evaluate ();
 
-		changeVelocity(new Vector2 (knockBackDirection * xPower, knockBackDirection * yPower) );
+		changeVelocity(new Vector2 (knockBackDirection * xPower,  yPower) );
+		changeYVelocity (yPower);
     }
 
 	public void Damage(float damage){ //reduce health stat by X

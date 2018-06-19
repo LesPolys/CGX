@@ -536,12 +536,12 @@ Prefab:
     - target: {fileID: 114963990263254756, guid: ed3eb6643689fe04a916f18ddcd395c0,
         type: 2}
       propertyPath: xknockback
-      value: 8.04
+      value: 11.03
       objectReference: {fileID: 0}
     - target: {fileID: 114963990263254756, guid: ed3eb6643689fe04a916f18ddcd395c0,
         type: 2}
       propertyPath: yknockback
-      value: 52.01
+      value: 34.84
       objectReference: {fileID: 0}
     - target: {fileID: 61880910306710502, guid: ed3eb6643689fe04a916f18ddcd395c0,
         type: 2}
