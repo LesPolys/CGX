@@ -80,8 +80,9 @@ public class Agent : MonoBehaviour
 
 		//knockbackCurve.Evaluate ();
 
-		changeVelocity(new Vector2 (knockBackDirection * xPower,  yPower) );
-		changeYVelocity (yPower);
+		changeVelocity( new Vector3(xPower, yPower, 0.0f));
+
+
     }
 
 	public void Damage(float damage){ //reduce health stat by X

@@ -49,6 +49,11 @@ public class Player : Agent
 	public  float alteredMoveSpeed;
 	private float acceptableDistance;
 
+
+
+	public float knockBackTestx;
+	public float knockBackTesty;
+
     void Update()
     {
 
@@ -56,6 +61,12 @@ public class Player : Agent
 			SetJumpSignal(true);
 
 		}
+
+		if(Input.GetKeyDown(KeyCode.DownArrow)){
+			gameObject.KnockBack();
+			
+		}
+		
 
 		if (partyPosition != null && _controller.isGrounded) {
 		
