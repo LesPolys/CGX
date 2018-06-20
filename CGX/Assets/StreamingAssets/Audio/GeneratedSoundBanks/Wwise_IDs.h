@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID BREAK_CRATE = 3015998970U;
         static const AkUniqueID CAVE_TRACK = 281929850U;
         static const AkUniqueID COIN_PICKUP = 98870701U;
+        static const AkUniqueID DIALOGUE_CONTINUE = 1717704501U;
         static const AkUniqueID DIALOGUE_QUIPS = 2344392194U;
         static const AkUniqueID DRUID_ATTACK = 2560653066U;
         static const AkUniqueID DRUID_FOOTSTEPS_START = 588867630U;
@@ -53,7 +54,7 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID US = 1551306157U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

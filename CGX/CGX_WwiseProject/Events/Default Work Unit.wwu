@@ -77,7 +77,7 @@
 							<ChildrenList>
 								<Event Name="Ranger_Attack" ID="{95DCEEBE-A856-4C52-AE7F-040A04C71F1D}">
 									<ChildrenList>
-										<Action Name="" ID="{713D9A5F-C413-46E7-AD33-03ACC3C3EC9A}" ShortID="676300287">
+										<Action Name="" ID="{8C1624F3-9975-4D6C-9893-4636AEC8BF17}" ShortID="813643497">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
@@ -361,13 +361,13 @@
 							<ChildrenList>
 								<Event Name="Town_Track" ID="{0A53A264-14B6-4594-ABDA-6215143808D1}">
 									<ChildrenList>
-										<Action Name="" ID="{9CB061A2-B174-48C3-BEEA-98D5DEB8865B}" ShortID="821365430">
+										<Action Name="" ID="{2BE462FD-0794-4A23-87FD-70452AE56A6C}" ShortID="838882751">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="NiceDayDotJPEG_V3" ID="{853B501B-A6A7-4169-9F11-D4C2FCA0528A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+													<ObjectRef Name="Town_Track_CGXMix" ID="{10DDB666-0C6C-4A31-8DA9-9667C7EC9BA3}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -375,13 +375,13 @@
 								</Event>
 								<Event Name="Cave_Track" ID="{9794EF28-5E48-4221-A28F-1DDF21EDCCA5}">
 									<ChildrenList>
-										<Action Name="" ID="{ACFEC08E-A82C-47E5-B8F0-066A205E4980}" ShortID="698085586">
+										<Action Name="" ID="{859F1E34-5303-4A23-B577-D7C1B8896CE2}" ShortID="939851308">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Cave_Music_CGX Mix" ID="{61A95CAF-439F-46B5-ABCD-7AA565201138}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+													<ObjectRef Name="Cave_Track_CGXMix_V2" ID="{94469711-C51D-4073-AC30-E613AAE15A1A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -524,6 +524,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Dialogue_Quips" ID="{9842F24B-2478-41E3-A389-EC08B2CF0D40}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dialogue_Continue" ID="{C6765015-B7AB-46FE-9357-5FE5B01F1A44}">
+							<ChildrenList>
+								<Action Name="" ID="{AA15408A-9BD1-4A5D-9729-77A673740F53}" ShortID="641905675">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dialogue_Continue" ID="{F9B5AF24-839B-48F5-8510-1C060358F414}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -24,6 +24,7 @@
 				<Event Id="3015998970" Name="Break_Crate" ObjectPath="\Events\Default Work Unit\Character-World\Actions\Break_Crate"/>
 				<Event Id="281929850" Name="Cave_Track" ObjectPath="\Events\Default Work Unit\Music\Main_Music\Cave_Track"/>
 				<Event Id="98870701" Name="Coin_Pickup" ObjectPath="\Events\Default Work Unit\Character-World\Coin\Coin_Pickup"/>
+				<Event Id="1717704501" Name="Dialogue_Continue" ObjectPath="\Events\Default Work Unit\Dialogue\Dialogue_Continue"/>
 				<Event Id="2344392194" Name="Dialogue_Quips" ObjectPath="\Events\Default Work Unit\Dialogue\Dialogue_Quips"/>
 				<Event Id="2560653066" Name="Druid_Attack" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Attack"/>
 				<Event Id="588867630" Name="Druid_Footsteps_Start" ObjectPath="\Events\Default Work Unit\Classes\Druid\Druid_Footsteps_Start"/>
@@ -69,10 +70,6 @@
 					<ShortName>Coin_Pickup_V4_06.wav</ShortName>
 					<Path>SFX\Coin_Pickup_V4_06_1C9C67B2.wem</Path>
 				</File>
-				<File Id="41677025" Language="SFX">
-					<ShortName>Player_HitEnemy_01.wav</ShortName>
-					<Path>SFX\Player_HitEnemy_01_1C9C67B2.wem</Path>
-				</File>
 				<File Id="42184936" Language="SFX">
 					<ShortName>Jump_Effort_01.wav</ShortName>
 					<Path>SFX\Jump_Effort_01_1C9C67B2.wem</Path>
@@ -88,10 +85,6 @@
 				<File Id="87758470" Language="SFX">
 					<ShortName>Coin_Pickup_V4_02.wav</ShortName>
 					<Path>SFX\Coin_Pickup_V4_02_1C9C67B2.wem</Path>
-				</File>
-				<File Id="96230328" Language="SFX">
-					<ShortName>Druid_Attack_V1.wav</ShortName>
-					<Path>SFX\Druid_Attack_V1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="101881139" Language="SFX">
 					<ShortName>Jump_Effort_12.wav</ShortName>
@@ -113,6 +106,10 @@
 					<ShortName>Jump_Effort_08.wav</ShortName>
 					<Path>SFX\Jump_Effort_08_1C9C67B2.wem</Path>
 				</File>
+				<File Id="183978958" Language="SFX">
+					<ShortName>Town_Track_CGXMix.wav</ShortName>
+					<Path>SFX\Town_Track_CGXMix_F17FB28C.wem</Path>
+				</File>
 				<File Id="189906918" Language="SFX">
 					<ShortName>Coin_Pickup_V4_04.wav</ShortName>
 					<Path>SFX\Coin_Pickup_V4_04_1C9C67B2.wem</Path>
@@ -124,10 +121,6 @@
 				<File Id="209876768" Language="SFX">
 					<ShortName>BOOT_CONC CLEAN_02.wav</ShortName>
 					<Path>SFX\BOOT_CONC CLEAN_02_1C9C67B2.wem</Path>
-				</File>
-				<File Id="221281819" Language="SFX">
-					<ShortName>Player_HitEnemy_02.wav</ShortName>
-					<Path>SFX\Player_HitEnemy_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="226472155" Language="SFX">
 					<ShortName>Jump_Effort_09.wav</ShortName>
@@ -145,6 +138,10 @@
 					<ShortName>FG_Attack_02_V2.wav</ShortName>
 					<Path>SFX\FG_Attack_02_V2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="320240475" Language="SFX">
+					<ShortName>Cave_Track_CGXMx_V2.wav</ShortName>
+					<Path>SFX\Cave_Track_CGXMx_V2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="356883731" Language="SFX">
 					<ShortName>Dialogue_Quips_04.wav</ShortName>
 					<Path>SFX\Dialogue_Quips_04_1C9C67B2.wem</Path>
@@ -152,6 +149,10 @@
 				<File Id="363037985" Language="SFX">
 					<ShortName>Druid_Jump_V1_02.wav</ShortName>
 					<Path>SFX\Druid_Jump_V1_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="367658891" Language="SFX">
+					<ShortName>Mage_Attack_V2.wav</ShortName>
+					<Path>SFX\Mage_Attack_V2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="367791495" Language="SFX">
 					<ShortName>Concrete_Steps_20.wav</ShortName>
@@ -169,13 +170,13 @@
 					<ShortName>Dialogue_Quips_05.wav</ShortName>
 					<Path>SFX\Dialogue_Quips_05_1C9C67B2.wem</Path>
 				</File>
+				<File Id="422045549" Language="SFX">
+					<ShortName>Ranger_Attack_V2.wav</ShortName>
+					<Path>SFX\Ranger_Attack_V2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="424612533" Language="SFX">
 					<ShortName>Ranger_Jump_V1_01.wav</ShortName>
 					<Path>SFX\Ranger_Jump_V1_01_1C9C67B2.wem</Path>
-				</File>
-				<File Id="425700718" Language="SFX">
-					<ShortName>NiceDayDotJPEG_V3.wav</ShortName>
-					<Path>SFX\NiceDayDotJPEG_V3_F17FB28C.wem</Path>
 				</File>
 				<File Id="436190008" Language="SFX">
 					<ShortName>Jump_Effort_11.wav</ShortName>
@@ -216,6 +217,10 @@
 				<File Id="518155104" Language="SFX">
 					<ShortName>Minotaur_Emit_01.wav</ShortName>
 					<Path>SFX\Minotaur_Emit_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="519726645" Language="SFX">
+					<ShortName>Knight_Attack_V3.wav</ShortName>
+					<Path>SFX\Knight_Attack_V3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="524617033" Language="SFX">
 					<ShortName>BOOT_CONC CLEAN_01.wav</ShortName>
@@ -277,6 +282,10 @@
 					<ShortName>Player_Death_03.wav</ShortName>
 					<Path>SFX\Player_Death_03_1C9C67B2.wem</Path>
 				</File>
+				<File Id="751825810" Language="SFX">
+					<ShortName>Druid_Attack_V2.wav</ShortName>
+					<Path>SFX\Druid_Attack_V2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="759236324" Language="SFX">
 					<ShortName>Minotaur_Attack_01.wav</ShortName>
 					<Path>SFX\Minotaur_Attack_01_1C9C67B2.wem</Path>
@@ -297,6 +306,10 @@
 					<ShortName>Dialogue_Quips_06.wav</ShortName>
 					<Path>SFX\Dialogue_Quips_06_1C9C67B2.wem</Path>
 				</File>
+				<File Id="817492861" Language="SFX">
+					<ShortName>Dialogue_Continue_01.wav</ShortName>
+					<Path>SFX\Dialogue_Continue_01_1C9C67B2.wem</Path>
+				</File>
 				<File Id="838095883" Language="SFX">
 					<ShortName>Knight_Jump_V2_03.wav</ShortName>
 					<Path>SFX\Knight_Jump_V2_03_1C9C67B2.wem</Path>
@@ -313,6 +326,10 @@
 					<ShortName>Menu_Select.wav</ShortName>
 					<Path>SFX\Menu_Select_1C9C67B2.wem</Path>
 				</File>
+				<File Id="860094726" Language="SFX">
+					<ShortName>Dialogue_Continue_03.wav</ShortName>
+					<Path>SFX\Dialogue_Continue_03_1C9C67B2.wem</Path>
+				</File>
 				<File Id="867590590" Language="SFX">
 					<ShortName>Player_Death_01.wav</ShortName>
 					<Path>SFX\Player_Death_01_1C9C67B2.wem</Path>
@@ -325,13 +342,13 @@
 					<ShortName>Jump_Effort_10.wav</ShortName>
 					<Path>SFX\Jump_Effort_10_1C9C67B2.wem</Path>
 				</File>
-				<File Id="924259518" Language="SFX">
-					<ShortName>Mage_Attack_V1.wav</ShortName>
-					<Path>SFX\Mage_Attack_V1_1C9C67B2.wem</Path>
-				</File>
 				<File Id="933448769" Language="SFX">
 					<ShortName>Druid_Jump_V1_03.wav</ShortName>
 					<Path>SFX\Druid_Jump_V1_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="934947742" Language="SFX">
+					<ShortName>Player_HitEnemy_01_V2.wav</ShortName>
+					<Path>SFX\Player_HitEnemy_01_V2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="946410815" Language="SFX">
 					<ShortName>Enemy_Alert_02.wav</ShortName>
@@ -340,10 +357,6 @@
 				<File Id="950085750" Language="SFX">
 					<ShortName>footsteps_female_heels_concrete_04.wav</ShortName>
 					<Path>SFX\footsteps_female_heels_concrete_04_1C9C67B2.wem</Path>
-				</File>
-				<File Id="962511931" Language="SFX">
-					<ShortName>Cave_Music_CGX Mix.wav</ShortName>
-					<Path>SFX\Cave_Music_CGX Mix_F17FB28C.wem</Path>
 				</File>
 				<File Id="973625299" Language="SFX">
 					<ShortName>Mage_Jump_V8_02.wav</ShortName>
@@ -361,10 +374,6 @@
 					<ShortName>FG_Emit_03.wav</ShortName>
 					<Path>SFX\FG_Emit_03_1C9C67B2.wem</Path>
 				</File>
-				<File Id="1012814379" Language="SFX">
-					<ShortName>Ranger_Attack_V1.wav</ShortName>
-					<Path>SFX\Ranger_Attack_V1_1C9C67B2.wem</Path>
-				</File>
 				<File Id="1016395048" Language="SFX">
 					<ShortName>Jump_Effort_15.wav</ShortName>
 					<Path>SFX\Jump_Effort_15_1C9C67B2.wem</Path>
@@ -373,13 +382,21 @@
 					<ShortName>Minotaur_Attack_02.wav</ShortName>
 					<Path>SFX\Minotaur_Attack_02_1C9C67B2.wem</Path>
 				</File>
-				<File Id="1033272939" Language="SFX">
-					<ShortName>Knight_Attack_V2.wav</ShortName>
-					<Path>SFX\Knight_Attack_V2_1C9C67B2.wem</Path>
+				<File Id="1025816328" Language="SFX">
+					<ShortName>Dialogue_Continue_04.wav</ShortName>
+					<Path>SFX\Dialogue_Continue_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1037667485" Language="SFX">
+					<ShortName>Player_HitEnemy_02_V2.wav</ShortName>
+					<Path>SFX\Player_HitEnemy_02_V2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1040478560" Language="SFX">
 					<ShortName>FG_Attack_01_V2.wav</ShortName>
 					<Path>SFX\FG_Attack_01_V2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1056799665" Language="SFX">
+					<ShortName>Dialogue_Continue_02.wav</ShortName>
+					<Path>SFX\Dialogue_Continue_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1062067847" Language="SFX">
 					<ShortName>FG_Emit_01.wav</ShortName>
