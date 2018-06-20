@@ -102,7 +102,7 @@ public class Parallaxing : MonoBehaviour {
 	{
 		layers [leftIndex].SetActive (false);
 		layers[leftIndex] = bgPools[Random.Range(0,bgPools.Length)].GetPooledObject();
-		layers[leftIndex].transform.position = new Vector3((layers[rightIndex-1].transform.position.x + layers[leftIndex].GetComponent<SpriteRenderer>().bounds.size.x) , transform.position.y, 0);
+		layers[leftIndex].transform.position = new Vector3((layers[rightIndex].transform.position.x + layers[leftIndex].GetComponent<SpriteRenderer>().bounds.size.x) , transform.position.y, 0);
 		layers [rightIndex].SetActive (true);
 
 
