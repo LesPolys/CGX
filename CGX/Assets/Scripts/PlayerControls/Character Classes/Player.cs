@@ -51,8 +51,12 @@ public class Player : Agent
 
 
 
-	public float knockBackTestx;
-	public float knockBackTesty;
+	[SerializeField]
+	protected float knowbackDur;
+
+	[SerializeField]
+	protected float power;
+
 
     void Update()
     {
@@ -63,7 +67,8 @@ public class Player : Agent
 		}
 
 		if(Input.GetKeyDown(KeyCode.DownArrow)){
-			gameObject.KnockBack();
+			
+			//gameObject.GetComponent<Agent>().KnockBack(knockBackTestx,knockBackTesty,);
 			
 		}
 		

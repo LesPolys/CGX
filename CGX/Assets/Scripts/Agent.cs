@@ -73,17 +73,32 @@ public class Agent : MonoBehaviour
 
 	}
 
-    public void KnockBack( float xPower, float yPower, float knockBackDirection)
+	public void KnockBack( float knockDur, float power, Vector3 knockBackDirection)
     {
 		//knockBackDirection += (new Vector2 (0, yPower) );
-		//moveVelocity(knockBackDirection * xPower);
+		//changeVelocity(knockBackDirection * xPower);
 
-		//knockbackCurve.Evaluate ();
-
-		changeVelocity( new Vector3(xPower, yPower, 0.0f));
-
+		StartCoroutine (KnockBackRoutine(  knockDur,  power,  knockBackDirection));
 
     }
+
+	IEnumerator KnockBackRoutine(float knockDur, float knockBackPwr, Vector3 knockbackDir){
+		float timer = 0;
+
+		while (knockDur > timer) {
+			timer += Time.deltaTime;
+
+			changeVelocity (new Vector3 (knockbackDir.x * -100, knockbackDir.y * knockBackPwr, 0.0f));
+
+		}
+		yield return null;
+	}
+
+
+	public void KnockUp(float yPower){
+
+	}
+
 
 	public void Damage(float damage){ //reduce health stat by X
 		health -= damage;
