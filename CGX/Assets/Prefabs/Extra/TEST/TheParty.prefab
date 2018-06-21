@@ -532,3 +532,4 @@ MonoBehaviour:
   - {fileID: 4252854806615412}
   - {fileID: 4537887176825454}
   - {fileID: 4682336348120636}
+  spawnablePlayerPrefabs: []
