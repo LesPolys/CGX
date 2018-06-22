@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PartyManager : MonoBehaviour {
 
@@ -32,6 +33,12 @@ public class PartyManager : MonoBehaviour {
 	bool isTalking;
 
 	private bool jumpPressed = false;
+
+
+	//public static event Action knightAddEvent = null; //events are kind of like a weird list
+	public static event Action rangerAddEvent = null; //events are kind of like a weird list
+	public static event Action mageAddEvent = null; //events are kind of like a weird list
+	public static event Action druidAddEvent = null; //events are kind of like a weird list
 
 
 	void OnValidate(){
@@ -75,11 +82,11 @@ public class PartyManager : MonoBehaviour {
 
 			
 		transform.Translate(transform.right * partyMoveSpeed * Time.deltaTime);
-
+		/*
 		if(Input.GetKeyDown(KeyCode.P)){
 			isTalking = !isTalking;
 			StopPartyCoroutine(1);
-		}
+		}*/
 
 	}
 
@@ -169,6 +176,7 @@ public class PartyManager : MonoBehaviour {
 	}
 
 	IEnumerator GroupJump(){
+
 			if(jumpPressed){
 				foreach (Player member in theParty) {
 					if(!member.IsGrounded() && currentPlayer == member){
@@ -199,9 +207,50 @@ public class PartyManager : MonoBehaviour {
 
 	public void CreatePartyMember(int index){
 		if(theParty.Count < 4){
-			GameObject newMember = Instantiate (spawnablePlayerPrefabs[index], partyPositions[theParty.Count].position, Quaternion.identity);
-			theParty.AddLast(newMember.GetComponent<Player>());
+
+			switch(index){ //	[Tooltip("0=K, 1=R, 2=M, 3=D")]
+			case 0: //knight
+
+				break;
+
+			case 1: //Ranger
+				FireRangerAddEvent();
+				break;
+
+			case 2: //Mage
+				FireMageAddEvent();
+				break;
+
+			case 3: //Druid
+				FireDruidAddEvent();
+				break;
+			}
+
+
+			//GameObject newMember = Instantiate (spawnablePlayerPrefabs[index], partyPositions[theParty.Count].position, Quaternion.identity);
+			GameObject newMember = Instantiate (spawnablePlayerPrefabs[index], new Vector3(0.5f, partyPositions[theParty.Count].position.y, 0.0f), Quaternion.identity);
+			newMember.transform.parent = transform;
+
+
+
+			//theParty.AddLast(newMember.GetComponent<Player>());
+			AddMember(newMember.GetComponent<Player>());
 			OrganizeParty();
 		}
 	}
+
+	public void FireRangerAddEvent(){
+		rangerAddEvent.Invoke ();
+	}
+
+	public void FireDruidAddEvent(){
+		druidAddEvent.Invoke ();
+	}
+
+	public void FireMageAddEvent(){
+		mageAddEvent.Invoke ();
+	}
+
+
+
 }

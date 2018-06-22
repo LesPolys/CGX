@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 
 
 public class Player : Agent
@@ -58,8 +58,26 @@ public class Player : Agent
 	protected float power;
 
 
+
+
+
+	/*///////INSPECTOR SHIT///////////////////////////////////////
+	[Serializable]
+	private class MyCustomEventClass : UnityEngine.Events.UnityEvent{ // make this shit in the inspector for fun
+
+	};
+
+	[SerializeField]
+	private MyCustomEventClass myEvent = null;
+	*/
+	////////////////////////////////////////////////////////////
+
+
     void Update()
     {
+
+		//myEvent.Invoke ("TEST");
+		/*
 
 		if(Input.GetKeyDown(KeyCode.UpArrow)){
 			SetJumpSignal(true);
@@ -70,7 +88,7 @@ public class Player : Agent
 			
 			//gameObject.GetComponent<Agent>().KnockBack(knockBackTestx,knockBackTesty,);
 			
-		}
+		}*/
 		
 
 		if (partyPosition != null && _controller.isGrounded) {
@@ -252,6 +270,9 @@ public class Player : Agent
 	public void SetAcceptableDistance(float newDistance){
 		acceptableDistance = newDistance;
 	}
+
+
+
 	
 }
 

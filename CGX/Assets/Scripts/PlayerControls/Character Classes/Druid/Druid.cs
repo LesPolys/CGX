@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Druid : Player
 {
@@ -9,6 +10,8 @@ public class Druid : Player
     public float rootTime;
 
     public ObjectPooler[] vinePooler;
+
+	public static event Action druidJumpEvent = null; //events are kind of like a weird list
 
     Druid()
     {
@@ -40,6 +43,7 @@ public class Druid : Player
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("DruidJump"));
+				FireDruidJumpEvent();
                 AkSoundEngine.PostEvent("Druid_Jump", gameObject);
                 break;
             case 3: //fall down
@@ -94,6 +98,13 @@ public class Druid : Player
         }
 
     }
+
+	public void FireDruidJumpEvent(){ // call this to fire the event to all listen
+		//if (jumpEvent != null) {// check to see if no one is listening cause that would be embarassing screaming into the void
+		//jumpEvent();//fire the event
+		//druidJumpEvent.Invoke();//also fires the event but dont need a null check for listeners
+		//}
+	}
 
 
 

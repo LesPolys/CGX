@@ -6,12 +6,12 @@
 				<SoundcasterSession Name="Session 1" ID="{5B14F8F7-6D79-4EFC-A1AA-F771040DE570}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Cave_Track_CGXMix_V2" ID="{94469711-C51D-4073-AC30-E613AAE15A1A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
-							<Position X="0" Y="1"/>
+							<ObjectRef Name="NiceDayDotJPEG_V3" ID="{853B501B-A6A7-4169-9F11-D4C2FCA0528A}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Town_Track_CGXMix" ID="{10DDB666-0C6C-4A31-8DA9-9667C7EC9BA3}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
-							<Position X="1" Y="1"/>
+							<ObjectRef Name="Cave_Music_CGX Mix" ID="{61A95CAF-439F-46B5-ABCD-7AA565201138}" WorkUnitID="{7CF6D929-0649-43D9-9604-4DEBAAFFB80D}"/>
+							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>

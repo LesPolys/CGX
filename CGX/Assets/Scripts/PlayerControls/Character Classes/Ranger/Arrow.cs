@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class Arrow : MonoBehaviour {
 
@@ -13,7 +15,7 @@ public class Arrow : MonoBehaviour {
 	private Animator _animator;
 
    
-
+	public static event Action arrowHitEvent = null; //events are kind of like a weird list
     //void Start()
     //{
         
@@ -64,7 +66,7 @@ public class Arrow : MonoBehaviour {
 
 		if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
 		{
-			print ("hi");
+			//print ("hi");
             //knockback and damage
 			other.gameObject.GetComponent<Agent>().Damage(1);
 			//other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position).normalized);
@@ -77,4 +79,13 @@ public class Arrow : MonoBehaviour {
         
         //Destroy(gameObject);
     }
+
+
+	public void FireArroweHitEvent(){ // call this to fire the event to all listen
+		//if (jumpEvent != null) {// check to see if no one is listening cause that would be embarassing screaming into the void
+		//jumpEvent();//fire the event
+		arrowHitEvent.Invoke();//also fires the event but dont need a null check for listeners
+		//}
+	}
+
 }

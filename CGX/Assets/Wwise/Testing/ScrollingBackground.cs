@@ -89,5 +89,10 @@ public class ScrollingBackground : MonoBehaviour {
     }
 
 
+	public void SetCameraLastXPos(float newXPos){
+
+		lastCameraX = newXPos;
+	}
+
 
 }

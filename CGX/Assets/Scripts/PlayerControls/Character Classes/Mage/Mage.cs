@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 class Mage : Player
 {
@@ -11,6 +12,8 @@ class Mage : Player
 
     [SerializeField]
     protected LayerMask partyMask = 0;
+
+	public static event Action mageJumpEvent = null; //events are kind of like a weird list
 
     Mage()
     {
@@ -40,6 +43,7 @@ class Mage : Player
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("MageJump"));
+				FireMageJumpvent();
                 //AkSoundEngine.PostEvent("Mage_Jump", gameObject);
                 break;
             case 3: //fall down
@@ -110,4 +114,13 @@ class Mage : Player
 
       
     }
+
+
+	public void FireMageJumpvent(){ // call this to fire the event to all listen
+		//if (jumpEvent != null) {// check to see if no one is listening cause that would be embarassing screaming into the void
+		//jumpEvent();//fire the event
+		//mageJumpEvent.Invoke();//also fires the event but dont need a null check for listeners
+		//}
+	}
+
 }

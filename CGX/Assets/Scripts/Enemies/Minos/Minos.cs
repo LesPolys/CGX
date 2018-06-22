@@ -7,6 +7,8 @@ public class Minos : Enemy {
 	public float losFrontRange;
 	public float losBackRange;
 
+	public float chargeSpeed;
+
 	public enum MinosStates {IDLE, ENRAGED, WALK, CHARGING };
 
 
@@ -25,6 +27,15 @@ public class Minos : Enemy {
 	public float xknockback;
 	public float yknockback;
 	 
+
+	Vector3 startPos;
+	public float resetDistance;
+
+
+	protected override void Awake(){
+		base.Awake ();
+		startPos = transform.position;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -77,7 +88,7 @@ public class Minos : Enemy {
 			break;
 
 		case MinosStates.CHARGING:
-			moveSpeed = 5;
+			moveSpeed = chargeSpeed;
 			_animator.Play(Animator.StringToHash("MinosAttack"));
 
 			break;
@@ -96,6 +107,13 @@ public class Minos : Enemy {
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
 
+		print ("Trans" + transform.position);
+		print ("Start" + startPos);
+
+		if(Vector3.Distance(transform.position, startPos) > resetDistance){//if minos has moved to far away from his starting point then reset him to the start point, rresety his velocity to nothing and set his state back to the default
+			print ("toobig");
+			ResetMinos();
+		}
 
 
 	}
@@ -120,14 +138,14 @@ public class Minos : Enemy {
 
 	public void ScanForEnemies(){
 
-		DrawRay(transform.position + new Vector3((0.65f * transform.right).x,0.5f,0), transform.right * losFrontRange, Color.red);
-		if (Physics2D.Raycast(transform.position + new Vector3((0.65f * transform.right).x,0.5f,0), transform.right, losFrontRange)){
+		DrawRay(transform.position + new Vector3((0.15f * transform.right).x,0.1428f/2.0f,0), transform.right * losFrontRange, Color.red);
+		if (Physics2D.Raycast(transform.position + new Vector3((0.15f * transform.right).x,0.1428f/2.0f,0), transform.right, losFrontRange)){
 			SetState(MinosStates.ENRAGED);
 		}
 		
 		
-		DrawRay(transform.position + new Vector3((-0.65f * transform.right).x ,0.5f,0), -1 * transform.right * losBackRange, Color.blue);
-		if (Physics2D.Raycast(transform.position + new Vector3((-0.65f * transform.right).x ,0.5f,0), -1 * transform.right, losBackRange)){
+		DrawRay(transform.position + new Vector3((-0.15f * transform.right).x ,0.1428f/2.0f,0), -1 * transform.right * losBackRange, Color.blue);
+		if (Physics2D.Raycast(transform.position + new Vector3((-0.15f * transform.right).x ,0.1428f/2.0f,0), -1 * transform.right, losBackRange)){
 			ChangeFacing();
 			SetState(MinosStates.ENRAGED);
 		}
@@ -149,6 +167,14 @@ public class Minos : Enemy {
 		}
 		
 	
+	}
+
+	void ResetMinos(){
+
+		transform.position = startPos;
+		currentState = MinosStates.WALK;
+		//_velocity = 0.0f;
+
 	}
 
 	

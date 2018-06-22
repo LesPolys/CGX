@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Ranger : Player
 {
@@ -17,6 +18,8 @@ public class Ranger : Player
 
 
     private GameObject currentTarget;
+
+	public static event Action rangerJumpEvent = null; //events are kind of like a weird list
 
 
     Ranger()
@@ -56,6 +59,7 @@ public class Ranger : Player
                 break;
             case 2: //jump up
                 _animator.Play(Animator.StringToHash("RangerJump"));
+				FireRangerJumpEvent();
                 AkSoundEngine.PostEvent("Ranger_Jump", gameObject);
                 break;
             case 3: //fall down
@@ -79,11 +83,6 @@ public class Ranger : Player
      
 
 
-    public override void Ability()
-    {
-
-
-    }
 
 	public void DisplayCrosshair(){
 		if (currentTarget != null) {
@@ -130,19 +129,18 @@ public class Ranger : Player
 							currentTarget = collider.gameObject;
 						}
 					}
-					
-				
-
 				}
-
-
-			
 			} 
-
-
 			yield return null;
 		}
 		yield break;
+	}
+
+	public void FireRangerJumpEvent(){ // call this to fire the event to all listen
+		//if (jumpEvent != null) {// check to see if no one is listening cause that would be embarassing screaming into the void
+		//jumpEvent();//fire the event
+		//rangerJumpEvent.Invoke();//also fires the event but dont need a null check for listeners
+		//}
 	}
 
 

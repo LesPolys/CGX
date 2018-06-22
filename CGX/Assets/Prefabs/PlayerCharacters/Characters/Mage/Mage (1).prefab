@@ -183,12 +183,14 @@ MonoBehaviour:
   gravity: -25
   jumpStartMultiplier: -25
   jumpEndMultiplier: -25
-  jumpHeight: 3
+  jumpHeight: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
   partyPosition: {fileID: 0}
   alteredMoveSpeed: 0
+  knowbackDur: 0
+  power: 0
   abilityRange: 9.51
   magneticPower: 1.5
   floatStrength: 5.1

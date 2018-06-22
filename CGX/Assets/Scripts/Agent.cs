@@ -15,8 +15,7 @@ public class Agent : MonoBehaviour
     protected float moveSpeed;
 
 
-	[SerializeField]
-	AnimationCurve knockbackCurve;
+
 
 	protected CharacterController2D _controller;
     protected Animator _animator;
@@ -50,7 +49,7 @@ public class Agent : MonoBehaviour
 
     #endregion
 
-	void Awake()
+	protected virtual void Awake()
     {
         _animator = GetComponent<Animator>();
         _controller = GetComponent<CharacterController2D>();
