@@ -1306,6 +1306,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Mage_Attack_V2" ID="{E5602A68-86AF-4FC0-99DB-956951B24576}" ShortID="845095128">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
@@ -1322,6 +1329,32 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Mage_Attack_V2" ID="{6D4ED6C7-51A4-45CD-BE9D-B46CA5C69CA9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Mage_Attack_V1" ID="{1FB1CFA0-4587-4D7F-9514-0D6A437B0190}" ShortID="309431833">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A077409F-2D53-4127-8069-A988E8E09D6E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="us" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Mage_Attack_V1" ID="{C45E0416-579E-4E7D-856C-FFDD4DDA95B0}" ShortID="975667522">
+													<Language>SFX</Language>
+													<AudioFile>Mage_Attack_V1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Mage_Attack_V1" ID="{C45E0416-579E-4E7D-856C-FFDD4DDA95B0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -2227,7 +2260,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

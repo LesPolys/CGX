@@ -123,10 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   moveSpeed: 0
-  gravity: -25
-  jumpStartMultiplier: -25
-  jumpEndMultiplier: -25
-  jumpHeight: 1
+  gravity: -30
+  jumpStartMultiplier: -6
+  jumpEndMultiplier: -7
+  jumpHeight: 1.1
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300058, guid: 0d40e4d1e7bff484b86b1ffd72e2e774, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
