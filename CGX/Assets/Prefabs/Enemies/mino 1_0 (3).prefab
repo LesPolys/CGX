@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212783290014618406}
   - component: {fileID: 95637031676420292}
   - component: {fileID: 61071475179877320}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mino 1_0 (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

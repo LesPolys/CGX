@@ -25,6 +25,7 @@ public class Vine : MonoBehaviour {
 
 	public void Grow(){
 		_animator.Play (Animator.StringToHash("Grow"));
+		FireVineRootHitEvent ();
 	}
 
 	public void EndAnimation(){

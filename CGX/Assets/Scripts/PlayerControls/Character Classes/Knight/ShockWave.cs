@@ -36,11 +36,11 @@ public class ShockWave : MonoBehaviour {
         if (other.gameObject.tag == "Enemy")// || hit.gameObject.tag == "Bullet")
         {
             //knockback and damage
-			//print ("WTW");
+	//		print ("WTW");
 			other.gameObject.GetComponent<Agent>().Damage(damage);
 			//other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position.x - transform.position.x).normalized);
 			//other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position.x - transform.position.x));
-			other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position - transform.position));
+			//other.gameObject.GetComponent<Agent>().KnockBack(kbPower, 1,(other.transform.position - transform.position));
 
 			FireShockWaveHitEvent();
 

@@ -106,16 +106,28 @@ public class Agent : MonoBehaviour
 
     public void Root(float newSpeed, float abilityTime)
     {
-        StartCoroutine(RootRoutine(newSpeed, abilityTime));
+        StartCoroutine(RootRoutine(newSpeed, abilityTime, transform.position));
     }
 
-    IEnumerator RootRoutine(float newSpeed, float abilityTime)
+    IEnumerator RootRoutine(float newSpeed, float abilityTime, Vector3 trans)
     {
+		transform.position = trans;
         float startSpeed = moveSpeed;
-		_velocity.x = newSpeed;//remove for gradual velocity reduction, should probably lerp between the values.
-        moveSpeed = newSpeed;
-        yield return new WaitForSeconds(abilityTime);
-        moveSpeed = startSpeed;
+		if (gameObject.GetComponent<Minos> () != null) {
+			float tempC = gameObject.GetComponent<Minos> ().chargeSpeed;
+			gameObject.GetComponent<Minos> ().chargeSpeed = 0;
+			_velocity.x = newSpeed;//remove for gradual velocity reduction, should probably lerp between the values.
+			moveSpeed = newSpeed;
+			yield return new WaitForSeconds (abilityTime);
+			moveSpeed = startSpeed;
+			gameObject.GetComponent<Minos> ().chargeSpeed = tempC;
+		} else {
+			_velocity.x = newSpeed;//remove for gradual velocity reduction, should probably lerp between the values.
+			moveSpeed = newSpeed;
+			yield return new WaitForSeconds(abilityTime);
+			moveSpeed = startSpeed;
+		}
+
     }
 
     IEnumerator AlterSpeedTemp(float speedChange, float abilityTime)

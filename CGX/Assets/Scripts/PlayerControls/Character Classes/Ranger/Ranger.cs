@@ -71,8 +71,10 @@ public class Ranger : Player
                 AkSoundEngine.PostEvent("Ranger_Attack", gameObject);
                 break;
             case 5: //fainting
+				_animator.Play(Animator.StringToHash("RangerHit"));
                 break;
             case 6: //just in case
+				_animator.Play(Animator.StringToHash("RangerFaint"));
                 break;
 
 

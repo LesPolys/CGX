@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392189691230036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.624, y: -2.575, z: 0}
+  m_LocalPosition: {x: -7.7783203, y: -3.0911844, z: 0}
   m_LocalScale: {x: 0.1428, y: 0.1428, z: 0.1428}
   m_Children: []
   m_Father: {fileID: 0}
@@ -206,8 +206,8 @@ MonoBehaviour:
   alteredMoveSpeed: 0
   knowbackDur: 0
   power: 0
-  attackRange: 20.8
-  rootTime: 5
+  attackRange: 3.32
+  rootTime: 2.5
   vinePooler:
   - {fileID: 114411744155408232}
 --- !u!212 &212001000727486860

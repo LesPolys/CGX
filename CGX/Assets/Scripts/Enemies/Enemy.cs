@@ -41,4 +41,8 @@ public class Enemy : Agent {
 		}
 	}
 
+	public void Disable(){
+		gameObject.SetActive (false);
+	}
+
 }

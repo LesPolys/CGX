@@ -9,7 +9,7 @@ public class Minos : Enemy {
 
 	public float chargeSpeed;
 
-	public enum MinosStates {IDLE, ENRAGED, WALK, CHARGING };
+	public enum MinosStates {IDLE, ENRAGED, WALK, CHARGING, HIT, DEAD };
 
 
 	MinosStates currentState = MinosStates.IDLE;
@@ -93,6 +93,21 @@ public class Minos : Enemy {
 
 			break;
 
+		case MinosStates.HIT:
+			//moveSpeed = chargeSpeed;
+			_animator.Play(Animator.StringToHash("MinosHit"));
+			
+			break;
+		case MinosStates.DEAD:
+			//moveSpeed = chargeSpeed;
+			_animator.Play(Animator.StringToHash("MinosDead"));
+			
+			break;
+
+		
+
+		
+
 		}
 
 
@@ -107,11 +122,11 @@ public class Minos : Enemy {
 		// grab our current _velocity to use as a base for all calculations
 		_velocity = _controller.velocity;
 
-		print ("Trans" + transform.position);
-		print ("Start" + startPos);
+		//print ("Trans" + transform.position);
+		//print ("Start" + startPos);
 
 		if(Vector3.Distance(transform.position, startPos) > resetDistance){//if minos has moved to far away from his starting point then reset him to the start point, rresety his velocity to nothing and set his state back to the default
-			print ("toobig");
+			//print ("toobig");
 			ResetMinos();
 		}
 
@@ -160,9 +175,11 @@ public class Minos : Enemy {
 		//print ("w");
 		if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
 		{
-			//print ("hit");
+		//	print ("hit");
 			//other.gameObject.GetComponent<Agent>().KnockBack(xknockback, yknockback,(other.transform.position.x - transform.position.x));
-			other.gameObject.GetComponent<Agent>().KnockBack(xknockback, yknockback,(other.transform.position - transform.position));
+			//other.gameObject.GetComponent<Agent>().KnockBack(xknockback, yknockback,(other.transform.position - transform.position));
+			other.gameObject.GetComponent<Agent>().Damage(1);
+			other.gameObject.GetComponent<Player>().HitAnim();
 			return;
 		}
 		
@@ -175,6 +192,10 @@ public class Minos : Enemy {
 		currentState = MinosStates.WALK;
 		//_velocity = 0.0f;
 
+	}
+
+	public void Disable(){
+		gameObject.SetActive (false);
 	}
 
 	

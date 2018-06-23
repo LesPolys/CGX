@@ -54,8 +54,10 @@ class Mage : Player
                 //AkSoundEngine.PostEvent("Mage_Attack", gameObject);
                 break;
             case 5: //fainting
+				_animator.Play(Animator.StringToHash("MageHit"));
                 break;
             case 6: //just in case
+				_animator.Play(Animator.StringToHash("MageFaint"));
                 break;
 
 

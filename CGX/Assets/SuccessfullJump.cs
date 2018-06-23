@@ -27,10 +27,12 @@ public class SuccessfullJump : MonoBehaviour {
 			foreach (GameObject box in boxes) {
 				if(box.GetComponent<BoxBreak>().broken == true){
 					break;
-				}else{
-					FireBoxJumpEvent();
 				}
 			}
+
+				print ("hello");
+				FireBoxJumpEvent();
+
 		}
 		
 	}

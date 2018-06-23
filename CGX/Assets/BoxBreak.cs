@@ -25,7 +25,7 @@ public class BoxBreak : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 		if(other.gameObject.tag == "Player"){
-			print ("skbf");
+	//		print ("skbf");
 			//broken = true;
 			_animator.Play (Animator.StringToHash("CrateSmash"));
 		}

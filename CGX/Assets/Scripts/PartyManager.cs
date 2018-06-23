@@ -41,6 +41,10 @@ public class PartyManager : MonoBehaviour {
 	public static event Action mageAddEvent = null; //events are kind of like a weird list
 	public static event Action druidAddEvent = null; //events are kind of like a weird list
 
+	public static event Action rangerLeaderEvent = null; //events are kind of like a weird list
+	public static event Action mageLeaderEvent = null; //events are kind of like a weird list
+	public static event Action druidLeaderEvent = null; //events are kind of like a weird list
+
 
 	void OnValidate(){
 		UpdatePartyStats ();
@@ -112,7 +116,7 @@ public class PartyManager : MonoBehaviour {
 			//acceptableDistance = 0; 
 			yield return null;
 		}
-		CreatePartyMember (i);
+		//CreatePartyMember (i);
 		partyMoveSpeed = partyMoveSpeedHolder;
 		partySpeedOffset = partySpeedOffsetHolder;
 		//acceptableDistance = acceptableDistanceHolder;
@@ -140,6 +144,22 @@ public class PartyManager : MonoBehaviour {
 
 	void SetCurrentPlayer(){
 		currentPlayer = theParty.First.Value;
+		//print (currentPlayer.gameObject.tag);
+		 //	[Tooltip("0=K, 1=R, 2=M, 3=D")]
+			
+
+		if(currentPlayer.gameObject.GetComponent<Ranger>() != null){
+			FireRangerLeaderEvent();
+		}
+
+		if(currentPlayer.gameObject.GetComponent<Mage>() != null){
+			FireMageLeaderEvent();
+		}
+
+		if(currentPlayer.gameObject.GetComponent<Druid>() != null){
+			FireDruidLeaderEvent();
+		}
+
 	}
 
 	void OrganizeParty(){
@@ -257,6 +277,17 @@ public class PartyManager : MonoBehaviour {
 		mageAddEvent.Invoke ();
 	}
 
-
+	
+	public void FireRangerLeaderEvent(){
+		rangerLeaderEvent.Invoke ();
+	}
+	
+	public void FireDruidLeaderEvent(){
+		druidLeaderEvent.Invoke ();
+	}
+	
+	public void FireMageLeaderEvent(){
+		mageLeaderEvent.Invoke ();
+	}
 
 }

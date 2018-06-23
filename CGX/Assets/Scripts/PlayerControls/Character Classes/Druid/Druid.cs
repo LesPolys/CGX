@@ -53,10 +53,12 @@ public class Druid : Player
                 _animator.Play(Animator.StringToHash("DruidPower"));
                 AkSoundEngine.PostEvent("Druid_Attack", gameObject);
                 break;
-            case 5: //fainting
+            case 5: //hit
+				_animator.Play(Animator.StringToHash("DruidHit"));    
                 break;
-            case 6: //just in case
-                break;
+			case 6: ////fainting
+				_animator.Play(Animator.StringToHash("DruidFaint"));              
+				break;
 
 
 

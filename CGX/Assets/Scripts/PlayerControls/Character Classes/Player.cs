@@ -37,7 +37,7 @@ public class Player : Agent
     protected bool abilityAnimating;
 
 
-    protected enum PlayerState {IDLE, RUNNING, JUMPING, FALLING, ABILITY };
+    protected enum PlayerState {IDLE, RUNNING, JUMPING, FALLING, ABILITY, HIT, DEATH };
     protected  PlayerState currentState;
     
 	[SerializeField]
@@ -57,7 +57,7 @@ public class Player : Agent
 	[SerializeField]
 	protected float power;
 
-
+	private bool hit = false;
 
 
 
@@ -89,126 +89,121 @@ public class Player : Agent
 			//gameObject.GetComponent<Agent>().KnockBack(knockBackTestx,knockBackTesty,);
 			
 		}*/
+		if (!hit) {
+
+			if (partyPosition != null && _controller.isGrounded) {
 		
 
-		if (partyPosition != null && _controller.isGrounded) {
-		
+				//print (partyPosition);
+				//print(partyPosition.transform.position);
 
-			//print (partyPosition);
-			//print(partyPosition.transform.position);
+				if (transform.position.x < partyPosition.position.x) {
 
-			if (transform.position.x < partyPosition.position.x) {
+					alteredMoveSpeed = moveSpeed + speedOffset;
 
-				alteredMoveSpeed = moveSpeed + speedOffset;
+				} else if (transform.position.x > partyPosition.position.x) {
 
-			} else if (transform.position.x > partyPosition.position.x) {
-
-				alteredMoveSpeed = moveSpeed - speedOffset;
-			}
+					alteredMoveSpeed = moveSpeed - speedOffset;
+				}
 
 
-			if(Mathf.Abs(partyPosition.transform.position.x - transform.position.x) < acceptableDistance){
+				if (Mathf.Abs (partyPosition.transform.position.x - transform.position.x) < acceptableDistance) {
+					alteredMoveSpeed = moveSpeed;
+				}
+
+
+			} else {
 				alteredMoveSpeed = moveSpeed;
 			}
 
 
-		} else {
-			alteredMoveSpeed = moveSpeed;
-		}
-
-
-		if (_controller.isGrounded)
-			_velocity.y = 0;
-
-
-		if(jumpSignal){
-			// we can only jump whilst grounded
 			if (_controller.isGrounded)
-			{
-				_velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
-				currentState = PlayerState.JUMPING;
-				Animation(2); //jump
-				//jump sound
-			}
+				_velocity.y = 0;
+
+
+			if (jumpSignal) {
+				// we can only jump whilst grounded
+				if (_controller.isGrounded) {
+					_velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
+					currentState = PlayerState.JUMPING;
+					Animation (2); //jump
+					//jump sound
+				}
 			
-			if (!_controller.isGrounded)
-			{
-				currentState = PlayerState.ABILITY;
-				Animation(4);
-				abilityAnimating = true;
-				Ability();
-				//shoot sound
+				if (!_controller.isGrounded) {
+					currentState = PlayerState.ABILITY;
+					Animation (4);
+					abilityAnimating = true;
+					Ability ();
+					//shoot sound
 				
+				}
+
+				SetJumpSignal (false);
+			}
+		
+			normalizedHorizontalSpeed = 1;
+			if (transform.localScale.x < 0f)
+				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
+			if (_controller.isGrounded && moveSpeed > 0) {
+				currentState = PlayerState.RUNNING;
+				Animation (1); //run anim
+				// run sound
+
 			}
 
-			SetJumpSignal(false);
-		}
-		
-        normalizedHorizontalSpeed = 1;
-        if (transform.localScale.x < 0f)
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-
-        if( _controller.isGrounded && moveSpeed > 0)
-        {
-            currentState = PlayerState.RUNNING;
-            Animation(1); //run anim
-            // run sound
-
-        }
-
-		if( _controller.isGrounded && moveSpeed <= 0)
-		{
-			currentState = PlayerState.IDLE;
-			Animation(0); //run anim
-			// run sound
+			if (_controller.isGrounded && moveSpeed <= 0) {
+				currentState = PlayerState.IDLE;
+				Animation (0); //run anim
+				// run sound
 			
-		}
+			}
 
 
-        //sound toggle
-        if (_controller.isGrounded && !isPlayingRunSound)
-        {
-            PlayRunSound();
-            isPlayingRunSound = true;
+			//sound toggle
+			if (_controller.isGrounded && !isPlayingRunSound) {
+				PlayRunSound ();
+				isPlayingRunSound = true;
 
-        }
-        else if (!_controller.isGrounded)
-        {
-            StopRunSound();
-            isPlayingRunSound = false;
-        }
+			} else if (!_controller.isGrounded) {
+				StopRunSound ();
+				isPlayingRunSound = false;
+			}
 		
-        if (!_controller.isGrounded && _velocity.y < 0 && !abilityAnimating)
-        {
-            currentState = PlayerState.FALLING;
-            Animation(3);
-        }
+			if (!_controller.isGrounded && _velocity.y < 0 && !abilityAnimating) {
+				currentState = PlayerState.FALLING;
+				Animation (3);
+			}
 		
       
-		_velocity.x = Mathf.Lerp(_velocity.x, normalizedHorizontalSpeed * alteredMoveSpeed, Time.deltaTime );
+			_velocity.x = Mathf.Lerp (_velocity.x, normalizedHorizontalSpeed * alteredMoveSpeed, Time.deltaTime);
 
-        // apply gravity before moving
+			// apply gravity before moving
 
-        if (_velocity.y < 0) // if falling
-        {
-            gravity = jumpEndMultiplier;
-        }
-        else if (_velocity.y > 0 && Input.GetKey(actionKey))
-        {
-            gravity = jumpStartMultiplier;
-        }
+			if (_velocity.y < 0) { // if falling
+				gravity = jumpEndMultiplier;
+			} else if (_velocity.y > 0 && Input.GetKey (actionKey)) {
+				gravity = jumpStartMultiplier;
+			}
         
 
 
-        _velocity.y += gravity * Time.deltaTime;
-        //print(_velocity.y);
+			_velocity.y += gravity * Time.deltaTime;
+			//print(_velocity.y);
 
       
 
-        _controller.move(_velocity * Time.deltaTime);
+			_controller.move (_velocity * Time.deltaTime);
 
-        // grab our current _velocity to use as a base for all calculations
-        _velocity = _controller.velocity;
+			// grab our current _velocity to use as a base for all calculations
+			_velocity = _controller.velocity;
+		}
+
+		if (hit) {
+			Animation(5);
+		
+		}
     }
 
     public virtual void Ability()
@@ -271,6 +266,13 @@ public class Player : Agent
 		acceptableDistance = newDistance;
 	}
 
+	public void HitAnim(){
+		hit = true;
+	}
+
+	public void SetHitFalse(){
+		hit = false;
+	}
 
 
 	

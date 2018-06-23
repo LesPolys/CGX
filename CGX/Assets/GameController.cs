@@ -7,6 +7,9 @@ using System;
 
 public class GameController : MonoBehaviour {
 
+
+	public ScrollingBackground lastPanel;
+
 	public OnScreenMovable moveables;
 	public GameObject rightLooper;
 
@@ -15,13 +18,15 @@ public class GameController : MonoBehaviour {
 	DemoGameState currentState;
 	bool wasStateChanged = false;
 
+	public ChangeInstructions instruc;
+
 
 	[SerializeField]
 	private PartyManager pManager;
 
 	#region KNIGHTJUMP variables
 	private int numKnightJumps = 0;
-	private int maxNumJumps = 3;
+	private int maxNumJumps = 2;
 
 
 
@@ -31,7 +36,7 @@ public class GameController : MonoBehaviour {
 	//hit x number of things with knight
 
 	private int numKnightAttackHits = 0;
-	private int maxNumKnightEnemiesHit = 2;
+	private int maxNumKnightEnemiesHit = 1;
 	
 	#endregion
 
@@ -39,7 +44,7 @@ public class GameController : MonoBehaviour {
 	#region RANGERADD variables
 	//is the ranger in the party
 	private bool hasRanger = false;
-
+	private bool rangerLeader = false;
 
 
 	#endregion
@@ -49,33 +54,35 @@ public class GameController : MonoBehaviour {
 	//has the ranger hit x number of things
 
 	private int numRangerAttackHits = 0;
-	private int maxNumRangerEnemiesHit = 5;
+	private int maxNumRangerEnemiesHit = 4;
 	
 	#endregion
 
 	#region MAGEADD variables
 	//is the mage in the party
 	private bool hasMage = false;
+	private bool mageLeader = false;
 	
 	#endregion
 
 	#region MAGEATTACK variables
 	//have you jumped over x number of pits
 	private int numPitsJumped = 0;
-
+	private bool jumpComplete = false;
 	
 	#endregion
 
 	#region DRUIDADD variables
 	//is the druid in the party
 	private bool hasDruid = false;
+	private bool druidLeader = false;
 	
 	#endregion
 
 	#region DRUIDATTACK variables
 	//has the druid frozen x number of enemies
 	private int numDruidAttackHits = 0;
-	private int maxNumDruidEnemiesHit = 3;
+	private int maxNumDruidEnemiesHit = 2;
 	
 	#endregion
 
@@ -105,6 +112,13 @@ public class GameController : MonoBehaviour {
 		SuccessfullJump.boxJumpEvent += MageAttackHitMethodListener;
 
 		PartyManager.mageAddEvent += HasMageMethodListner;
+
+		PartyManager.rangerLeaderEvent += RangerLeaderMethodListner;
+
+		PartyManager.mageLeaderEvent += MageLeaderMethodListner;
+
+		PartyManager.druidLeaderEvent += DruidLeaderMethodListner;
+
 		
 	}
 
@@ -122,7 +136,7 @@ public class GameController : MonoBehaviour {
 			//moveables.MoveY(10.0f);
 			currentState++;
 			wasStateChanged = true;
-			print(currentState);
+//			print(currentState);
 			//NextChallenge();
 		}
 
@@ -130,6 +144,7 @@ public class GameController : MonoBehaviour {
 		switch (currentState) {
 
 			case DemoGameState.KNIGHTJUMP:
+			//print ("IN KNIGHT JUMP");
 				if(numKnightJumps > maxNumJumps){
 					//currentState = DemoGameState.KNIGHTATTACK;
 					currentState++;
@@ -139,6 +154,7 @@ public class GameController : MonoBehaviour {
 
 
 			case DemoGameState.KNIGHTATTACK:
+			//print ("IN KNIGHT ATTACK");
 				if(numKnightAttackHits > maxNumKnightEnemiesHit){
 						//currentState = DemoGameState.KNIGHTATTACK;
 						currentState++;
@@ -148,14 +164,20 @@ public class GameController : MonoBehaviour {
 
 
 			case DemoGameState.RANGERADD:
-
+			//print ("IN RANGERADD");
 				if(!hasRanger){
 					pManager.CreatePartyMember(1);
 				}
-				break;
+
+				if(rangerLeader){
+					currentState++;
+					wasStateChanged = true;
+				}
+			break;
 
 
 			case DemoGameState.RANGERATTACK:
+			//print ("RANGERATTACK");
 				if(numRangerAttackHits > maxNumRangerEnemiesHit){
 					//currentState = DemoGameState.KNIGHTATTACK;
 					currentState++;
@@ -165,32 +187,56 @@ public class GameController : MonoBehaviour {
 
 
 			case DemoGameState.MAGEADD:
+			//print ("MAGEADD");
 				if(!hasMage){
 					pManager.CreatePartyMember(2);
+				}
+
+				if(mageLeader){
+					currentState++;
+					wasStateChanged = true;
 				}
 				break;
 
 
 			case DemoGameState.MAGEATTACK:
-
-				break;
-
-
-			case DemoGameState.DRUIDADD:
-				if(!hasDruid){
-					pManager.CreatePartyMember(3);
+	//print ("MAGEATTACK");
+				if(jumpComplete){
+					currentState++;
+					wasStateChanged = true;
 				}
 				break;
 
 
-			case DemoGameState.DRUIDATTACK:
+			case DemoGameState.DRUIDADD:
+	//	 ("DRUIDADD");
+				if(!hasDruid){
+					pManager.CreatePartyMember(3);
+				}
 
-				break;
+				if(druidLeader){
+					currentState++;
+					wasStateChanged = true;
+				}
+			break;
+
+
+			case DemoGameState.DRUIDATTACK:
+	//		print ("DRUIDATTACK");
+				if(numDruidAttackHits > maxNumDruidEnemiesHit){
+					//currentState = DemoGameState.KNIGHTATTACK;
+					currentState++;
+					wasStateChanged = true;
+				}
+			break;
 
 
 			case DemoGameState.ALLTOGETHER:
-
-				break;
+	//	print ("ALLTOGETHER");
+			lastPanel.scrolling = false;
+			lastPanel.paralax = false;
+			//lastPanel.gameObject.SetActive(false);
+			break;
 
 
 		}
@@ -208,11 +254,12 @@ public class GameController : MonoBehaviour {
 	private void NextChallenge(){
 		moveables.MoveY(10.0f);
 		moveables.MoveX(rightLooper.transform.position.x - transform.position.x);
+		instruc.NextSprite ();
 
 	}
 
 	private void KnightJumpMethodListener(){//functions called wby event set in awake
-		print ("hbkhjb");
+		//print ("hbkhjb");
 		numKnightJumps ++;
 	}
 
@@ -238,13 +285,24 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void MageAttackHitMethodListener(){//functions called wby event set in awake
-		numPitsJumped++;
+		jumpComplete = true;
 	}
 
 	private void HasMageMethodListner(){
 		hasMage = true;
 	}
 
+	private void RangerLeaderMethodListner(){
+		rangerLeader = true;
+	}
+
+	private void MageLeaderMethodListner(){
+		mageLeader = true;
+	}
+
+	private void DruidLeaderMethodListner(){
+		druidLeader = true;
+	}
 
 
 }

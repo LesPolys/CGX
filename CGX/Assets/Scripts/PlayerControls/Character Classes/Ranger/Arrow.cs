@@ -49,7 +49,8 @@ public class Arrow : MonoBehaviour {
     {
         //Move Projectile
 		Target (arrowTarget);
-        transform.position += transform.right * arrowSpeed * Time.deltaTime;
+		transform.position = Vector3.Lerp (transform.position, arrowTarget.transform.position , arrowSpeed * Time.deltaTime);
+       // transform.position += transform.right * arrowSpeed * Time.deltaTime;
     }
 
 
@@ -69,9 +70,15 @@ public class Arrow : MonoBehaviour {
 			//print ("hi");
             //knockback and damage
 			other.gameObject.GetComponent<Agent>().Damage(1);
+			if(other.GetComponent<Imp>() != false){
+				other.GetComponent<Imp>().PlayFlash();
+			}
+			if(other.GetComponent<Minos>() != false){
+				other.GetComponent<Minos>().SetState(Minos.MinosStates.HIT);
+			}
 			//other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position).normalized);
-
-            other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position));
+			FireArroweHitEvent();
+            //other.gameObject.GetComponent<Agent>().KnockBack(2, 1,(other.transform.position - transform.position));
             gameObject.SetActive(false);
             return;
 		}

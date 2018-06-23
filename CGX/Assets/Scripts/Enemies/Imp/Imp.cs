@@ -76,7 +76,7 @@ public class Imp : Enemy {
 
 		RaycastHit2D hit = Physics2D.Raycast(circlePoint + transform.position + new Vector3( sightDistance * normalizedHorizontalSpeed , 0.0f ,0.0f), (circlePoint ), attackRange);
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player"){
-				SpawnFireBall(circlePoint);
+				//SpawnFireBall(circlePoint);
 
 		}
 	}
@@ -86,5 +86,13 @@ public class Imp : Enemy {
 		Debug.DrawRay( start, dir, color );
 	}
 
+
+	public void Disable(){
+		gameObject.SetActive (false);
+	}
+
+	public void PlayFlash(){
+		_animator.Play(Animator.StringToHash("ImpHit"));
+	}
 
 }

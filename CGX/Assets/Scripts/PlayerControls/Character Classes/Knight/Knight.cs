@@ -65,8 +65,11 @@ public class Knight : Player
                 AkSoundEngine.PostEvent("Knight_Attack", gameObject);
                 break;
             case 5: //fainting
+				
+				_animator.Play(Animator.StringToHash("KnightHit"));
                 break;
             case 6: //just in case
+				_animator.Play(Animator.StringToHash("KnightFaint"));
                 break;
 
 
@@ -108,7 +111,7 @@ public class Knight : Player
 	public void FireKnightJumpEvent(){ // call this to fire the event to all listen
 		//if (jumpEvent != null) {// check to see if no one is listening cause that would be embarassing screaming into the void
 		//jumpEvent();//fire the event
-		//knightJumpEvent.Invoke();//also fires the event but dont need a null check for listeners
+		knightJumpEvent.Invoke();//also fires the event but dont need a null check for listeners
 		//}
 	}
 
