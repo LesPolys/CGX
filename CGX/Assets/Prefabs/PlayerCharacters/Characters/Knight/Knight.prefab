@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bff031869488478d87c9fdd72d136c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 1
   moveSpeed: 0
   gravity: -25
   jumpStartMultiplier: -25
@@ -196,6 +196,8 @@ MonoBehaviour:
     m_Bits: 2048
   partyPosition: {fileID: 0}
   alteredMoveSpeed: 0
+  knowbackDur: 0
+  power: 0
   shockWavePooler:
   - {fileID: 114135974918082014}
   shockWaveSpawnPoint: {fileID: 4045897411131312}

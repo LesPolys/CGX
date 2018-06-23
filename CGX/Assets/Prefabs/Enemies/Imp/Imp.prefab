@@ -192,11 +192,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343ebe9c96f7abb4195f63dafc465667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1
   moveSpeed: 0
   gravity: -25
   frequency: 0
   magnitude: 0
+  attackRange: 0
+  sightDistance: 0
+  angle: 0
+  fireBallSpawnPoint: {fileID: 0}
+  fireBallPooler: []
 --- !u!212 &212408876294795726
 SpriteRenderer:
   m_ObjectHideFlags: 1

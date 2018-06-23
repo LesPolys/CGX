@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf92d1bf0f0346aca9839a89c63a2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 1
   moveSpeed: 0
   gravity: -25
   jumpStartMultiplier: -25
@@ -131,6 +131,8 @@ MonoBehaviour:
     m_Bits: 2048
   partyPosition: {fileID: 0}
   alteredMoveSpeed: 0
+  knowbackDur: 0
+  power: 0
   attackRange: 20.8
   rootTime: 5
   vinePooler:
