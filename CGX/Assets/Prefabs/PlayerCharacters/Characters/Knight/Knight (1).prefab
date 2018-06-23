@@ -188,14 +188,16 @@ MonoBehaviour:
   health: 10
   moveSpeed: 0
   gravity: -25
-  jumpStartMultiplier: -25
-  jumpEndMultiplier: -25
-  jumpHeight: 3
+  jumpStartMultiplier: -5
+  jumpEndMultiplier: -15
+  jumpHeight: 0.5
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
   partyPosition: {fileID: 0}
   alteredMoveSpeed: 0
+  knowbackDur: 0
+  power: 0
   shockWavePooler:
   - {fileID: 114220623165401362}
   shockWaveSpawnPoint: {fileID: 4928754660125828}
@@ -292,7 +294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300020, guid: 831b99c47e3aff946be877109a59fe31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
