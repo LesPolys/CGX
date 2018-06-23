@@ -9,6 +9,9 @@ public class LoopController : MonoBehaviour {
 
 	public OnScreenMovable movable;
 
+	public SuccessfullJump mageLevel;
+
+
 
 	void Awake(){
 
@@ -29,6 +32,7 @@ public class LoopController : MonoBehaviour {
 
 		if(other.gameObject.tag == "Player"){
 			movable.MoveX(rightLooper.transform.position.x - other.transform.position.x);
+			mageLevel.ResetCrates();
 		}
 
 	}

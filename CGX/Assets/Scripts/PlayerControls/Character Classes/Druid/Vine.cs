@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Vine : MonoBehaviour {
 
@@ -15,6 +16,8 @@ public class Vine : MonoBehaviour {
 	//think about making the slow call a part of the vine and not a part of the druid, more flexible that way
 	//vines could store a reference to their enemy is probably the way to go
 
+	public static event Action vineRootHitEvent = null;
+
 	void Awake()
 	{
 		_animator = GetComponent<Animator> ();
@@ -26,6 +29,13 @@ public class Vine : MonoBehaviour {
 
 	public void EndAnimation(){
 		gameObject.SetActive(false);
+	}
+
+	public void FireVineRootHitEvent(){ // call this to fire the event to all listen
+		//if (jumpEvent != null) {// check to see if no one is listening cause that would be embarassing screaming into the void
+		//jumpEvent();//fire the event
+		vineRootHitEvent.Invoke();//also fires the event but dont need a null check for listeners
+		//}
 	}
 
 

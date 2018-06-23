@@ -18,6 +18,7 @@ public class PartyManager : MonoBehaviour {
 
 	public List<Player> tempPartyHolder;
 	public LinkedList<Player> theParty = new LinkedList<Player>();
+	private List<Player> iteratorHolder = new List<Player>();
 
 	[SerializeField]
 	Transform[] partyPositions;
@@ -143,8 +144,11 @@ public class PartyManager : MonoBehaviour {
 
 	void OrganizeParty(){
 		int x = 0;
+		iteratorHolder.Clear ();
+
 		foreach (Player member in theParty) {
 			member.SetPartyPosition(partyPositions[x]);
+			iteratorHolder.Add(member);
 			x++;
 		}
 		SetCurrentPlayer ();
@@ -168,7 +172,7 @@ public class PartyManager : MonoBehaviour {
 
 	void UpdatePartyStats(){
 		
-		foreach (Player member in theParty) {
+		foreach (Player member in theParty) { //coroutine causing weird enumeration race condition returning a numm list on enumaration from the linked list, solution is to dissallow reorganizing while jumping
 			member.ChangeMoveSpeed(partyMoveSpeed);
 			member.SetSpeedOffsets(partySpeedOffset);
 			member.SetAcceptableDistance(acceptableDistance);
@@ -178,12 +182,14 @@ public class PartyManager : MonoBehaviour {
 	IEnumerator GroupJump(){
 
 			if(jumpPressed){
-				foreach (Player member in theParty) {
-					if(!member.IsGrounded() && currentPlayer == member){
-						member.SetJumpSignal(true);
+				//foreach (Player member in theParty) {
+
+				for(int i =0;i< iteratorHolder.Count; i++){
+				if(!iteratorHolder[i].IsGrounded() && currentPlayer == iteratorHolder[i]){
+					iteratorHolder[i].SetJumpSignal(true);
 						yield return new WaitForSecondsRealtime(jumpDelay);
-					}else if(member.IsGrounded()){
-						member.SetJumpSignal(true);
+				}else if(iteratorHolder[i].IsGrounded()){
+					iteratorHolder[i].SetJumpSignal(true);
 						yield return new WaitForSecondsRealtime(jumpDelay);
 					}
 					

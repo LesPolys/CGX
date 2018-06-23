@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
 	//hit x number of things with knight
 
 	private int numKnightAttackHits = 0;
-	private int maxNumKnightEnemiesHit = 3;
+	private int maxNumKnightEnemiesHit = 2;
 	
 	#endregion
 
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
 	//has the ranger hit x number of things
 
 	private int numRangerAttackHits = 0;
-	private int maxNumRangerEnemiesHit = 3;
+	private int maxNumRangerEnemiesHit = 5;
 	
 	#endregion
 
@@ -98,11 +98,11 @@ public class GameController : MonoBehaviour {
 		
 		Arrow.arrowHitEvent += RangerAttackHitMethodListener;
 		
-		//DruidAttackHitMethodListener;
+		Vine.vineRootHitEvent += DruidAttackHitMethodListener;
 
 		PartyManager.druidAddEvent += HasDruidMethodListner;
 		
-		//MageAttackHitMethodListener;
+		SuccessfullJump.boxJumpEvent += MageAttackHitMethodListener;
 
 		PartyManager.mageAddEvent += HasMageMethodListner;
 		
@@ -139,7 +139,11 @@ public class GameController : MonoBehaviour {
 
 
 			case DemoGameState.KNIGHTATTACK:
-
+				if(numKnightAttackHits > maxNumKnightEnemiesHit){
+						//currentState = DemoGameState.KNIGHTATTACK;
+						currentState++;
+						wasStateChanged = true;
+					}
 				break;
 
 
@@ -152,7 +156,11 @@ public class GameController : MonoBehaviour {
 
 
 			case DemoGameState.RANGERATTACK:
-
+				if(numRangerAttackHits > maxNumRangerEnemiesHit){
+					//currentState = DemoGameState.KNIGHTATTACK;
+					currentState++;
+					wasStateChanged = true;
+				}
 				break;
 
 

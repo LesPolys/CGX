@@ -160,7 +160,7 @@ public class Minos : Enemy {
 		//print ("w");
 		if (other.gameObject.tag == "Player")// || hit.gameObject.tag == "Bullet")
 		{
-			print ("hit");
+			//print ("hit");
 			//other.gameObject.GetComponent<Agent>().KnockBack(xknockback, yknockback,(other.transform.position.x - transform.position.x));
 			other.gameObject.GetComponent<Agent>().KnockBack(xknockback, yknockback,(other.transform.position - transform.position));
 			return;
