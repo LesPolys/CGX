@@ -21,8 +21,8 @@ MonoBehaviour:
   autoPopulateEnabled: 1
   AuxBusWwu:
   - Guid: '{C892AF33-FD78-47E8-80E2-4AC1A218EF4A}'
-    m_lastTimePart2: -1999253510
-    m_lastTimePsrt1: -211852488
+    m_lastTimePart2: -1999251361
+    m_lastTimePsrt1: 550810614
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
@@ -48,11 +48,43 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{032E0657-2410-45BE-97DA-B9D2266BB823}'
-    m_lastTimePart2: -1999252887
-    m_lastTimePsrt1: 660662093
+    m_lastTimePart2: -1999251361
+    m_lastTimePsrt1: 543220741
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
+    - Guid: 8876082688f89949a411ea8f88e70537
+      ID: -1278968326
+      Name: Break_Crate
+      Path: Default Work Unit\Character-World\Actions\Break_Crate
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character-World
+        ObjectType: 4
+      - ElementName: Actions
+        ObjectType: 4
+      - ElementName: Break_Crate
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 28ef9497485e2142a28f1ddf21edcca5
+      ID: 281929850
+      Name: Cave_Track
+      Path: Default Work Unit\Music\Main_Music\Cave_Track
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Main_Music
+        ObjectType: 4
+      - ElementName: Cave_Track
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 309eb85a99cdc14a91019ec8b63884b9
       ID: 98870701
       Name: Coin_Pickup
@@ -65,6 +97,34 @@ MonoBehaviour:
       - ElementName: Coin
         ObjectType: 4
       - ElementName: Coin_Pickup
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 155076c6abb7fe4693575fe5b01f1a44
+      ID: 1717704501
+      Name: Dialogue_Continue
+      Path: Default Work Unit\Dialogue\Dialogue_Continue
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dialogue
+        ObjectType: 4
+      - ElementName: Dialogue_Continue
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6e3e3e8574b8bc45996e1c113e2f38fa
+      ID: -1950575102
+      Name: Dialogue_Quips
+      Path: Default Work Unit\Dialogue\Dialogue_Quips
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dialogue
+        ObjectType: 4
+      - ElementName: Dialogue_Quips
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -129,6 +189,22 @@ MonoBehaviour:
       - ElementName: Druid
         ObjectType: 4
       - ElementName: Druid_Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fd6522c2c0aa5943a6eb9fd0947c63ed
+      ID: 493036092
+      Name: Enemy_Alert
+      Path: Default Work Unit\Enemies\Alert\Enemy_Alert
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 4
+      - ElementName: Alert
+        ObjectType: 4
+      - ElementName: Enemy_Alert
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -474,7 +550,6 @@ MonoBehaviour:
   - /CGX_WwiseProject/Events
   - /CGX_WwiseProject/Events/Default Work Unit
   - /CGX_WwiseProject/Events/Default Work Unit/Enemies
-  - /CGX_WwiseProject/Events/Default Work Unit/Enemies/Minotaur
   - /CGX_WwiseProject/Events/Default Work Unit/Music
   - /CGX_WwiseProject/Events/Default Work Unit/Music/Main_Music
   - /CGX_WwiseProject/SoundBanks

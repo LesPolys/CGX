@@ -22,9 +22,9 @@ public class ChangeInstructions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.A)) {
-			NextSprite();
-		}
+		//if (Input.GetKeyDown (KeyCode.A)) {
+		//	NextSprite();
+		//}
 	}
 
 	public void SetSprite(){

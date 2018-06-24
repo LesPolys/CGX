@@ -132,7 +132,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
 
 
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.L)) {
 			//moveables.MoveY(10.0f);
 			currentState++;
 			wasStateChanged = true;
